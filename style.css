@@ -1,0 +1,135 @@
+.central-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
+}
+.album {
+  width: 300px;
+  height: 300px;
+}
+.site-icon {
+  width: 300px;
+  height: 300px;
+}
+.grszh {
+  width: 408px;
+  height: auto;
+}
+body {
+  background-color: #303030; 
+  font-family: Consolas, monospace;
+  color: white;
+}
+a {
+  color: white; 
+}
+.content-table {
+  max-width: 60%; 
+}
+#GarfRing {
+  margin: 0 auto;
+  padding: 15px; /* creates some space around the widget */
+}
+
+#GarfRing table {
+  background-color: #303030; /* makes the background pure white */
+  margin: 0 auto; /* centers the widget */
+}
+
+#GarfRing table tr td {
+  padding: 15px; /* creates some space between the links and text inside the widget */
+}
+
+#GarfRing .webring-prev {
+  text-align:right;
+}
+
+#GarfRing .webring-info {
+  text-align:center;
+}
+
+#GarfRing .webring-next {
+  text-align:left;
+}
+
+#GarfRing .webring-links {
+  font-size:small;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #191919;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4800FF;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: auto;
+  text-align: center;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+/* On screens that are less than 800px wide, make the sidebar into a topbar */
+@media screen and (max-width: 800px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .central-img {
+    width: 80%;
+    height: auto;
+  }
+  .album {
+    width: 250px;
+    height: 250px;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 500px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 500px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .central-img {
+    width: 100%;
+    height: auto;
+  }
+  .album {
+    width: 130px;
+    height: 130px;
+  }
+}
