@@ -1,32 +1,35 @@
+name: Deploy to neocities
 
+# only run on changes to main
+on:
+  push:
+    branches:
+      - main
 
-name: Build site
-
-on: [push, pull_request]
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - run: make
-
-      - if: ${{ success() && github.ref == 'refs/heads/main' }}
-        id: deploy
-        continue-on-error: true
-        uses: bcomnes/deploy-to-neocities@v1
-        with:
-          api_token: ${{ secrets.NEOCITIES_API_KEY }}
-          dist_dir: _site
-          cleanup: true
-
-      - name: Deploy to Neocities fallback
-        if: ${{ steps.deploy.outcome == 'failure' && github.ref == 'refs/heads/main' }}
-        uses: jonchang/deploy-neocities@master
-        with:
-          key: ${{ secrets.NEOCITIES_API_KEY }}
-          dir: _site
-          clean: true
-
+    - uses: actions/checkout@v3
+    # Set up any tools and build steps here
+    # This example uses a Node.js toolchain to build a site
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
+    - name: Install deps and build
+      run: |
+        npm i
+        npm run build
+    # When the dist_dir is ready, deploy it to neocities
+    - name: Deploy to neocities
+      uses: bcomnes/deploy-to-neocities@v1
+      with:
+        api_token: ${{ secrets.NEOCITIES_API_KEY }}
+        cleanup: false
+        dist_dir: public
