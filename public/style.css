@@ -24,7 +24,13 @@ body {
 a {
   color: white; 
 }
+.content-table tr:nth-child(even){
+  background-color: #3f3f3f;
+}
 .content-table {
+  max-width: 60%; 
+}
+.music-table {
   max-width: 60%; 
 }
 #GarfRing {
@@ -113,6 +119,9 @@ table {
   .album {
     width: 250px;
     height: 250px;
+  }
+  .content-table {
+    max-width: 100%; 
   }
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
