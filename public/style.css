@@ -27,12 +27,6 @@ a {
 .content-table tr:nth-child(even){
   background-color: #3f3f3f;
 }
-.content-table {
-  max-width: 60%; 
-}
-.music-table {
-  max-width: 60%; 
-}
 #GarfRing {
   margin: 0 auto;
   padding: 15px; /* creates some space around the widget */
@@ -103,6 +97,7 @@ div.content {
 table {
   margin-left: auto;
   margin-right: auto;  
+  max-width: 60%; 
 }
 
 /* On screens that are less than 800px wide, make the sidebar into a topbar */
@@ -120,7 +115,7 @@ table {
     width: 250px;
     height: 250px;
   }
-  .content-table {
+  table {
     max-width: 100%; 
   }
   .sidebar a {float: left;}
@@ -141,4 +136,5 @@ table {
     width: 130px;
     height: 130px;
   }
+  
 }
