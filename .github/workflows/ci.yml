@@ -1,2 +1,30 @@
-- name: Deploy to Neocities
-  uses: bcomnes/deploy-to-neocities@v1.1.13
+name: Build site
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: make
+
+      - if: ${{ success() && github.ref == 'refs/heads/main' }}
+        id: deploy
+        continue-on-error: true
+        uses: bcomnes/deploy-to-neocities@v1
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_KEY }}
+          dist_dir: public
+          cleanup: true
+
+      - name: Deploy to Neocities fallback
+        if: ${{ steps.deploy.outcome == 'failure' && github.ref == 'refs/heads/main' }}
+        uses: jonchang/deploy-neocities@master
+        with:
+          key: ${{ secrets.NEOCITIES_API_KEY }}
+          dir: public
+          clean: true
+
