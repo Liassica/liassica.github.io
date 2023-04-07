@@ -11,6 +11,10 @@ a {
   color: white;
 }
 
+footer {
+  font-size: 10pt;
+}
+
 /*///////////////
 //Page-specific//
 ///////////////*/
@@ -18,7 +22,7 @@ a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 70vh;
+  height: 75vh;
 }
 
 /*////////
@@ -193,7 +197,7 @@ div.content {
 //////////*/
 #GarfRing {
   margin: 0 auto;
-  padding: 15px;
+  padding: 0px;
   /* creates some space around the widget */
 }
 
