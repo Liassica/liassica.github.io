@@ -1,61 +1,117 @@
+/*/////////
+//General//
+/////////*/
+body {
+  background-color: #303030;
+  font-family: Consolas, monospace;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+/*///////////////
+//Page-specific//
+///////////////*/
 .central-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: 80vh;
 }
-.album {
-  width: 300px;
-  height: 300px;
+
+/*////////
+//Tables//
+////////*/
+table {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
 }
-.site-icon {
-  width: 300px;
-  height: 300px;
+
+.content-table th,
+.content-table td {
+  padding: 10px 0px 10px 0px;
 }
-.grszh {
-  width: 408px;
-  height: auto;
-}
-body {
-  background-color: #303030; 
-  font-family: Consolas, monospace;
-  color: white;
-}
-a {
-  color: white; 
-}
-.content-table tr:nth-child(even){
+
+.content-table tr:nth-child(even) {
   background-color: #3f3f3f;
 }
-#GarfRing {
-  margin: 0 auto;
-  padding: 15px; /* creates some space around the widget */
+
+.music-table img {
+  width: 300px;
+  height: 300px;
 }
 
-#GarfRing table {
-  background-color: #303030; /* makes the background pure white */
-  margin: 0 auto; /* centers the widget */
+.image-table img {
+  width: 400px;
+  height: auto;
 }
 
-#GarfRing table tr td {
-  padding: 15px; /* creates some space between the links and text inside the widget */
+/*/////////////
+//Screen Size//
+/////////////*/
+@media screen and (max-width: 1500px) {
+  .image-table img {
+    width: 350px;
+    height: auto;
+  }
 }
 
-#GarfRing .webring-prev {
-  text-align:right;
+@media screen and (max-width: 1300px) {
+  .image-table img {
+    width: 300px;
+    height: auto;
+  }
 }
 
-#GarfRing .webring-info {
-  text-align:center;
+@media screen and (max-width: 1100px) {
+  .image-table img {
+    width: 210px;
+    height: auto;
+  }
 }
 
-#GarfRing .webring-next {
-  text-align:left;
+@media screen and (max-width: 800px) {
+  .central-img {
+    width: 80%;
+    height: auto;
+  }
+
+  table {
+    max-width: 100%;
+  }
+
+  .music-table img {
+    width: 250px;
+    height: 250px;
+  }
+  .image-table img {
+    width: 180px;
+    height: auto;
+  }
 }
 
-#GarfRing .webring-links {
-  font-size:small;
+@media screen and (max-width: 500px) {
+  .central-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .music-table img {
+    width: 130px;
+    height: 130px;
+  }
+  .image-table img {
+    width: 130px;
+    height: auto;
+  }
 }
+
+/*/////////
+//Sidebar// 
+/////////*/
 .sidebar {
   margin: 0;
   padding: 0;
@@ -94,12 +150,6 @@ div.content {
   text-align: center;
 }
 
-table {
-  margin-left: auto;
-  margin-right: auto;  
-  max-width: 60%; 
-}
-
 /* On screens that are less than 800px wide, make the sidebar into a topbar */
 @media screen and (max-width: 800px) {
   .sidebar {
@@ -107,34 +157,56 @@ table {
     height: auto;
     position: relative;
   }
-  .central-img {
-    width: 80%;
-    height: auto;
+
+  .sidebar a {
+    float: left;
   }
-  .album {
-    width: 250px;
-    height: 250px;
+
+  div.content {
+    margin-left: 0;
   }
-  table {
-    max-width: 100%; 
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
 }
 
-/* On screens that are less than 500px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 500px) {
   .sidebar a {
     text-align: center;
     float: none;
   }
-  .central-img {
-    width: 100%;
-    height: auto;
-  }
-  .album {
-    width: 130px;
-    height: 130px;
-  }
-  
+}
+
+/*//////////
+//GarfRing//
+//////////*/
+#GarfRing {
+  margin: 0 auto;
+  padding: 15px;
+  /* creates some space around the widget */
+}
+
+#GarfRing table {
+  background-color: #303030;
+  /* makes the background pure white */
+  margin: 0 auto;
+  /* centers the widget */
+}
+
+#GarfRing table tr td {
+  padding: 15px;
+  /* creates some space between the links and text inside the widget */
+}
+
+#GarfRing .webring-prev {
+  text-align: right;
+}
+
+#GarfRing .webring-info {
+  text-align: center;
+}
+
+#GarfRing .webring-next {
+  text-align: left;
+}
+
+#GarfRing .webring-links {
+  font-size: small;
 }
