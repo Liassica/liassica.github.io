@@ -39,8 +39,8 @@ else {
   //find the 'next' and 'previous' sites in the ring. this code looks complex
   //because it's using a shorthand version of an if-else statement to make sure
   //the first and last sites in the ring join together correctly
-  previousIndex = (thisIndex-1 < 0) ? sites.length-1 : thisIndex-1;
-  nextIndex = (thisIndex+1 >= sites.length) ? 0 : thisIndex+1;
+  previousIndex = (thisIndex - 1 < 0) ? sites.length - 1 : thisIndex - 1;
+  nextIndex = (thisIndex + 1 >= sites.length) ? 0 : thisIndex + 1;
 
   indexText = ""
   //if you've chosen to include an index, this builds the link to that
