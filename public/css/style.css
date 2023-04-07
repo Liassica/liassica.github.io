@@ -61,14 +61,14 @@ table {
 
 @media screen and (max-width: 1300px) {
   .image-table img {
-    width: 300px;
+    width: 280px;
     height: auto;
   }
 }
 
 @media screen and (max-width: 1100px) {
   .image-table img {
-    width: 210px;
+    width: 190px;
     height: auto;
   }
 }
@@ -88,7 +88,14 @@ table {
     height: 250px;
   }
   .image-table img {
-    width: 180px;
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .image-table img {
+    width: 150px;
     height: auto;
   }
 }
@@ -104,7 +111,14 @@ table {
     height: 130px;
   }
   .image-table img {
-    width: 130px;
+    width: 110px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .image-table img {
+    width: 90px;
     height: auto;
   }
 }
