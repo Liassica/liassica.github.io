@@ -5,6 +5,7 @@ body {
   background-color: #303030;
   font-family: Consolas, monospace;
   color: white;
+  margin: 0;
 }
 
 a {
