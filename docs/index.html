@@ -23,6 +23,22 @@
         <script type="text/javascript" src="https://garfring.neocities.org/onionring-variables.js"></script>
         <script type="text/javascript" src="https://garfring.neocities.org/onionring-widget.js"></script>
       </div>
+      <p id="origin"></p>
+      <p id="mirror-link"></p>
+      <script>
+        let origin = window.location.origin;
+        if(origin == 'https://liassica.neocities.org/'){
+          document.getElementById("origin").innerHTML = 'You are currently on the NeoCities mirror.' 
+          document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.github.io/">GitHub pages mirror.</a>';
+        } else if(origin == 'https://liassica.github.io/'){
+          document.getElementById("origin").innerHTML = 'You are currently on the GitHub Pages mirror.' 
+          document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.neocities.org/">NeoCities mirror.</a>';
+        }
+        else {
+          document.getElementById("origin").innerHTML = "You are currently on someone else's site." 
+          document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.neocities.org/">NeoCities mirror</a> or the <a href="https://liassica.github.io/">GitHub pages mirror.</a>';
+        }
+      </script>
     </div>
   </body>
 </html>
