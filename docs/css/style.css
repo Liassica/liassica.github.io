@@ -26,6 +26,8 @@ footer {
   height: 75vh;
 }
 
+
+
 /*////////
 //Tables//
 ////////*/
@@ -57,6 +59,12 @@ table {
 /*/////////////
 //Screen Size//
 /////////////*/
+/* To-Do: Make more standard, use min-width
+Minimum: 360 <= x
+Small: 360 < x < 800
+Medium: 800 < x 1280
+Large: 1280 < x
+*/
 @media screen and (max-width: 1500px) {
   .image-table img {
     width: 350px;
@@ -96,6 +104,9 @@ table {
   .image-table img {
     width: 200px;
     height: auto;
+  }
+  .post-header {
+    text-align: left;
   }
 }
 
@@ -161,6 +172,11 @@ table {
 .sidebar a:hover:not(.active) {
   background-color: #555;
   color: white;
+}
+
+/* Parent tab of an active sub-tab */
+.sidebar-parent {
+  background-color: #2E00AD;
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
