@@ -35,6 +35,10 @@ a {
   font-size: 10pt;
 }
 
+.footnote {
+  text-decoration: none;
+}
+
 /*/////////////
 //Screen Size//
 /////////////*/

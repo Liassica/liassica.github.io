@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Arkenfox Guide - Liassica's Site</title>
+    <title>Arkenfox - Liassica's Site</title>
     <link href="/css/style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/grszh_icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +16,8 @@
     <div class="sidebar">
         <!-- One class="active" -->
         <a href="/index.html">Home</a>
-        <a href="/posts.html" class="sidebar-parent">Posts & Guides</a>
-        <a class="active" href="/guides/arkenfox.html">Arkenfox Guide</a>
+        <a href="/posts.html" class="sidebar-parent">Guides</a>
+        <a class="active" href="/guides/arkenfox.html">Arkenfox</a>
         <a href="/music.html">Music</a>
         <a href="/links.html">Links</a>
         <a href="/grszh.html">Grszh Gallery</a>
@@ -25,11 +25,200 @@
         <!-- etc -->
     </div>
     <div class="content">
-        <div class="col-4 col-s-1"></div>
-        <div class="col-4 col-s-10">
-            <p>WIP</p>
+        <div class="row">
+            <div class="col-3 col-s-1"></div>
+            <div class="col-6 col-s-10">
+                <h1>Arkenfox/Firefox Hardening Guide</h1>
+                <br>
+                <h3>1. What is browser hardening?</h3>
+                <h5><a href="#install">I know what it is--skip to the guide!</a></h5>
+                <p>
+                    Browser hardening, simply put, is increasing the security and privacy of your browser. 
+                    <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> is the preferred browser
+                    for hardening because it has the greatest privacy and security customizability out of any 
+                    major browser.
+                </p>
+            </div>
+            <div class="col-3 col-s-1"></div>
         </div>
-        <div class="col-4 col-s-1"></div>
+        <div class="row">
+            <div class="col-3 col-s-1"></div>
+            <div class="col-6 col-s-10">
+                <h3>2. Why/when should you harden?</h3>
+                <p>
+                    For most people, hardening is not necessary. A more basic Firefox setup guide such as 
+                    <a target="_blank" href="https://geckro.github.io/articles/firefox.html">this one by Geck</a> is good enough
+                    for general browsing. However, if you want better privacy than a standard Firefox setup without
+                    having to deal with <a target="_blank" href="https://www.torproject.org/">Tor browser</a>'s slowness and lack of 
+                    customization, hardened Firefox is a good middle ground.<sup><a href="#footnote1" id="inline-footnote1" class="footnote">1</a></sup>
+                </p>
+            </div>
+            <div class="col-3 col-s-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-3 col-s-1"></div>
+            <div class="col-6 col-s-10">
+                <h3>3. How to harden?</h3>
+                <p>
+                    Now, you <i>could</i> go through Firefox's settings (about:settings) and configuration (about:config)
+                    pages and manually harden your browser, but that would take a long time and chances are you don't know
+                    what a majority of the configuration settings even do. The solution: Arkenfox.
+                </p>
+            </div>
+            <div class="col-3 col-s-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-3 col-s-1"></div>
+            <div class="col-6 col-s-10">
+                <h3>4. Arkenfox</h3>
+                <p>
+                    <a target="_blank" href="https://github.com/arkenfox/user.js">Arkenfox</a> is a user.js file for desktop Firefox designed to improve privacy and security
+                    while not going so overboard as to make Firefox unusable. A user.js file is a file that controls Firefox settings. Almost every setting in 
+                    Firefox can be controlled with one. However, installing the Arkenfox user.js can be a little tricky, and frankly they make a few odd choices
+                    when it comes to certain settings. The rest of this page will serve as a guide to installing Arkenfox user.js.
+                </p>
+            </div>
+            <div class="col-3 col-s-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-3 col-s-1"></div>
+            <div class="col-6 col-s-10">
+                <h3 id="install">5. Installing Arkenfox</h3>
+                <p>
+                    To install Arkenfox, first install Firefox:
+                </p>
+                <ol>
+                    <li>
+                        Go to <a target="_blank" href="https://www.mozilla.org/en-US/firefox/download/thanks/">this link</a>. The download should begin automatically.
+                    </li>
+                    <li>
+                        Once the installer is done downloading, open it and Firefox will install on your computer. Open Firefox when done, if it doesn't start automatically.
+                    </li>
+                    <li>
+                        Firefox will show a pop-up about importing bookmarks and other setup things. Click through these, they won't matter because you'll be making a new profile.
+                    </li>
+                </ol>
+            </div>
+            <div class="col-3 col-s-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-4 col-s-5">
+                <p>
+                    Next, we are going to make a new Firefox profile.
+                </p>
+                <ol>
+                    <li>
+                        In the address bar, type 'about:profiles' to open the profiles page.
+                    </li>
+                    <li>
+                        You'll see some default profiles, ignore these. Click 'Create a New Profile'.
+                    </li>
+                    <li>
+                        In the profile creation wizard that pops up, hit next. Name the profile however you want (e.g. 'Arkenfox Profile') and hit next.
+                    </li>
+                    <li>
+                        The profile creation wizard will close. Scroll down to the new profile and hit 'Launch profile in new browser'. This will initialize the new profile.
+                        Firefox may pop-up with the same set-up box, and you can either just ignore it again or look through it.
+                    </li>
+                </ol>
+            </div>
+            <div class="col-8 col-s-7">
+                <img src="/images/arkenfox/arkenfox00.png">
+                <img src="/images/arkenfox/arkenfox01.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 col-s-8">
+                <p>
+                    After that, we are going to install the Arkenfox user.js file in the profile directory.
+                </p>
+                <ol>
+                    <li>
+                        Go to 'about:support'. In the list under 'Application Basics', find 'Profile Folder' and hit the 'Open Folder' button. Keep the folder that opens open during the next steps.
+                    </li>
+                    <li>
+                        Go to the <a target="_blank" href="https://github.com/arkenfox/user.js/releases/latest">Arkenfox user.js download page</a> and download either 'Source code (zip)' if you're on Windows or
+                        'Source code (tar.gz)' if you're on Linux.
+                    </li>
+                    <li>
+                        Extract the downloaded file. You should see a variety of files. If you're on Windows, copy 'prefsCleaner.bat', 'updater.bat', and 'user.js' to the profile folder you opened earlier.
+                        If you're on Linux, copy 'prefsCleaner.sh', 'updater.sh', and 'user.js' instead.
+                    </li>
+                    <li>
+                        Now, time for the optional user-overrides.js. A user-overrides.js file is used by the Arkenfox updater to apply user-specific settings on top of the Arkenfox user.js. <b>Do not manually edit user.js.</b>
+                        I've created a few very simple user-overrides.js files that you can <a target="_blank" href="https://github.com/Liassica/user-overrides">read about and download here.</a> As you get more familiar with Firefox, you can make your own
+                        user-overrides.js file. To use one of the user-overrides.js files I made, simply download the .zip file with the one you want, extract it, and copy user-overrides.js into your profile folder.
+                    </li>
+                    <li>
+                        Once you've copied all of the files over, <b>exit Firefox</b> (control + shift + q). 
+                    </li>
+                </ol>
+            </div>
+            <div class="col-4 col-s-4">
+                <img src="/images/arkenfox/arkenfox03.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5 col-s-7">
+                <p>
+                    Next is running the Arkenfox updater. This will append your user-overrides.js file to your user.js file. It will also ensure that your Arkenfox is up to date. As a general rule, run the updater after every Firefox update.
+                </p>
+                <ol>
+                    <li>
+                        Run updater.bat or updater.sh from your profile folder.
+                    </li>
+                    <li>
+                        Type 'S' to start the updater. It should only take a few seconds.
+                    </li>
+                    <li>
+                        If you get a prompt asking to run the prefsCleaner, type 'Y'. This will open the prefsCleaner, which makes sure that old preferences get removed and new preferences are properly updated.
+                    </li>
+                    <li>
+                        Type 'S' to run the prefsCleaner. If you get a prompt saying "Firefox is still running", make sure to exit Firefox, not just close it. Once you've exited Firefox, hit any key to continue.
+                    </li>
+                    <li>
+                        PrefsCleaner should close, and then you're done! Your newly hardened Firefox should be ready to use next time you launch it.
+                    </li>
+                </ol>
+            </div>
+            <div class="col-5 col-s-5">
+                <img src="/images/arkenfox/arkenfox04.png">
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-3 col-s-1"></div>
+            <div class="col-6 col-s-10">
+                <h3>6. Closing thoughts</h3>
+                <p>
+                    There are many further customization options in Firefox, in both the settings and configuration, but also with extensions. The only extension I absolutely recommend <i>everyone</i> get is
+                    <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>. It is by far the most powerful content blocker available. It blocks all ads, as well
+                    as malicious scripts and domains. It too has many customization options, but it is perfectly usable out of the box. You can add it to Firefox and forget it about it if you want.
+                    Beyond that, I recommend <a target="_blank" href="https://geckro.github.io/articles/firefox.html">the extensions section of Geck's Firefox guide</a> for more information on extensions.
+                </p>
+                <p>
+                    If you ever encounter issues while using Arkenfox, check the <a target="_blank" href="https://github.com/arkenfox/user.js/wiki/3.2-Overrides-%5BCommon%5D">common overrides</a> page of the
+                    Arkenfox wiki. Chances are, changing one of these will fix your issue.
+                </p>
+                <p>
+                    Enjoy your faster, more secure, and more private Firefox!
+                </p>
+            </div>
+            <div class="col-3 col-s-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-3 col-s-1"></div>
+            <div class="col-6 col-s-10">
+                <div class="footer">
+                    <p id="footnote1">
+                        <a href="#inline-footnote1" class="footnote">^</a> 1. Even the most hardened Firefox setup will not be as private as Tor. However, as noted above, Tor is very slow,
+                        due to having to make connections through the TOR network.
+                    </p>
+                </div>
+            </div>
+            <div class="col-3 col-s-1"></div>
+        </div>
     </div>
 </body>
 
