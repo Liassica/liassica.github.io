@@ -8,7 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Home">
   <style>
-
+    .content {
+      text-align:center;
+    }
+    .banner {
+      text-align: center; 
+    }
   </style>
 </head>
 
@@ -22,15 +27,32 @@
     <a href="/about.html">About</a>
   </div>
   <div class="content">
-    <img src="/images/grszh00.png" alt="A picture of a white cat, dubbed Grszh. The cat is on a table in a room in front of some shut blinds. The cat is staring at the camera ominously." class="central-img">
-    <div id='GarfRing'>
-      <script type="text/javascript" src="https://garfring.neocities.org/onionring-variables.js"></script>
-      <script type="text/javascript" src="/js/onionring-widget.js"></script>
+    <div class="banner">
+      <h2>
+        Hey just a heads up: I know stuff is broken right now as I move to a new responsive design, but I gotta go to bed at some point. I'll fix it tomorrow.
+      </h2>
     </div>
-    <footer>
+    <div class="row">
+      <div class="col-4 col-s-2"></div>
+      <div class="col-4 col-s-8">
+        <img src="/images/grszh00.png" alt="A picture of a white cat, dubbed Grszh. The cat is on a table in a room in front of some shut blinds. The cat is staring at the camera ominously.">
+      </div>
+      <div class="col-4 col-s-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-s-12">
+        <div id='GarfRing'>
+          <script type="text/javascript" src="https://garfring.neocities.org/onionring-variables.js"></script>
+          <script type="text/javascript" src="/js/onionring-widget.js"></script>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
       <p id="hostname"></p>
       <p id="mirror-link"></p>
-    </footer>
+    </div>
 
     <script>
       let hostname = window.location.hostname;

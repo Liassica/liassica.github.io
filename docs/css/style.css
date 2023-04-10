@@ -1,144 +1,94 @@
 /*/////////
 //General//
 /////////*/
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #303030;
   font-family: Consolas, monospace;
   color: white;
   margin: 0;
+  padding: 0;
+}
+
+.centered-img {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
 }
 
 a {
   color: white;
 }
 
-footer {
+.header {
+  text-align: center;
+}
+
+.footer {
   font-size: 10pt;
 }
 
 /*///////////////
-//Page-specific//
+//Page Specific//
 ///////////////*/
-.central-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 75vh;
-}
-
-
-
-/*////////
-//Tables//
-////////*/
-table {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 60%;
-}
-
-.content-table th,
-.content-table td {
-  padding: 10px 0px 10px 0px;
-}
-
-.content-table tr:nth-child(even) {
-  background-color: #3f3f3f;
-}
-
 .music-table img {
-  width: 300px;
-  height: 300px;
-}
-
-.image-table img {
-  width: 400px;
-  height: auto;
+  width: auto;
+  max-height: 300px;
 }
 
 /*/////////////
 //Screen Size//
 /////////////*/
-/* To-Do: Make more standard, use min-width
-Minimum: 360 <= x
-Small: 360 < x < 800
-Medium: 800 < x 1280
-Large: 1280 < x
-*/
-@media screen and (max-width: 1500px) {
-  .image-table img {
-    width: 350px;
-    height: auto;
-  }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-@media screen and (max-width: 1300px) {
-  .image-table img {
-    width: 280px;
-    height: auto;
-  }
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  float: left;
+  padding: 15px;
 }
 
-@media screen and (max-width: 1100px) {
-  .image-table img {
-    width: 190px;
-    height: auto;
-  }
+/* For tablets, horizontal phones, and vertical 720p and 768p displays: */
+@media screen and (min-width: 700px) {
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
 }
 
-@media screen and (max-width: 800px) {
-  .central-img {
-    width: 80%;
-    height: auto;
-  }
-
-  table {
-    max-width: 100%;
-  }
-
-  .music-table img {
-    width: 250px;
-    height: 250px;
-  }
-
-  .image-table img {
-    width: 200px;
-    height: auto;
-  }
-  .post-header {
-    text-align: left;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .image-table img {
-    width: 150px;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .central-img {
-    width: 100%;
-    height: auto;
-  }
-
-  .music-table img {
-    width: 130px;
-    height: 130px;
-  }
-
-  .image-table img {
-    width: 110px;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .image-table img {
-    width: 90px;
-    height: auto;
-  }
+/* For desktops: */
+@media screen and (min-width: 1200px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 }
 
 /*/////////
@@ -147,15 +97,17 @@ Large: 1280 < x
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 100%;
   background-color: #191919;
-  position: fixed;
-  height: 100%;
+  position: relative;
+  height: auto;
   overflow: auto;
 }
 
 /* Sidebar links */
 .sidebar a {
+  text-align: center;
+  float: none;
   display: block;
   color: white;
   padding: 16px;
@@ -174,40 +126,39 @@ Large: 1280 < x
   color: white;
 }
 
-/* Parent tab of an active sub-tab */
 .sidebar-parent {
   background-color: #2E00AD;
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-  margin-left: 200px;
+  margin-left: 0;
   padding: 1px 16px;
   height: auto;
-  text-align: center;
 }
 
-/* On screens that are less than 800px wide, make the sidebar into a topbar */
-@media screen and (max-width: 800px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
+@media screen and (min-width: 700px) {
   .sidebar a {
     float: left;
   }
-
-  div.content {
-    margin-left: 0;
-  }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 1200px) {
+
+  /* The side navigation menu */
+  .sidebar {
+    width: 200px;
+    position: fixed;
+    height: 100%;
+  }
+
   .sidebar a {
-    text-align: center;
     float: none;
+    text-align: left;
+  }
+
+  div.content {
+    margin-left: 200px;
   }
 }
 
