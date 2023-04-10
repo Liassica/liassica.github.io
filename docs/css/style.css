@@ -19,7 +19,7 @@ body {
   margin-right: auto;
 }
 
-img {
+img, table {
   max-width: 100%;
 }
 
@@ -33,14 +33,6 @@ a {
 
 .footer {
   font-size: 10pt;
-}
-
-/*///////////////
-//Page Specific//
-///////////////*/
-.music-table img {
-  width: auto;
-  max-height: 300px;
 }
 
 /*/////////////
