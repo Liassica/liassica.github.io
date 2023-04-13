@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Home">
   <style>
-    .content {
+    main {
       text-align:center;
     }
   </style>
@@ -23,7 +23,7 @@
     <a href="/grszh.html">Grszh Gallery</a>
     <a href="/about.html">About</a>
   </div>
-  <div class="content">
+  <main>
     <div class="row">
       <div class="col-4 col-s-2"></div>
       <div class="col-4 col-s-8">
@@ -41,26 +41,26 @@
       </div>
     </div>
     
-    <div class="footer">
+    <footer>
       <p id="hostname"></p>
       <p id="mirror-link"></p>
-    </div>
+    </footer>
 
     <script>
       let hostname = window.location.hostname;
       if (hostname == 'liassica.neocities.org') {
         document.getElementById("hostname").innerHTML = 'You are currently on the NeoCities mirror.'
-        document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.github.io/">GitHub pages mirror.</a>';
+        document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.github.io/">GitHub Pages mirror.</a>';
       } else if (hostname == 'liassica.github.io') {
         document.getElementById("hostname").innerHTML = 'You are currently on the GitHub Pages mirror.'
         document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.neocities.org/">NeoCities mirror.</a>';
       }
       else {
         document.getElementById("hostname").innerHTML = "You are currently on someone else's site."
-        document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.neocities.org/">NeoCities mirror</a> or the <a href="https://liassica.github.io/">GitHub pages mirror.</a>';
+        document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.neocities.org/">NeoCities mirror</a> or the <a href="https://liassica.github.io/">GitHub Pages mirror.</a>';
       }
     </script>
-  </div>
+  </main>
 </body>
 
 </html>

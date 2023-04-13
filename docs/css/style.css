@@ -27,16 +27,22 @@ a {
   color: white;
 }
 
-.header {
+.heading {
   text-align: center;
 }
 
-.footer {
+footer {
   font-size: 10pt;
 }
 
 .footnote {
   text-decoration: none;
+}
+
+.internal-info {
+  text-align: center;
+  font-size: small;
+  color: grey;
 }
 
 /*/////////////
@@ -127,7 +133,7 @@ a {
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
+main {
   margin-left: 0;
   padding: 1px 16px;
   height: auto;
@@ -153,7 +159,7 @@ div.content {
     text-align: left;
   }
 
-  div.content {
+  main {
     margin-left: 200px;
   }
 }
