@@ -1,13 +1,15 @@
 /*/////////
 //General//
 /////////*/
+@import url('https://api.fonts.coollabs.io/css2?family=Inconsolata');
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #303030;
-  font-family: Consolas, monospace;
+  font-family: Inconsolata, monospace;
   color: white;
   margin: 0;
   padding: 0;
@@ -43,6 +45,11 @@ footer {
   text-align: center;
   font-size: small;
   color: grey;
+}
+
+code {
+  background-color: #191919;
+  padding: 2px;
 }
 
 /*/////////////
