@@ -50,6 +50,11 @@ footer {
 code {
   background-color: #191919;
   padding: 2px;
+  white-space: nowrap;
+}
+
+.wrap-code {
+  white-space: normal;
 }
 
 /*/////////////
