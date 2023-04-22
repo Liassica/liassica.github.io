@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>yt-dlp - Liassica's Site</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/grszh_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="yt-dlp guide">
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <!-- One class="active" -->
+    <a href="/index.html">Home</a>
+    <a href="/posts.html" class="sidebar-parent">Guides</a>
+    <a href="/music.html" class="active">yt-dlp</a>
+    <a href="/music.html">Music</a>
+    <a href="/links.html">Links</a>
+    <a href="/grszh.html">Grszh Gallery</a>
+    <a href="/about.html">About</a>
+    <!-- etc -->
+  </div>
+  <main>
+    <h1 class="heading">yt-dlp guide</h1>
+    <p class="internal-info">
+      <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-04-21/2023-04-21/G002
+    </p>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>1. What is yt-dlp? Why should I use it?</h2>
+        <h5><a href="#install">I know what it is--skip to the guide!</a></h5>
+        <p>
+          <a href="https://github.com/yt-dlp/yt-dlp" target="_blank">yt-dlp</a> is a command-line tool for downloading
+          videos and audio from YouTube and other sites. It is an improved version of <a href="https://github.com/ytdl-org/youtube-dl" target="_blank">youtube-dl</a>, with new features and improvements.
+          It's really as simple as that.  
+        </p>
+        <p>
+          The benefit of using yt-dlp over a random downloader site is not only the greater control over the output, but it's also a lot safer to use. You don't ever have to worry about downloading malware.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2 id="install">2. Installing yt-dlp</h2>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-3 col-s-3">
+        <h3>Windows</h3>
+        <h4>
+          winget, chocolatey, or scoop:
+        </h4>
+        <p>
+          <code>winget install yt-dlp</code>
+        </p>
+        <p>
+          <code>choco install yt-dlp</code>
+        </p>
+        <p>
+          <code>scoop install yt-dlp</code>
+        </p>
+      </div>
+      <div class="col-4 col-s-6">
+        <h3>Linux</h3>
+        <h4>apt (Debian/Ubuntu):</h4>
+        <p>
+          <code>
+            sudo add-apt-repository ppa:tomtomtom/yt-dlp <br>
+            sudo apt update <br>
+            sudo apt install yt-dlp
+          </code>
+        </p>
+        <h4>dnf (Fedora):</h4>
+        <p>
+          <code>sudo dnf install yt-dlp</code>
+        </p>
+        <h4>pacman (Arch):</h4>
+        <p>
+          <code>sudo pacman -Syu yt-dlp</code>
+        </p>
+        <h4>Other Linux package managers</h4>
+        <p>
+          See the <a href="https://github.com/yt-dlp/yt-dlp/wiki/Installation" target="_blank">installation page of the yt-dlp wiki</a>.
+        </p>
+      </div>
+      <div class="col-1 col-s-3">
+        <h3>MacOS</h3>
+        <h4>brew:</h4>
+        <p>
+          <code>brew install yt-dlp</code>
+        </p>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h3>Manually (any platform)</h3>
+        <p>
+          Download the binary for your platform (direct links):
+        </p>
+        <ul>
+          <li><a href="https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe">Windows</a></li>
+          <li><a href="https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux">Linux</a></li>
+          <li><a href="https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos">MacOS</a></li>
+          <li><a href="https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp">Other (e.g. BSD, works on Linux too), needs Python</a></li>
+        </ul>
+        <p>
+          Place the downloaded binary into a folder where you want yt&#8209dlp (e.g. <code>C:\Tools\yt-dlp</code> on Windows or <code>~/Tools/yt-dlp</code> on Linux).
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>3. Simple usage</h2>
+        <p>
+          If you downloaded yt-dlp with a package manager, simply open a terminal to whatever folder you want to download into
+          and type <code>yt-dlp [URL]</code>.
+        </p>
+        <p>
+          If you instead downloaded the binary manually, open a terminal to the folder you put the binary into and type <code>./yt-dlp [URL]</code>.
+          Alternatively, you can add the folder to your system's PATH, which will allow you to use it anywhere like with package-manager-installed yt-dlp. 
+          See appendices for doing so on <a href="/guides/appendix#windows-path">Windows</a> and <a href="/guides/appendix#linux-path">Linux/MacOS</a>.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>4. Installing FFmpeg</h2>
+        <p>
+          Many of yt-dlp's advanced options require <a href="https://en.wikipedia.org/wiki/FFmpeg" target="_blank">FFmpeg</a> to be installed as well.
+          FFmpeg can be used for a variety of audio-related processing on its own, but it can be used with yt-dlp to allow the download and remuxing of audio
+          in different formats.
+        </p>
+        <p>
+          FFmpeg can be installed much the same way as yt-dlp, via command line or manually.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-3 col-s-3">
+        <h3>Windows</h3>
+        <h4>
+          winget or chocolatey, or scoop:
+        </h4>
+        <p>
+          <code>winget install ffmpeg</code>
+        </p>
+        <p>
+          <code>choco install ffmpeg</code>
+        </p>
+        <p>
+          <code>scoop install ffmpeg</code>
+        </p>
+      </div>
+      <div class="col-5 col-s-6">
+        <h3>Linux</h3>
+        <h4>apt (Debian/Ubuntu):</h4>
+        <p>
+          <code>
+            sudo apt update <br>
+            sudo apt install ffmpeg
+          </code>
+        </p>
+        <h4>dnf (Fedora):</h4>
+        <p>
+          First enable RPM Fusion repositories (this is one long command):
+        </p>
+        <p>
+          <code class="wrap-code">sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</code>
+        </p>
+        <p>
+          Then run:
+          <code>sudo dnf install ffmpeg</code>
+        </p>
+        <h4>Other Linux distros:</h4>
+        <p>
+          Download manually.
+        </p>
+      </div>
+      <div class="col-2 col-s-3">
+        <h3>MacOS</h3>
+        <h4>brew:</h4>
+        <p>
+          <code>brew install ffmpeg</code>
+        </p>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h3>Manually (Windows, Linux, MacOS)</h3>
+        <p>
+          Download the binary for your platform (direct links):
+        </p>
+        <ul>
+          <li><a href="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip">Windows</a></li>
+          <li><a href="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz">Linux</a></li>
+          <li><a href="https://evermeet.cx/ffmpeg/">MacOS</a> (separate downloads for ffmpeg, ffplay, and ffprobe)</li>
+        </ul>
+        <p>
+          Navigate to <code>[extracted ffmpeg folder]/bin</code> and copy the three binaries (<code>ffmpeg</code>, <code>ffplay</code>, and <code>ffprobe</code>) into the same folder as your yt-dlp install.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>5. Advanced usage</h2>
+        <p>
+          yt-dlp allows many options to be used in order to more finely direct its output. The standard syntax is <code>yt-dlp [OPTIONS] [URL]</code>.
+          The full list of options can be found <a href="https://github.com/yt-dlp/yt-dlp#usage-and-options" target="_blank">on the README for yt-dlp</a>.
+        </p>
+        <p>
+          Common options include: 
+          <ul>
+            <li>
+              <code>-h</code> - shows the help text
+            </li>
+            <li>
+              <code>-f</code> - change the output format
+              <ul>
+                <li>
+                  <code>yt-dlp -f mp4 [URL]</code> will download the video as mp4
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>-x</code> - download audio only
+              <ul>
+                <li>
+                  <code>yt-dlp -f mp3 -x [URL]</code> will download audio as mp3
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>-o</code> - change the output template (file name) 
+              <ul>
+                <li>
+                  <code class="wrap-code">yt-dlp -f mkv -o "video2.%(ext)s" [URL]</code> will download the video as <code>video2.mkv</code>. <code>%(ext)s</code>
+                  is Python printf syntax for a variable (<code>%</code>) called <code>ext</code> (the extension, in this case mkv) as a string (<code>s</code>).
+                  Use this over hardcoding the extension (e.g. <code>-o "video2.mkv"</code>). Read the <a href="https://github.com/yt-dlp/yt-dlp#output-template" target="_blank">full output template documentation here</a>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+  </main>
+</body>
+
+</html>

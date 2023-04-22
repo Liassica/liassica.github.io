@@ -57,6 +57,11 @@ code {
   white-space: normal;
 }
 
+.flex-col-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 /*/////////////
 //Screen Size//
 /////////////*/
