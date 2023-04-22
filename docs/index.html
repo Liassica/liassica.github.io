@@ -42,22 +42,26 @@
     </div>
     
     <footer>
-      <p id="hostname"></p>
-      <p id="mirror-link"></p>
+      <p>
+        You are currently on <span id="hostname"></span>.
+      </p>
+      <p>
+        Click to go to the <span id="mirror-link"></span>.
+      </p>
     </footer>
 
     <script>
       let hostname = window.location.hostname;
       if (hostname == 'liassica.neocities.org') {
-        document.getElementById("hostname").innerHTML = 'You are currently on the NeoCities mirror.'
-        document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.github.io/">GitHub Pages mirror.</a>';
+        document.getElementById("hostname").innerHTML = 'the NeoCities mirror'
+        document.getElementById("mirror-link").innerHTML = '<a href="https://liassica.github.io/">GitHub Pages mirror</a>';
       } else if (hostname == 'liassica.github.io') {
-        document.getElementById("hostname").innerHTML = 'You are currently on the GitHub Pages mirror.'
-        document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.neocities.org/">NeoCities mirror.</a>';
+        document.getElementById("hostname").innerHTML = 'the GitHub Pages mirror'
+        document.getElementById("mirror-link").innerHTML = '<a href="https://liassica.neocities.org/">NeoCities mirror</a>';
       }
       else {
-        document.getElementById("hostname").innerHTML = "You are currently on someone else's site."
-        document.getElementById("mirror-link").innerHTML = 'Click to go to the <a href="https://liassica.neocities.org/">NeoCities mirror</a> or the <a href="https://liassica.github.io/">GitHub Pages mirror.</a>';
+        document.getElementById("hostname").innerHTML = "someone else's site"
+        document.getElementById("mirror-link").innerHTML = '<a href="https://liassica.neocities.org/">NeoCities mirror</a> or the <a href="https://liassica.github.io/">GitHub Pages mirror</a>';
       }
     </script>
   </main>
