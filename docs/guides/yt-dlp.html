@@ -27,7 +27,7 @@
   <main>
     <h1 class="heading">yt-dlp guide</h1>
     <p class="internal-info">
-      <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-04-21/2023-04-21/G002
+      <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-04-21/2023-04-23/G002
     </p>
     <div class="row">
       <div class="col-3 col-s-1"></div>
@@ -235,7 +235,7 @@
               <code>-h</code> - shows the help text
             </li>
             <li>
-              <code>-f</code> - change the output format
+              <code>-f</code> - change the output format. Sometimes <code>-f</code> won't work when trying to convert audio; try <code>--audio-format</code> in that case.
               <ul>
                 <li>
                   <code>yt-dlp -f mp4 [URL]</code> will download the video as mp4
@@ -246,7 +246,7 @@
               <code>-x</code> - download audio only
               <ul>
                 <li>
-                  <code>yt-dlp -f mp3 -x [URL]</code> will download audio as mp3
+                  <code>yt-dlp --audio-format mp3 -x [URL]</code> will download audio as mp3
                 </li>
               </ul>
             </li>
