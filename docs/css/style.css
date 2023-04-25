@@ -22,7 +22,7 @@ body {
 }
 
 img, table {
-  max-width: 100%;
+  width: 100%;
 }
 
 a {
@@ -60,6 +60,16 @@ code {
 .flex-col-reverse {
   display: flex;
   flex-direction: column-reverse;
+}
+
+.s-hid {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  .s-hid {
+    display: initial;
+  }
 }
 
 /*/////////////
