@@ -145,7 +145,7 @@ code {
 
 /* Active/current link */
 .sidebar a.active {
-  background-color: #4800FF;
+  background-color: #6b0080;
   color: white;
 }
 
