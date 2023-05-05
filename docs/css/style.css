@@ -41,6 +41,14 @@ footer {
   text-decoration: none;
 }
 
+.notelist {
+  list-style: lower-latin;
+}
+
+.reflist {
+  list-style: decimal;
+}
+
 .internal-info {
   text-align: center;
   font-size: small;
