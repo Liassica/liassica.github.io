@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Neocities GitHub - Liassica's Site</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/grszh_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Neocities GitHub">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <a href="/index.html">Home</a>
+    <a href="/posts.html" class="sidebar-parent">Posts & Guides</a>
+    <a href="/guides/neocities-github.html" class="active">Neocities GitHub</a>
+    <a href="/music.html">Music</a>
+    <a href="/links.html">Links</a>
+    <a href="/grszh.html">Grszh Gallery</a>
+    <a href="/about.html">About</a>
+  </div>
+  <main>
+    <h1 class="heading">Deploying to Neocities from GitHub Guide</h1>
+    <p class="internal-info">
+        <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-05-05/2023-05-05/G003
+    </p>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>1. Why would I want to deploy to Neocities from GitHub?</h2>
+        <p>
+          Deploying to Neocities from GitHub allows you to take advantage of git and GitHub's features while keeping your site hosted on Neocities.
+          Doing this also makes it very easy to create a mirror of your Neocities page on GitHub Pages (such as I did). It also means that you can use an
+          external editor, such as Visual Studio Code or VSCodium, instead of the clunky Neocities web editor.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>2. Setting up a GitHub repository</h2>
+        <p>
+          This guide will assume that you already know how to use git and GitHub. 
+        </p>
+        <p>First, make a new repository on GitHub. If you plan on mirroring your site on GitHub Pages, name it <code>[GitHub username].github.io</code>
+          (e.g. mine is <code>liassica.github.io</code>) and make it public, otherwise call it whatever you like (such as 'neocities-site', etc.). 
+          Once you have it created, clone it to a local repository.
+        </p>
+        <p>
+          Next, download your Neocities site. This can be done from the Neocities dashboard by clicking 'Download entire site' below your files. Unzip the archive
+          into a folder in your repository. If you plan to mirror on GitHub pages, call this folder <code>docs</code>, otherwise name it whatever you like
+          (e.g. <code>site</code>, <code>public</code>, etc.). The reason why we do this is because Neocities has a limited number of allowed filetypes, and deploying
+          to Neocities from the root folder of the repository can break things. 
+        </p>
+        <img src="/images/neocities-github/download_neocities.png">
+        <p>
+          After that, create a folder in the root of your repository called <code>.github</code>. In that folder, create another folder called <code>workflows</code>.
+          Now you should have in your root folder something like <code>/.github/workflows</code> and <code>/docs</code>. Next is the actual workflow file. Download
+          <a href="https://github.com/Liassica/liassica.github.io/releases/download/v1.0.0/ci.yml" target="_blank">this file</a> from my repository and place it in your
+          workflows folder. If you named your site folder something other than <code>docs</code>, open this file and change the line <code>dist_dir</code> to match the name
+          of your folder (e.g. <code>dist_dir: site</code>, etc.).
+        </p>
+        <img src="/images/neocities-github/repo.png">
+        <img src="/images/neocities-github/workflow.png">
+        <p>
+          Next, we need to add a Neocities API key as a secret to the repository. Navigate to <code class="wrap-code">https://neocities.org/settings/[neocities username]#api_key</code>. This
+          will show your API key. On your GitHub repository, go to Settings > Secrets and variables > Actions > New repository secret. Name the secret <code>NEOCITIES_API_KEY</code>
+          and paste the key you got from Neocities as the value. Be very careful with this API key, as it allows anyone or anything with access to it to change anything on your site.
+        </p>
+        <p>
+          Now all that's left is to push to your GitHub repository. Whenever you make a change to the main branch of your repository, it'll deploy it to Neocities without any user input.
+          A small note however, files you delete from the repository will have to be manually deleted from your Neocities site's files.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>3. (Optional) GitHub Pages mirroring</h2>
+        <p>
+          There are a few extra steps needed to be able to mirror your Neocities site on GitHub Pages. First, make sure your repository is named <code>[GitHub username].github.io</code>. 
+          Then, make sure your site folder is called <code>docs</code>. This is because GitHub Pages can only be deployed from either the root folder or a <code>/docs</code> folder. 
+          You may also want to add a <code>.gitattributes</code> file to tell GitHub to not ignore code statistics on the <code>/docs</code> like it does by default. To do so, create
+          a file called <code>.gitattributes</code> in your root directory and add the line <code>docs/* linguist-documentation=false</code> to it. Finally, set up deploying to GitHub
+          Pages from your GitHub repository by going to Settings > Pages. Set the deploying branch to <code>main</code> and the deploying folder to <code>/docs</code>. Now every time
+          you push to your repository, it'll automatically build and deploy your GitHub Pages mirror.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+  </main>
+</body>
+
+</html>
