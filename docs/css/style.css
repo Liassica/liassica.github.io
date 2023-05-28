@@ -131,7 +131,7 @@ code {
 /*/////////
 //Sidebar// 
 /////////*/
-.sidebar {
+nav {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -142,7 +142,7 @@ code {
 }
 
 /* Sidebar links */
-.sidebar a {
+nav a {
   text-align: center;
   float: none;
   display: block;
@@ -152,13 +152,13 @@ code {
 }
 
 /* Active/current link */
-.sidebar a.active {
+nav a.active {
   background-color: #6b0080;
   color: white;
 }
 
 /* Links on mouse-over */
-.sidebar a:hover:not(.active) {
+nav a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
@@ -175,7 +175,7 @@ main {
 }
 
 @media screen and (min-width: 700px) {
-  .sidebar a {
+  nav a {
     float: left;
   }
 }
@@ -183,13 +183,13 @@ main {
 @media screen and (min-width: 1200px) {
 
   /* The side navigation menu */
-  .sidebar {
+  nav {
     width: 200px;
     position: fixed;
     height: 100%;
   }
 
-  .sidebar a {
+  nav a {
     float: none;
     text-align: left;
   }
