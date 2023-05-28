@@ -38,6 +38,24 @@
         <div id='GarfRing'>
           <script type="text/javascript" src="https://garfring.neocities.org/onionring-variables.js"></script>
           <script type="text/javascript" src="/js/onionring-widget.js"></script>
+          <noscript>
+            <table>
+              <tr>
+                <td class='webring-prev'>
+                  <a href="https://r-temisia.neocities.org/">&lt;--</a>
+                </td>
+                <td class='webring-info'>This site is part of the Garfield Ring
+                  <br />
+                  <span class='webring-links'>
+                    <a href="https://garfring.neocities.org/">index</a>
+                  </span>
+                </td>
+                <td class='webring-next'>
+                  <a href="https://anti-kythera.neocities.org/">--&gt;</a>
+                </td>
+              </tr>
+            </table>
+          </noscript>
         </div>
       </div>
       <div class="col-4 col-s-2"></div>
@@ -45,10 +63,10 @@
     
     <footer>
       <p>
-        You are currently on <span id="hostname"></span>.
+        You are currently on <span id="hostname"><noscript>my site</noscript></span>.
       </p>
       <p>
-        Click to go to the <span id="mirror-link"></span>.
+        Click to go to the <span id="mirror-link"><noscript><a href="https://liassica.neocities.org/">NeoCities mirror</a> or the <a href="https://liassica.github.io/">GitHub Pages mirror</a></noscript></span>.
       </p>
     </footer>
 
@@ -60,8 +78,7 @@
       } else if (hostname == 'liassica.github.io') {
         document.getElementById("hostname").innerHTML = 'the GitHub Pages mirror'
         document.getElementById("mirror-link").innerHTML = '<a href="https://liassica.neocities.org/">NeoCities mirror</a>';
-      }
-      else {
+      } else {
         document.getElementById("hostname").innerHTML = "someone else's site"
         document.getElementById("mirror-link").innerHTML = '<a href="https://liassica.neocities.org/">NeoCities mirror</a> or the <a href="https://liassica.github.io/">GitHub Pages mirror</a>';
       }
