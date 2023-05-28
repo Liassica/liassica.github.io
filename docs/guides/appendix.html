@@ -9,7 +9,7 @@
   <meta name="description" content="Guides Appendix">
   <style>
     .internal-info {
-        text-align: left;
+      text-align: left;
     }
   </style>
 </head>
@@ -27,55 +27,64 @@
   <main>
     <h1 class="heading">Guides appendix</h1>
     <article>
-        <div class="row">
-            <div class="col-3 col-s-1"></div>
-            <div class="col-6 col-s-10">
-                <h2 id="windows-path">Modifying the PATH on Windows</h2>
-                <p class="internal-info">
-                    <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-04-21/2023-05-02/A001
-                </p>
-                <p>
-                    To modify the PATH on Windows:
-                </p>
-                <ul>
-                    <li>Open the Windows search and search for "path"</li> 
-                    <li>Click on "Edit the system environment variables"</li>
-                    <li>This will open a system properties dialogue box; click "Environment Variables" in the bottom right</li>
-                    <li>In either the user variables or system variables sections of the next dialogue box, find "Path", select it, and hit edit</li>
-                    <li>In the subsequent box, click "New" and then "Browse" and then navigate to the folder you want to add to the PATH</li>
-                    <li>Hit "OK" on each box until you close the system properties</li>
-                </ul>
-            </div>
-            <div class="col-3 col-s-1"></div>
+      <div class="row">
+        <div class="col-3 col-s-1"></div>
+        <div class="col-6 col-s-10">
+          <h2 id="windows-path">Modifying the PATH on Windows</h2>
+          <p class="internal-info">
+            <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-04-21/2023-05-02/A001
+          </p>
+          <p>
+            To modify the PATH on Windows:
+          </p>
+          <ul>
+            <li>Open the Windows search and search for "path"</li>
+            <li>Click on "Edit the system environment variables"</li>
+            <li>This will open a system properties dialogue box; click "Environment Variables" in the bottom right</li>
+            <li>In either the user variables or system variables sections of the next dialogue box, find "Path", select
+              it, and hit edit</li>
+            <li>In the subsequent box, click "New" and then "Browse" and then navigate to the folder you want to add to
+              the PATH</li>
+            <li>Hit "OK" on each box until you close the system properties</li>
+          </ul>
         </div>
+        <div class="col-3 col-s-1"></div>
+      </div>
     </article>
     <article>
-        <div class="row">
-            <div class="col-3 col-s-1"></div>
-            <div class="col-6 col-s-10">
-                <h2 id="linux-path">Modifying the PATH on Linux/MacOS</h2>
-                <p class="internal-info">
-                    <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-04-21/2023-04-21/A002
-                </p>
-                <p>
-                    To modify the PATH on Linux or MacOS:
-                </p>
-                <ul>
-                    <li>Open a terminal and navigate to your home directory if you're not there already: <code>cd ~</code></li>
-                    <li>Open the <code>.bashrc</code> or <code>.bash_profile</code> file (or your shell's eqivalent, such as <code>.zshrc</code> or <code>.zsh_profile</code> for z shell) in nano: <code>nano .bashrc</code></li>
-                    <li>
-                        Add this line: <code>export PATH=$PATH:/path/to/directory</code> with the path(s) to the desired directory(s), colon-separated
-                        <ul>
-                            <li>For example, to add the <code>~/Programs/syncthing</code> directory to the path, the line should be <code class="wrap-code">export PATH=$PATH:/home/[USER]/Programs/syncthing</code></li>
-                            <li>To add the <code>~/Programs/yt-dlp</code> and <code>~/Tools/FFmpeg</code> directories to the path, the line should be <code class="wrap-code">export PATH=$PATH:/home/[USER]/Programs/yt-dlp:/home/[USER]/Tools/FFmpeg</code></li>
-                        </ul>
-                    </li>
-                    <li>Once your desired PATH is specified, hit <code>ctrl+O</code> to save the file, press enter to use the default file name, and then press <code>ctrl+X</code> to exit nano</li>
-                    <li>Restart the terminal or type <code>source ~/.bashrc</code> (or whichever file you edited)</li>
-                </ul>
-            </div>
-            <div class="col-3 col-s-1"></div>
+      <div class="row">
+        <div class="col-3 col-s-1"></div>
+        <div class="col-6 col-s-10">
+          <h2 id="linux-path">Modifying the PATH on Linux/MacOS</h2>
+          <p class="internal-info">
+            <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-04-21/2023-04-21/A002
+          </p>
+          <p>
+            To modify the PATH on Linux or MacOS:
+          </p>
+          <ul>
+            <li>Open a terminal and navigate to your home directory if you're not there already: <code>cd ~</code></li>
+            <li>Open the <code>.bashrc</code> or <code>.bash_profile</code> file (or your shell's eqivalent, such as
+              <code>.zshrc</code> or <code>.zsh_profile</code> for z shell) in nano: <code>nano .bashrc</code></li>
+            <li>
+              Add this line: <code>export PATH=$PATH:/path/to/directory</code> with the path(s) to the desired
+              directory(s), colon-separated
+              <ul>
+                <li>For example, to add the <code>~/Programs/syncthing</code> directory to the path, the line should be
+                  <code class="wrap-code">export PATH=$PATH:/home/[USER]/Programs/syncthing</code></li>
+                <li>To add the <code>~/Programs/yt-dlp</code> and <code>~/Tools/FFmpeg</code> directories to the path,
+                  the line should be <code
+                    class="wrap-code">export PATH=$PATH:/home/[USER]/Programs/yt-dlp:/home/[USER]/Tools/FFmpeg</code>
+                </li>
+              </ul>
+            </li>
+            <li>Once your desired PATH is specified, hit <code>ctrl+O</code> to save the file, press enter to use the
+              default file name, and then press <code>ctrl+X</code> to exit nano</li>
+            <li>Restart the terminal or type <code>source ~/.bashrc</code> (or whichever file you edited)</li>
+          </ul>
         </div>
+        <div class="col-3 col-s-1"></div>
+      </div>
     </article>
   </main>
 </body>
