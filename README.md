@@ -28,6 +28,8 @@ Except where noted, the content of the site (prose, text, images, etc.) is licen
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
-The code used to format and display it (HTML, CSS, and JavaScript, etc.) is licensed under the [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html).
+Except where noted, the code used to format and display it (HTML, CSS, and JavaScript, etc.) is licensed under the [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html) or later.
 
 [![GNU GPL License](https://www.gnu.org/graphics/gplv3-88x31.png)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+
+[Onionring.js](https://garlic.garden/onionring/) by [Allium House](https://allium.house/) is licensed under the [Cooperative Non-violent License Version 4 and Above](https://thufie.lain.haus/files/CNPLv7.html).
