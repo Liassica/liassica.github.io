@@ -93,7 +93,7 @@ code {
 [class*="col-"] {
   width: 100%;
   float: left;
-  padding: 10px;
+  padding: 0px;
 }
 
 /* For tablets, horizontal phones, and vertical 720p and 768p displays: */
