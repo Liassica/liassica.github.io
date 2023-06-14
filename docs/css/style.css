@@ -61,6 +61,11 @@ code {
   white-space: nowrap;
 }
 
+.album {
+  text-align: center;
+  font-size: large;
+}
+
 .wrap-code {
   white-space: normal;
 }
