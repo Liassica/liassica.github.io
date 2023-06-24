@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>GPlates on Fedora - Liassica's Site</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/grszh_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GPlates on Fedora">
+  <style>
+    tr {
+      vertical-align: top;
+    }
+    th, td {
+      padding: 5px;
+    }
+    @media screen and (min-width: 700px){
+      th, td {
+        padding: 10px;
+      }
+    }
+    table tr:nth-child(even){
+      background-color: #3F3F3F;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/posts.html" class="sidebar-parent">Guides</a>
+    <a href="/posts/gplates-fedora.html" class="active">GPlates on Fedora</a>
+    <a href="/music.html">Music</a>
+    <a href="/links.html">Links</a>
+    <a href="/grszh.html">Grszh Gallery</a>
+    <a href="/about.html">About</a>
+  </nav>
+  <main>
+    <h1 class="heading">How to run GPlates on Fedora Linux</h1>
+    <p class="internal-info">
+      <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-06-21/2023-06-24/G004
+    </p>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>1. What is GPlates?</h2>
+        <p>
+          <a href="https://www.gplates.org/" target="_blank">GPlates</a> is a FLOSS program for modeling the tectonic history of a planet. In scientific contexts, this is usually
+          Earth; however, many in the worldbuilding community (such as <a href="https://yewtu.be/channel/UCeh-pJYRZTBJDXMNZeWSUVA" target="_blank">Artifexian</a>) also use it for fictional planets.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>2. Background</h2>
+        <p>
+          GPlates has pre-compiled binaries for Windows, MacOS, and Ubunutu. However, it does not have a native RPM package or distro-independent package
+          (e.g. Flatpak or AppImage), so if you intend to use it on Fedora you will have to compile it from source.
+        </p>
+        <p>
+          As of Fedora 38, compiling fails on the most recent stable version of GPlates,<sup><a href="#cite-1" id="ref-1" class="footnote">[1]</a></sup> 
+          however the 2.3.1 beta 5 will compile as expected.<sup><a href="#cite-2" id="ref-2" class="footnote">[2]</a></sup>
+          <a href="https://cloudstor.aarnet.edu.au/plus/s/ojsYNOyUYE3evNp/download?path=%2F&amp;files=gplates_2.3.1-beta.5_src.zip" target="_blank" download="gplates_2.3.1-beta.5_src.zip">
+            Download the 2.3.1 beta 5 source code from here</a>. Extract to wherever you like (e.g. <code>~/src/gplates_2.3.1-beta.5_src</code>).
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>3. Dependencies</h2>
+        <p>Next, open <code>DEPS.Linux</code>. This shows a list of dependencies. Scroll to the part with the Ubuntu package names:</p>
+        <figure>
+          <img src="/images/gplates/deps.webp">
+          <figcaption>GPlates Ubuntu dependencies</figcaption>
+        </figure>
+        <blockquote cite="GPlates 2.3.1-beta.5 Source Code Linux Dependencies File">
+          <table>
+            <thead>
+              <tr>
+                <th>Program/library</th>
+                <th>Corresponding Ubuntu packages</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>cmake</td>
+                <td>cmake</td>
+              </tr>
+              <tr>
+                <td>g++</td>
+                <td>g++</td>
+              </tr>
+              <tr>
+                <td>GL</td>
+                <td>See note below.</td>
+              </tr>
+              <tr>
+                <td>GLU</td>
+                <td>See note below.</td>
+              </tr>
+              <tr>
+                <td>GLEW</td>
+                <td>libglew-dev</td>
+              </tr>
+              <tr>
+                <td>Python</td>
+                <td>python3-dev python3-numpy</td>
+              </tr>
+              <tr>
+                <td>Boost</td>
+                <td>libboost-dev libboost-python-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev
+                  libboost-system-dev (See note below regarding Xenial 16.04 and libboost-python-dev)</td>
+              </tr>
+              <tr>
+                <td>Qt</td>
+                <td>qt5-default libqt5opengl5-dev libqt5svg5-dev libqt5xmlpatterns5-dev (starting with Hirsute 21.04 you
+                  should
+                  exclude qt5-default).</td>
+              </tr>
+              <tr>
+                <td>GDAL</td>
+                <td>libgdal-dev (or libgdal1-dev for GDAL1 on older systems)</td>
+              </tr>
+              <tr>
+                <td>CGAL</td>
+                <td>libcgal-dev (may also need libcgal-qt5-dev on Xenial 16.04 due to bug in CGAL cmake)</td>
+              </tr>
+              <tr>
+                <td>PROJ.4</td>
+                <td>libproj-dev</td>
+              </tr>
+              <tr>
+                <td>Qwt</td>
+                <td>libqwt-qt5-dev</td>
+              </tr>
+              <tr>
+                <td>zlib</td>
+                <td>zlib1g-dev</td>
+              </tr>
+              <tr>
+                <td>Extras</td>
+                <td>libxrender-dev libice-dev libsm-dev libfreetype6-dev libfontconfig1-dev (Ubuntu 14.04 Trusty Tahr and
+                  above)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </blockquote>
+        <p>
+          -- <cite>GPlates 2.3.1-beta.5 Source Code Linux Dependencies File</cite>
+        </p>
+        <p>
+          Most of these will have similar names on Fedora, the main exceptions being many will not have
+          <code>lib</code> in the name and they'll have <code>-devel</code> instead of <code>-dev</code>. I recommend using 
+          <a href="https://github.com/manatools/dnfdragora">dnfdragora</a> to search for the packages and install them
+          that way (dnfdragora is included with Fedora KDE).
+        </p>
+        <p>
+          If you prefer one command to install all the dependencies, this should do the trick:
+        </p>
+        <p>
+          <code class="wrap-code">sudo dnf install cmake g++ mesa-libGL-devel mesa-libGLU-devel libGLEW glew-devel python3-devel python3-numpy boost-devel qt qt5-qtbase-devel gdal-devel gdal-libs CGAL-devel proj-devel qwt-qt5-devel zlib-devel libXrender-devel libICE-devel libSM-devel freetype-devel fontconfig-devel</code>
+        </p>
+        <p>
+          Many of these are included by default in Fedora. If you get an error during compilation, try rechecking the
+          dependencies list in case you (or I) missed something.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>4. Compiling</h2>
+        <p>
+          (These instructions can also be found in the <code>BUILD.Linux</code> file in the source code folder)
+        </p>
+        <p>
+          Open the folder with the GPlates source code and open a terminal there. Fedora stores Qwt in an odd spot, so
+          you have to tell cmake where it is. Enter the command <code>cmake . -DQWT_INCLUDE_DIR=/usr/include/qt5/qwt</code>.
+          Once that has finished, run <code>make</code>. Compiling GPlates takes about 2 hours. Once its done, run
+          <code>sudo make install</code> to add GPlates to the system binaries.
+        </p>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <h2>5. Running GPlates</h2>
+        <p>
+          GPlates does not support Wayland yet, so we have to tell it to run through X11. In your <code>~/.bashrc</code>
+          file, add the line <code>alias gplates='QT_QPA_PLATFORM=xcb gplates'</code>. Save the file and run
+          <code>source ~/.bashrc</code> to reload the shell config. Finally, run <code>gplates</code> from the terminal.
+          GPlates should launch and be fully functional.
+        </p>
+        <figure>
+          <img src="/images/gplates/gplates.webp">
+          <figcaption>GPlates running on Fedora Linux 38 KDE</figcaption>
+        </figure>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-1"></div>
+      <div class="col-6 col-s-10">
+        <footer>
+          <ol class="reflist">
+            <li>
+              <p id="cite-1">
+                <a href="#ref-1" class="footnote">^</a> <a href="https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452" target="_blank">"Compilation error with boost 1.77"</a>. 
+                <cite>GPlates Community Forum</cite>, <time datetime="2021-12-20T22:43Z">2021-12-20</time>. Retrieved <time datetime="2023-06-24">2023-06-24</time>
+              </p>
+            </li>
+            <li>
+              <p id="cite-2">
+                <a href="#ref-2" class="footnote">^</a> <a href="https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/12" target="_blank">"---"</a>. 
+                <cite>GPlates Community Forum</cite>, <time datetime="2022-11-15T09:37Z">2022-11-15</time>. Retrieved <time datetime="2023-06-24">2023-06-24</time>
+              </p>
+            </li>
+          </ol>
+        </footer>
+      </div>
+      <div class="col-3 col-s-1"></div>
+    </div>
+  </main>
+</body>
+
+</html>
