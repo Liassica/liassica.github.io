@@ -181,7 +181,7 @@
         </p>
         <p>
           Open the folder with the GPlates source code and open a terminal there. Fedora stores Qwt in an odd spot, so
-          you have to tell cmake where it is. Enter the command <code>cmake . -DQWT_INCLUDE_DIR=/usr/include/qt5/qwt</code>.
+          you have to tell cmake where it is.<sup><a href="#cite-3" id="ref-3" class="footnote">[3]</a></sup> Enter the command <code>cmake . -DQWT_INCLUDE_DIR=/usr/include/qt5/qwt</code>.
           Once that has finished, run <code>make</code>. Compiling GPlates takes about 2 hours. Once its done, run
           <code>sudo make install</code> to add GPlates to the system binaries.
         </p>
@@ -220,6 +220,12 @@
               <p id="cite-2">
                 <a href="#ref-2" class="footnote">^</a> <a href="https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/12" target="_blank">"---"</a>. 
                 <cite>GPlates Community Forum</cite>, <time datetime="2022-11-15T09:37Z">2022-11-15</time>. Retrieved <time datetime="2023-06-24">2023-06-24</time>
+              </p>
+            </li>
+            <li>
+              <p id="cite-3">
+                <a href="#ref-3" class="footnote">^</a> <a href="https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues/1663" target="_blank">"QWT_INCLUDE_DIR is not automatically found on Fedora 27"</a>. 
+                <cite>GitLab</cite>, <time datetime="2018-07-05T16:01Z">2022-11-15</time>. Retrieved <time datetime="2023-06-24">2023-06-24</time>
               </p>
             </li>
           </ol>
