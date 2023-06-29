@@ -25,7 +25,7 @@
   <main>
     <h1 class="heading">Arkenfox (hardened Firefox) Guide</h1>
     <p class="internal-info">
-      <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-04-10/2023-05-02/G001
+      <abbr title="Created/Updated/Identification">C/U/ID</abbr>: 2023-04-10/2023-06-28/G001
     </p>
     <div class="row">
       <div class="col-3 col-s-1"></div>
@@ -55,20 +55,26 @@
         <p>
           To install Arkenfox, first install Firefox:
         </p>
-        <ol>
-          <li>
-            Go to <a target="_blank" href="https://www.mozilla.org/en-US/firefox/download/thanks/">this link</a>. The
-            download should begin automatically.
-          </li>
-          <li>
-            Once the installer is done downloading, open it and Firefox will install on your computer. Open Firefox when
-            done, if it doesn't start automatically.
-          </li>
-          <li>
-            Firefox will show a pop-up about importing bookmarks and other setup things. Click through these, they won't
-            matter because you'll be making a new profile.
-          </li>
-        </ol>
+        <p>
+          On Windows, you can either install Firefox with winget: <code>winget install Mozilla.Firefox</code> or manually. 
+        </p>
+        <p>
+          To install Firefox manually on Windows, go to <a target="_blank" href="https://www.mozilla.org/en-US/firefox/download/thanks/">this link</a>. The
+          download should begin automatically. Once the installer is done downloading, open it and Firefox will install on your computer. Open Firefox when
+          done, if it doesn't start automatically.
+        </p>
+        <br>
+        <p>
+          On Linux, it's near-certain your distribution has a package called <code>firefox</code>, which you can get from your preferred software center or via 
+          <abbr title="Command Line Interface">CLI</abbr>. Otherwise, you can install Firefox as a Flatpak on any distro, which you can 
+          <a href="https://flathub.org/apps/org.mozilla.firefox" target="_blank">download from Flathub</a>, your preferred software center, or run 
+          <code>flatpak install org.mozilla.firefox</code>. Once you've installed it, launch it.
+        </p>
+        <br>
+        <p>
+          Firefox will show a pop-up about importing bookmarks and other setup things. Click through these, they won't
+          matter because you'll be making a new profile.
+        </p>
       </div>
       <div class="col-3 col-s-1"></div>
     </div>
@@ -112,9 +118,7 @@
             Folder' button. Keep the folder that opens open during the next steps.
           </li>
           <li>
-            Go to the <a target="_blank" href="https://github.com/arkenfox/user.js/releases/latest">Arkenfox user.js
-              download page</a> and download either 'Source code (zip)' if you're on Windows or
-            'Source code (tar.gz)' if you're on Linux.
+            Go to the <a target="_blank" href="https://github.com/arkenfox/user.js/releases/latest">Arkenfox user.js download page</a> and download 'Source code (zip)'.
           </li>
           <li>
             Extract the downloaded file. You should see a variety of files. If you're on Windows, copy
@@ -133,7 +137,7 @@
             the one you want, extract it, and copy user-overrides.js into your profile folder.
           </li>
           <li>
-            Once you've copied all of the files over, <b>exit Firefox</b> (control + shift + q).
+            Once you've copied all of the files over, <b>exit Firefox</b> (<code>ctrl + shift + q</code> on Windows, <code>ctrl + q</code> on Linux).
           </li>
         </ol>
       </div>
@@ -154,18 +158,18 @@
             Run updater.bat or updater.sh from your profile folder.
           </li>
           <li>
-            Type 'S' to start the updater. It should only take a few seconds.
+            Follow the on-screen commands to run the updater. It should only take a few seconds.
           </li>
           <li>
             If you get a prompt asking to run the prefsCleaner, type 'Y'. This will open the prefsCleaner, which makes
             sure that old preferences get removed and new preferences are properly updated.
           </li>
           <li>
-            Type 'S' to run the prefsCleaner. If you get a prompt saying "Firefox is still running", make sure to exit
+            Follow the on-screen commands to run prefsCleaner. If you get a prompt saying "Firefox is still running", make sure to exit
             Firefox, not just close it. Once you've exited Firefox, hit any key to continue.
           </li>
           <li>
-            PrefsCleaner should close, and then you're done! Your newly hardened Firefox should be ready to use next
+            PrefsCleaner should close, and then you're done. Your newly hardened Firefox should be ready to use next
             time you launch it.
           </li>
         </ol>
@@ -179,22 +183,15 @@
       <div class="col-6 col-s-10">
         <h2>3. Closing thoughts</h2>
         <p>
-          Further customization of Firefox is possible with extensions. The one extension I explicitely recommend is <a
-            target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>.
-          It is a powerful (even out of the box) content blocker that blocks ads, malicious domains and scripts,
-          trackers, pop-ups, etc. Using it will vastly improve both privacy and security (as well as performance).
-          From there, extensions are up to you, though do keep in mind that the more extensions you have, the more
-          vulnerable your browser is. Read through the
-          <a href="https://github.com/arkenfox/user.js/wiki/4.1-Extensions" target="_blank">extensions section of the
-            Arkenfox wiki</a>, especially the <a
-            href="https://github.com/arkenfox/user.js/wiki/4.1-Extensions#-dont-bother" target="_blank">"don't bother"
-            section</a>
-          for more on extensions.
+          Further customization of Firefox is possible with extensions. The one extension I explicitely recommend is <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>.
+          It is a powerful (even out of the box) content blocker that blocks ads, malicious domains and scripts, trackers, pop-ups, etc. Using it will vastly improve both
+          privacy and security (as well as performance). From there, extensions are up to you, though do keep in mind that the more extensions you have, the more 
+          vulnerable your browser is. Read through the <a href="https://github.com/arkenfox/user.js/wiki/4.1-Extensions" target="_blank">extensions section of the Arkenfox wiki</a>, 
+          especially the <a href="https://github.com/arkenfox/user.js/wiki/4.1-Extensions#-dont-bother" target="_blank">"don't bother" section</a> for more on extensions.
         </p>
         <p>
-          If you encounter issues while using Arkenfox, check the <a target="_blank"
-            href="https://github.com/arkenfox/user.js/wiki/3.2-Overrides-%5BCommon%5D">common overrides</a> page of the
-          Arkenfox wiki. Chances are changing one of these will fix your issue.
+          If you encounter issues while using Arkenfox, check the <a target="_blank" href="https://github.com/arkenfox/user.js/wiki/3.2-Overrides-%5BCommon%5D">common overrides</a> 
+          page of the Arkenfox wiki. Chances are changing one of these will fix your issue.
         </p>
         <p>
           Enjoy your faster, more secure, and more private Firefox!
@@ -215,7 +212,6 @@
               </p>
             </li>
           </ol>
-
         </footer>
       </div>
       <div class="col-3 col-s-1"></div>
