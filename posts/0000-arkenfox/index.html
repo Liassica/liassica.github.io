@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>
+   Arkenfox installation guide - Liassica's site
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/main.css" type="text/css">
+  <meta name="generator" content="soupault">
+ </head>
+ <body>
+  <main>
+   <h1 id="arkenfox-installation-guide">
+    Arkenfox installation guide
+   </h1>
+   <p>
+    Posted: <time id="post-date" datetime="2023-04-10">2023-04-10</time>
+   </p>
+   <p>
+    Updated: <time id="update-date" datetime="2023-12-31">2023-12-31</time>
+   </p>
+   <h2 id="overview">
+    Overview
+   </h2>
+   <p>
+    <span id="post-excerpt"><a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/arkenfox/user.js">Arkenfox user.js</a> is a
+    configuration file for desktop Firefox designed to increase the privacy and
+    security of the browser while avoiding making the browser unusable. This
+    guide will walk you through how to install it and later explain some use
+    cases and alternatives.</span>
+  I recommend reading the
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/arkenfox/user.js/wiki/1.1-To-Arkenfox-or-Not">Arkenfox wiki</a>
+  in order to decide whether to use Arkenfox first.
+   </p>
+   <h2 id="installing-firefox">
+    Installing Firefox
+   </h2>
+   <p>
+    If you already have Firefox installed, skip to
+  <a href="#installing-arkenfox">installing Arkenfox</a>.
+   </p>
+   <p>
+    Otherwise, Firefox is available on these package managers with the following
+  package names (non-exhaustive):
+   </p>
+   <ul>
+    <li>
+     APT: <code>firefox</code>
+    </li>
+    <li>
+     DNF: <code>firefox</code>
+    </li>
+    <li>
+     Flatpak: <code>org.mozilla.firefox</code>
+    </li>
+    <li>
+     Homebrew: <code>firefox</code> (cask)
+    </li>
+    <li>
+     Pacman: <code>firefox</code>
+    </li>
+    <li>
+     Winget: <code>Mozilla.Firefox</code>
+    </li>
+   </ul>
+   <p>
+    Alternatively,
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.mozilla.org/en-US/firefox/download/thanks/">download Firefox from Mozilla’s site</a>
+  or with your favorite graphical software center application.
+   </p>
+   <h2 id="installing-arkenfox">
+    Installing Arkenfox
+   </h2>
+   <p>
+    Type ‘about:profiles’ in the address bar to get to the profile management
+  page. Find the ‘Root Directory’ row of the table under your current profile
+  and hit ‘Open Directory’. Alternatively, hit ‘Create a New Profile’, follow
+  the profile creation wizard, hit ‘Launch profile in new browser’ under the new
+  profile, and then do the same as above but with the new profile.
+   </p>
+   <p>
+    Then, open the
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/arkenfox/user.js/releases/latest">latest Arkenfox user.js release page</a>
+  and download ‘Source code (zip)’. Extract the archive somewhere and open the
+  resulting folder. Copy the contents of that folder into the root folder you
+  opened earlier.
+   </p>
+   <p>
+    In order to customize Arkenfox, we will use a file called ‘user-overrides.js’.
+  You can write your own by following the
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/arkenfox/user.js/wiki/3.1-Overrides">Arkenfox wiki page on user overrides</a>, or you can use one of the
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://codeberg.org/Liassica/user-overrides">user overrides presets I’ve made</a>.
+   </p>
+   <p>
+    If you chose to use one of my user overrides, simply extract whichever archive
+  you downloaded and place the ‘user-overrides.js’ file in the same folder as
+  the other Arkenfox files.
+   </p>
+   <p>
+    Finally, exit Firefox (Ctrl+Shift+Q on Windows, Ctrl+Q on Linux) and run
+  either <code>updater.bat</code> on Windows or <code>updater.sh</code> on Linux
+  or MacOS. Follow the on-screen prompts, updating the updater and running
+  prefsCleaner when asked. When you relaunch Firefox with your chosen profile,
+  the Arkenfox user.js will be applied along with your overrides.
+   </p>
+   <h2 id="use-cases-and-alternatives">
+    Use cases and alternatives
+   </h2>
+   <p>
+    Firefox with Arkenfox is best used when using
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.torproject.org/download/">Tor Browser</a> is impossible
+  or impractical. Firefox with Arkenfox will not give you as much protection as
+  Tor Browser, but it’s still far ahead of mainstream proprietary browsers like
+  Chrome or Edge. It can also be used alongside Tor Browser if one or the other
+  doesn’t meet all your needs.
+   </p>
+   <p>
+    Some alternatives to Firefox with Arkenfox include:
+   </p>
+   <ul>
+    <li>
+     <a target="_blank" rel="nofollow noopener noreferrer" href="https://brave.com/">Brave</a>,
+    <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.chromium.org/Home/">Chromium</a>-based
+    </li>
+    <li>
+     <a target="_blank" rel="nofollow noopener noreferrer" href="https://librewolf.net/">Librewolf</a>, Firefox fork
+    </li>
+    <li>
+     <a target="_blank" rel="nofollow noopener noreferrer" href="https://mullvad.net/en/browser">Mullvad Browser</a>, essentially
+    Tor Browser but with
+    <a target="_blank" rel="nofollow noopener noreferrer" href="https://mullvad.net/en/vpn">Mullvad VPN</a> instead of
+    <a target="_blank" rel="nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Tor_(network)">Tor</a>
+    </li>
+   </ul>
+   <p>
+    I personally use Tor Browser for most general browsing and Firefox with
+  Arkenfox when a site breaks with/blocks Tor or I need to sign into a site.
+  (When a site breaks on Firefox for whatever inexplicable reason, I use
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/ungoogled-software/ungoogled-chromium">ungoogled-chromium</a>.)
+   </p>
+   <h2 id="extensions">
+    Extensions
+   </h2>
+   <p>
+    As explained on the
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/arkenfox/user.js/wiki/4.1-Extensions">Arkenfox wiki page on extensions</a>, extensions have elevated privileges in your browser and can make you more
+  vulnerable to fingerprinting and security flaws. Therefore I recommend you
+  stick mostly to the extensions listed on that Arkenfox page.
+   </p>
+   <p>
+    In addition to
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>
+  and
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://addons.mozilla.org/en-US/firefox/addon/skip-redirect/">Skip Redirect</a>
+  as recommended by Arkenfox, I also use an extension for my password manager
+  (<a target="_blank" rel="nofollow noopener noreferrer" href="https://bitwarden.com/">Bitwarden</a> in my case) and have in the
+  past used
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://addons.mozilla.org/en-US/firefox/addon/libredirect/">LibRedirect</a>
+  which redirects many privacy-invasive sites to more privacy-friendly
+  frontends. I believe LibRedirect to be more useful when one frequently visits
+  said sites but doesn’t log into them often or at all. In my case, I rarely
+  visit major social medias, and it’s not much effort to just manually open them
+  in whichever frontend when I do, so I couldn’t personally justify using a
+  whole extension just for that. However, I still recommend LibRedirect to those
+  who think it may be useful.
+   </p>
+   <div class="tag-box">
+    <p>
+     Tags: <span id="tags">browsers, Firefox</span>
+    </p>
+   </div>
+  </main>
+ </body>
+</html>
