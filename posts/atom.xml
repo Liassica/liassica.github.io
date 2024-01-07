@@ -6,6 +6,20 @@
     <name>Liassica</name></author>
   <generator uri="https://soupault.app" version="4.7.0">soupault</generator>
   <entry>
+    <id>http://localhost:5500/posts/0002-neocities-github</id>
+    <title>Deploying to Neocities through GitHub</title>
+    <updated></updated>
+    <content type="html">
+    &lt;a href=&quot;https://neocities.org/&quot; title=&quot;Neocities home page&quot;&gt;Neocities&lt;/a&gt;
+    is a free, adless webhosting service modeled after the defunct
+    &lt;a href=&quot;https://en.wikipedia.org/wiki/GeoCities&quot; title=&quot;GeoCities - Wikipedia&quot;&gt;GeoCities&lt;/a&gt;. However, Neocities’ web editor is quite basic and there is no version
+    control. One way to alleviate these problems is to deploy your Neocities
+    site through a GitHub repository.
+    </content>
+    <link href="http://localhost:5500/posts/0002-neocities-github" rel="alternate"/>
+  </entry>
+  
+  <entry>
     <id>http://localhost:5500/posts/0001-yt-dlp</id>
     <title>Introduction to yt-dlp</title>
     <updated></updated>
