@@ -1,12 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <id>http://localhost:8000/atom.xml</id>
+  <id>http://localhost:5500/atom.xml</id>
   <updated></updated>
-  <title>Liassica's site</title><author>
+  <title>Liassica's site</title><logo>https://liassica.codeberg.page/images/favicon.png</logo><author>
     <name>Liassica</name></author>
   <generator uri="https://soupault.app" version="4.7.0">soupault</generator>
   <entry>
-    <id>http://localhost:8000/posts/0000-arkenfox</id>
+    <id>http://localhost:5500/posts/0001-yt-dlp</id>
+    <title>Introduction to yt-dlp</title>
+    <updated></updated>
+    <content type="html">
+    &lt;a href=&quot;https://github.com/yt-dlp/yt-dlp&quot;&gt;yt-dlp&lt;/a&gt; is a command-line
+    tool for downloading audio and video from YouTube and other sites. This post
+    will serve as a basic introduction to the program.
+    </content>
+    <link href="http://localhost:5500/posts/0001-yt-dlp" rel="alternate"/>
+  </entry>
+  
+  <entry>
+    <id>http://localhost:5500/posts/0000-arkenfox</id>
     <title>Arkenfox installation guide</title>
     <updated></updated>
     <content type="html">
@@ -16,18 +28,7 @@
     guide will walk you through how to install it and later explain some use
     cases and alternatives.
     </content>
-    <link href="http://localhost:8000/posts/0000-arkenfox" rel="alternate"/>
-  </entry>
-  
-  <entry>
-    <id>http://localhost:8000/posts/my-first-post</id>
-    <title>Test post</title>
-    <updated></updated>
-    <content type="html">
-    This is my first post in the brand new soupault blog. It’s really
-    interesting, except for its introductory paragraph of course.
-    </content>
-    <link href="http://localhost:8000/posts/my-first-post" rel="alternate"/>
+    <link href="http://localhost:5500/posts/0000-arkenfox" rel="alternate"/>
   </entry>
   
 </feed>
