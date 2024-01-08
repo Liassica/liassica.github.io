@@ -249,14 +249,44 @@ You should have received a copy of the GNU General Public License along with Lia
   box-sizing: border-box;
 }
 
-img,
-picture {
-  max-width: 100%;
-  display: block;
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-.tag-box {
-  font-size: small;
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr min(65ch, 100%) 1fr;
+}
+
+main > * {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1/-1;
+}
+
+footer {
+  text-align: center;
+}
+
+.csl-entry {
+  display: flex;
+}
+.csl-entry div {
+  margin: 0 0.35em;
 }
 
 /*# sourceMappingURL=main.css.map */

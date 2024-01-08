@@ -1,5 +1,8 @@
-images/favicon.png filter=lfs diff=lfs merge=lfs -text
+images/posts/gplates-fedora filter=lfs diff=lfs merge=lfs -text
+images/posts/gplates-fedora/gplates-gnome.webp filter=lfs diff=lfs merge=lfs -text
+images/posts/gplates-fedora/gplates-kde.webp filter=lfs diff=lfs merge=lfs -text
 images/posts filter=lfs diff=lfs merge=lfs -text
 images/posts/neocities-github filter=lfs diff=lfs merge=lfs -text
 images/posts/neocities-github/download-site.webp filter=lfs diff=lfs merge=lfs -text
 images/posts/neocities-github/repo.webp filter=lfs diff=lfs merge=lfs -text
+images/favicon.png filter=lfs diff=lfs merge=lfs -text

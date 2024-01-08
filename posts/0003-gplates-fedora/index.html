@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8">
   <title>
-   Liassica's site
+   How to compile GPlates on Fedora Linux - Liassica's site
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/css/main.css" type="text/css">
@@ -11,6 +11,150 @@
   <link rel="icon" type="image/png" href="/images/favicon.png">
  </head>
  <body>
-  <main></main>
+  <main>
+   <section id="cc-by-sa" class="level1">
+    <h1>
+     How to compile GPlates on Fedora Linux
+    </h1>
+    <p>
+     <strong>Posted</strong>:
+    <time id="post-date" datetime="2023-05-06">2023-06-24</time>
+    </p>
+    <p>
+     <strong>Updated</strong>:
+    <time id="update-date" datetime="2024-01-06">2024-01-07</time>
+    </p>
+    <p>
+     <strong>Tags</strong>: <span id="tags">guide, out of date</span>
+    </p>
+    <section id="overview" class="level2">
+     <h2>
+      Overview
+     </h2>
+     <p>
+      <span id="post-excerpt"><strong>Note: this guide is out of date. GPlates has a new stable version
+          (2.4.0) and the download link for the old source code doesn’t work
+          anymore.</strong>
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.gplates.org/">GPlates</a> is a free software
+        program for modeling the tectonic history of a planet. It was designed
+        with a scientific audience in mind, but it has also gained popularity
+        among the worldbuilding community. GPlates has an Ubuntu package and
+        both source- and binary-based AUR packages, but no package for Fedora.
+        This guide will show you how to compile GPlates from source.</span>
+      It was last confirmed to be working 2023-08-26.
+     </p>
+    </section>
+    <section id="download-and-dependencies" class="level2">
+     <h2>
+      Download and dependencies
+     </h2>
+     <p>
+      As of Fedora 38, compiling fails on the most recent stable version of
+      GPlates,<span class="citation" data-cites="gplates1"><a href="#ref-gplates1" role="doc-biblioref">[1]</a></span>
+      however the 2.3.1 beta 5 will compile as expected.<span class="citation" data-cites="gplates2"><a href="#ref-gplates2" role="doc-biblioref">[2]</a></span>
+      Download the
+      <a target="_blank" rel="nofollow noopener noreferrer" href="https://support.aarnet.edu.au/hc/en-us/sections/6547442372367">2.3.1 beta 5 source code</a>
+      and extract the downloaded archive to wherever you like.
+     </p>
+     <p>
+      Opening the file <code>DEPS.Linux</code> will show you what dependencies
+      are required to compile GPlates on Ubuntu. Translating the packages to
+      equivalent Fedora packages, we get the command:
+     </p>
+     <p>
+      <code>sudo dnf install cmake g++ mesa-libGL-devel mesa-libGLU-devel
+        glew-devel python3-devel python3-numpy boost-devel qt5-qtbase-devel
+        qt5-qtxmlpatterns-devel gdal-devel CGAL-devel proj-devel qwt-qt5-devel
+        zlib-devel libXrender-devel libICE-devel libSM-devel freetype-devel
+        fontconfig-devel</code>
+     </p>
+     <p>
+      Many of these are included by default in Fedora.
+     </p>
+    </section>
+    <section id="compiling-and-installing" class="level2">
+     <h2>
+      Compiling and installing
+     </h2>
+     <p>
+      Open the folder with the GPlates source code and open a terminal there.
+      Fedora puts Qwt in an odd spot, so you have to tell cmake where it
+      is.<span class="citation" data-cites="gitlab1"><a href="#ref-gitlab1" role="doc-biblioref">[3]</a></span>
+      Enter the command
+      <code>cmake . -DQWT_INCLUDE_DIR=/usr/include/qt5/qwt</code>. Once that has
+      finished, run <code>make</code>. Compiling GPlates takes about 2 hours.
+     </p>
+     <p>
+      Once GPlates is done compiling, install it by running
+      <code>sudo make install</code>.
+     </p>
+    </section>
+    <section id="running-gplates" class="level2">
+     <h2>
+      Running GPlates
+     </h2>
+     <p>
+      GPlates does not yet support Wayland, so you must run it with the
+      environment variable <code>QT_QPA_PLATFORM=xcb</code>. This can be added
+      to an alias or desktop entry.
+     </p>
+     <figure>
+      <img src="/images/posts/gplates-fedora/gplates-gnome.webp" alt="GPlates running on a Fedora 38 container in Fedora 38 Silverblue">
+      <figcaption aria-hidden="true">
+       GPlates running on a Fedora 38 container in Fedora 38 Silverblue
+      </figcaption>
+     </figure>
+     <figure>
+      <img src="/images/posts/gplates-fedora/gplates-kde.webp" alt="GPlates running on Fedora 38 KDE">
+      <figcaption aria-hidden="true">
+       GPlates running on Fedora 38 KDE
+      </figcaption>
+     </figure>
+    </section>
+    <div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+     <section id="references" class="level2">
+      <h2>
+       References
+      </h2>
+      <div id="ref-gplates1" class="csl-entry" role="listitem">
+       <div class="csl-left-margin">
+        [1]
+       </div>
+       <div class="csl-right-inline">
+        <span>“Compilation error with boost 1.77,”</span>
+          <em>GPlates Community Forum</em>. Dec. 20, 2021. Accessed: Jun. 24,
+          2023. [Online]. Available:
+          <a target="_blank" rel="nofollow noopener noreferrer" href="https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452">https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452</a>
+       </div>
+      </div>
+      <div id="ref-gplates2" class="csl-entry" role="listitem">
+       <div class="csl-left-margin">
+        [2]
+       </div>
+       <div class="csl-right-inline">
+        <span>“Compilation error with boost 1.77,”</span>
+          <em>GPlates Community Forum</em>. Nov. 15, 2022. Accessed: Jun. 24,
+          2023. [Online]. Available:
+          <a target="_blank" rel="nofollow noopener noreferrer" href="https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/12">https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/12</a>
+       </div>
+      </div>
+      <div id="ref-gitlab1" class="csl-entry" role="listitem">
+       <div class="csl-left-margin">
+        [3]
+       </div>
+       <div class="csl-right-inline">
+        <span>“QWT_INCLUDE_DIR is not automatically found on Fedora 27,”</span>
+          <em>GitLab</em>. Dec. 20, 2021. Accessed: Jun. 24, 2023. [Online].
+          Available:
+          <a target="_blank" rel="nofollow noopener noreferrer" href="https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues/1663">https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues/1663</a>
+       </div>
+      </div>
+     </section>
+    </div>
+   </section>
+  </main>
+  <footer>
+   Copyright © 2024 Liassica. Except where noted, the content of this page is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0</a>.
+  </footer>
  </body>
 </html>
