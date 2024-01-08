@@ -1,11 +1,5 @@
 /*
-This file is part of Liassica's site source.
-Liassica's site source is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-Liassica's site source is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-You should have received a copy of the GNU General Public License along with Liassica's site source. If not, see <https://www.gnu.org/licenses/>.
-*/
-/*
-This file is part of Liassica's site source.
+This and the other files in this folder are part of Liassica's site source.
 Liassica's site source is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 Liassica's site source is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with Liassica's site source. If not, see <https://www.gnu.org/licenses/>.
@@ -264,11 +258,50 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
+body {
+  background: #303030;
+  color: #fff;
+  font-family: Arial, "Liberation Sans", Helvetica, sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background: #191919;
+}
+nav > a {
+  text-align: center;
+  display: block;
+  color: #fff;
+  float: left;
+  padding: 1em;
+  text-decoration: none;
+}
+nav > a:hover {
+  background: #3F3F3F;
+}
+nav > a.nav-active {
+  background: #6b0080;
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr min(65ch, 100%) 1fr;
 }
-
+main a:link {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+main a:visited {
+  color: mediumorchid;
+}
+main a:hover {
+  text-decoration: underline;
+}
+main a:active {
+  color: darkorange;
+}
 main > * {
   grid-column: 2;
 }
@@ -281,11 +314,24 @@ main > * {
 footer {
   text-align: center;
 }
+footer a:link {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+footer a:visited {
+  color: mediumorchid;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer a:active {
+  color: darkorange;
+}
 
 .csl-entry {
   display: flex;
 }
-.csl-entry div {
+.csl-entry > div {
   margin: 0 0.35em;
 }
 
