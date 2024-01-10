@@ -14,118 +14,111 @@
   <nav>
    <a href="/">Home</a>
       <a class="nav-active" href="/posts">Posts</a>
+      <a href="/links">Links</a>
   </nav>
   <main>
-   <section id="cc-by-sa" class="level1">
-    <h1>
+   <div id="post-header" class="cc-by-sa">
+    <h1 id="post-title">
      Deploying to Neocities through GitHub
     </h1>
-    <p>
-     <strong>Posted</strong>:
-    <time id="post-date" datetime="2023-05-06">2023-05-06</time>
-    </p>
-    <p>
-     <strong>Updated</strong>:
-    <time id="update-date" datetime="2024-01-06">2024-01-06</time>
-    </p>
-    <p>
-     <strong>Tags</strong>: <span id="tags">git, guide</span>
-    </p>
-    <section id="overview" class="level2">
-     <h2>
-      Overview
-     </h2>
-     <p>
-      <span id="post-excerpt"><a target="_blank" rel="nofollow noopener noreferrer" href="https://neocities.org/" title="Neocities home page">Neocities</a>
-        is a free, adless webhosting service modeled after the defunct
-        <a target="_blank" rel="nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/GeoCities" title="GeoCities - Wikipedia">GeoCities</a>. However, Neocities’ web editor is quite basic and there is no version
-        control. One way to alleviate these problems is to deploy your Neocities
-        site through a GitHub repository.</span>
-     </p>
-     <p>
-      This guide will assume you know how to use Git and GitHub. If you don’t, I
-      recommend looking through
-      <a target="_blank" rel="nofollow noopener noreferrer" href="https://docs.github.com/en/get-started" title="Get started with GitHub documentation - GitHub Docs">GitHub’s “Get started with GitHub” documentation</a>.
-     </p>
-    </section>
-    <section id="setting-up-a-github-repository" class="level2">
-     <h2>
-      Setting up a GitHub repository
-     </h2>
-     <p>
-      First, make a new GitHub repository. Name it whatever you like, such as
-      <code>site</code>, or <code>&lt;GitHub username&gt;.github.io</code> for
-      easy mirroring on GitHub pages. If you’d like to mirror to GitHub pages,
-      read the section
-      <a href="#mirroring-on-github-pages">“Mirroring on GitHub Pages”</a> below
-      along with the rest of this article. Once it’s created, clone it to a
-      local repository.
-     </p>
-     <p>
-      Next, download your Neocities site. You can do this from the Neocities
-      dashboard by clicking ‘Download entire site’.
-      <img src="/images/posts/neocities-github/download-site.webp" title="Download your Neocities site" alt="Download your Neocities site">
-     </p>
-     <p>
-      Extract the site archive into a subfolder of your repository. Name the
-      folder <code>public</code>. The reason we do this is Neocities has a
-      limited selection of allowed filetypes, and deploying straight from the
-      root folder of your repository can break things.
-     </p>
-     <p>
-      After that, create a subfolder in the root of your repository called
-      <code>.github</code>. In the <code>.github</code> folder, create another
-      folder called <code>workflows</code>. Finally, download this
-      <a href="/assets/posts/neocities-github/ci.yml" download="ci.yml">“Deploy to Neocities” workflow file</a>
-      and put it in the <code>workflows</code> folder.
-     </p>
-     <p>
-      By this point, your repository should look something like this:
-      <img src="/images/posts/neocities-github/repo.webp" title="Example repository directory structure" alt="Example repository directory structure">
-     </p>
-     <p>
-      Next, you need to add your Neocities API key as a repository secret. Go to
-      Neocities settings &gt; Manage Site Settings &gt; API. This will show your
-      API key. On your GitHub repository, go to Settings &gt; Secrets and
-      variables &gt; Actions &gt; New repository secret. Name the secret
-      <code>NEOCITIES_API_KEY</code> and paste the key you got from Neocities as
-      the value. Be very careful with this API key, as it allows anyone or
-      anything with access to it to change anything on your site.
-     </p>
-     <p>
-      Now all you need to do is push to your GitHub repository. Any time you
-      push to the main branch, it will deploy the site to Neocities.
-     </p>
-    </section>
-    <section id="mirroring-on-github-pages" class="level2">
-     <h2>
-      Mirroring on GitHub Pages
-     </h2>
-     <p>
-      There are a few extra steps needed to be able to mirror your Neocities
-      site on GitHub Pages. First, make sure your repository is named
-      <code>&lt;GitHub username&gt;.github.io</code>. Then, make sure the folder
-      containing your site is called <code>docs</code> and change the
-      <code>dist_dir: public</code> line in the workflow file to
-      <code>dist_dir: docs</code>. This is because GitHub Pages (at least with a
-      free account) can only be deployed from either the root folder or a
-      <code>/docs</code> folder.
-     </p>
-     <p>
-      You may also want to tell GitHub to not ignore code statistics on the
-      <code>/docs</code> folder like it does by default. To do so, create a file
-      called <code>.gitattributes</code> in your root directory and add the line
-      <code>docs/* linguist-documentation=false</code> to it.
-     </p>
-     <p>
-      Finally, set up deploying to GitHub Pages from your GitHub repository by
-      going to Settings &gt; Pages. Set the deploying branch to
-      <code>main</code> and the deploying folder to <code>/docs</code>. Now
-      every time you push to your repository’s main branch, it’ll automatically
-      build and deploy your GitHub Pages mirror.
-     </p>
-    </section>
-   </section>
+    <div>
+     <strong>Posted:</strong> <time id="post-date" datetime="2023-05-06">2023-05-06</time>
+    </div>
+    <div>
+     <strong>Updated:</strong> <time id="update-date" datetime="2024-01-06">2024-01-06</time>
+    </div>
+    <div class="post-tags">
+     <strong>Tags: </strong><a href="/posts/tag/git"><span class="post-tag">git</span></a>, <a href="/posts/tag/guide"><span class="post-tag">guide</span></a>
+    </div>
+   </div>
+   <h2 id="overview">
+    Overview
+   </h2>
+   <p>
+    <span id="post-excerpt"><a target="_blank" rel="nofollow noopener noreferrer" href="https://neocities.org/" title="Neocities home page">Neocities</a>
+    is a free, adless webhosting service modeled after the defunct
+    <a target="_blank" rel="nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/GeoCities" title="GeoCities - Wikipedia">GeoCities</a>. However, Neocities’ web editor is quite basic and there is no version
+    control. One way to alleviate these problems is to deploy your Neocities
+    site through a GitHub repository.</span>
+   </p>
+   <p>
+    This guide will assume you know how to use Git and GitHub. If you don’t, I
+  recommend looking through
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://docs.github.com/en/get-started" title="Get started with GitHub documentation - GitHub Docs">GitHub’s “Get started with GitHub” documentation</a>.
+   </p>
+   <h2 id="setting-up-a-github-repository">
+    Setting up a GitHub repository
+   </h2>
+   <p>
+    First, make a new GitHub repository. Name it whatever you like, such as
+  <code>site</code>, or <code>&lt;GitHub username&gt;.github.io</code> for easy
+  mirroring on GitHub pages. If you’d like to mirror to GitHub pages, read the
+  section
+  <a href="#mirroring-on-github-pages">“Mirroring on GitHub Pages”</a> below
+  along with the rest of this article. Once it’s created, clone it to a local
+  repository.
+   </p>
+   <p>
+    Next, download your Neocities site. You can do this from the Neocities
+  dashboard by clicking ‘Download entire site’.
+  <img src="/images/posts/neocities-github/download-site.webp" title="Download your Neocities site" alt="Download your Neocities site">
+   </p>
+   <p>
+    Extract the site archive into a subfolder of your repository. Name the folder
+  <code>public</code>. The reason we do this is Neocities has a limited
+  selection of allowed filetypes, and deploying straight from the root folder of
+  your repository can break things.
+   </p>
+   <p>
+    After that, create a subfolder in the root of your repository called
+  <code>.github</code>. In the <code>.github</code> folder, create another
+  folder called <code>workflows</code>. Finally, download this
+  <a href="/assets/posts/neocities-github/ci.yml" download="ci.yml">“Deploy to Neocities” workflow file</a>
+  and put it in the <code>workflows</code> folder.
+   </p>
+   <p>
+    By this point, your repository should look something like this:
+  <img src="/images/posts/neocities-github/repo.webp" title="Example repository directory structure" alt="Example repository directory structure">
+   </p>
+   <p>
+    Next, you need to add your Neocities API key as a repository secret. Go to
+  Neocities settings &gt; Manage Site Settings &gt; API. This will show your API
+  key. On your GitHub repository, go to Settings &gt; Secrets and variables &gt;
+  Actions &gt; New repository secret. Name the secret
+  <code>NEOCITIES_API_KEY</code> and paste the key you got from Neocities as the
+  value. Be very careful with this API key, as it allows anyone or anything with
+  access to it to change anything on your site.
+   </p>
+   <p>
+    Now all you need to do is push to your GitHub repository. Any time you push to
+  the main branch, it will deploy the site to Neocities.
+   </p>
+   <h2 id="mirroring-on-github-pages">
+    Mirroring on GitHub Pages
+   </h2>
+   <p>
+    There are a few extra steps needed to be able to mirror your Neocities site on
+  GitHub Pages. First, make sure your repository is named
+  <code>&lt;GitHub username&gt;.github.io</code>. Then, make sure the folder
+  containing your site is called <code>docs</code> and change the
+  <code>dist_dir: public</code> line in the workflow file to
+  <code>dist_dir: docs</code>. This is because GitHub Pages (at least with a
+  free account) can only be deployed from either the root folder or a
+  <code>/docs</code> folder.
+   </p>
+   <p>
+    You may also want to tell GitHub to not ignore code statistics on the
+  <code>/docs</code> folder like it does by default. To do so, create a file
+  called <code>.gitattributes</code> in your root directory and add the line
+  <code>docs/* linguist-documentation=false</code> to it.
+   </p>
+   <p>
+    Finally, set up deploying to GitHub Pages from your GitHub repository by going
+  to Settings &gt; Pages. Set the deploying branch to <code>main</code> and the
+  deploying folder to <code>/docs</code>. Now every time you push to your
+  repository’s main branch, it’ll automatically build and deploy your GitHub
+  Pages mirror.
+   </p>
   </main>
   <footer>
    Copyright © 2024 Liassica. Except where noted, the content of this page is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0</a>.
