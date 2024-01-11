@@ -316,7 +316,7 @@ main > * {
   grid-column: 2;
 }
 
-.full-bleed {
+.gallery, .full-bleed {
   width: 100%;
   grid-column: 1/-1;
 }
@@ -329,6 +329,28 @@ table tr.odd {
 }
 table tr th, table tr td {
   padding: 0.4em;
+}
+
+.gallery p {
+  margin: 0 5%;
+}
+.gallery p img {
+  margin: auto;
+  width: 100%;
+  padding: 0.3em;
+}
+@media screen and (min-width: 640px) {
+  .gallery p {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 10%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery p {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 15%;
+  }
 }
 
 footer {
