@@ -4,7 +4,7 @@
   <updated>2024-01-09T00:00:00+00:00</updated>
   <title>Liassica's site</title><logo>https://liassica.codeberg.page/images/favicon.png</logo><author>
     <name>Liassica</name></author>
-  <generator uri="https://soupault.app" version="4.7.0">soupault</generator>
+  <generator uri="https://soupault.app" version="4.9.0">soupault</generator>
   <entry>
     <id>https://liassica.codeberg.page/posts/0003-gplates-fedora</id>
     <title>How to compile GPlates on Fedora Linux</title>

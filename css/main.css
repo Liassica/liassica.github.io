@@ -267,6 +267,43 @@ ul, ol, dl {
   padding-left: 1em;
 }
 
+@font-face {
+  font-family: "Cooper Black Regular";
+  src: url("/fonts/Cooper-Black-Regular/Cooper-Black-Regular.ttf");
+}
+.webrings {
+  text-align: center;
+  margin: 1em 0;
+}
+.webrings p {
+  margin-block-start: 0;
+}
+.webrings .garfring {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  border: 0.2em dashed black;
+  border-radius: 0.3em;
+  font-size: x-large;
+  font-family: "Cooper Black Regular", sans-serif;
+  background: #ff9c31;
+}
+.webrings .garfring > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em;
+  margin: 0.1em;
+}
+.webrings .garfring a {
+  color: black;
+}
+.webrings .garfring--controls {
+  font-size: smaller;
+  border-radius: 0.3em;
+  border: 0.2em solid black;
+  background: #ffffa5;
+}
+
 body {
   background: #303030;
   color: #fff;
@@ -327,7 +364,8 @@ table tr {
 table tr.odd {
   background-color: #3F3F3F;
 }
-table tr th, table tr td {
+table tr th,
+table tr td {
   padding: 0.4em;
 }
 
