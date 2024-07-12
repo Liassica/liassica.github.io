@@ -358,6 +358,12 @@ main > * {
   grid-column: 1/-1;
 }
 
+table {
+  margin: 1em 0;
+}
+table caption {
+  font-size: large;
+}
 table tr {
   vertical-align: top;
 }
