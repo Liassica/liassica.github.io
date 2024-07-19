@@ -1,5 +1,5 @@
-# Author: Bret Comnes
-# License: MIT
+# SPDX-License-Identifier: MIT
+# Copyright 2024 Bret Comnes
 
 name: Deploy to neocities
 
@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    # When the dist_dir is ready, deploy it to neocities
-    - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v1
-      with:
-        api_token: ${{ secrets.NEOCITIES_API_KEY }}
-        cleanup: true
-        dist_dir: public
+      - uses: actions/checkout@v3
+      # When the dist_dir is ready, deploy it to neocities
+      - name: Deploy to neocities
+        uses: bcomnes/deploy-to-neocities@v1
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_KEY }}
+          cleanup: true
+          dist_dir: public

@@ -1,8 +1,14 @@
-/*
-This and the other files in this folder are part of Liassica's site source.
-Liassica's site source is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-Liassica's site source is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-You should have received a copy of the GNU General Public License along with Liassica's site source. If not, see <https://www.gnu.org/licenses/>.
+/**
+* SPDX-License-Identifier: AGPL-3.0-or-later
+* Copyright 2024 Liassica
+*/
+/**
+* SPDX-License-Identifier: AGPL-3.0-or-later
+* Copyright 2024 Liassica
+*/
+/**
+* SPDX-License-Identifier: AGPL-3.0-or-later
+* Copyright 2024 Liassica
 */
 /* Document
  * ========================================================================== */
@@ -118,7 +124,8 @@ You should have received a copy of the GNU General Public License along with Lia
 /**
  * Correct the inability to style buttons in iOS and Safari.
  */
-:where(button, input:is([type=button i], [type=reset i], [type=submit i])) {
+:where(button,
+input:is([type=button i], [type=reset i], [type=submit i])) {
   -webkit-appearance: button;
 }
 
@@ -187,7 +194,11 @@ You should have received a copy of the GNU General Public License along with Lia
 /**
  * Remove the inner border and padding of focus outlines in Firefox.
  */
-:where(button, input:is([type=button i], [type=color i], [type=reset i], [type=submit i]))::-moz-focus-inner {
+:where(button,
+input:is([type=button i],
+[type=color i],
+[type=reset i],
+[type=submit i]))::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -195,7 +206,11 @@ You should have received a copy of the GNU General Public License along with Lia
 /**
  * Restore the focus outline styles unset by the previous rule in Firefox.
  */
-:where(button, input:is([type=button i], [type=color i], [type=reset i], [type=submit i]))::-moz-focusring {
+:where(button,
+input:is([type=button i],
+[type=color i],
+[type=reset i],
+[type=submit i]))::-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -248,25 +263,54 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body, h1, h2, h3, h4, p,
-figure, blockquote, ul, ol, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
   margin-block-end: 0;
 }
 
-h1, h2, h3, h4,
-button, input, label {
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
   line-height: 1.1;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   padding-left: 1em;
 }
 
+/**
+* SPDX-License-Identifier: AGPL-3.0-or-later
+* Copyright 2024 Liassica
+*/
+/**
+* SPDX-License-Identifier: AGPL-3.0-or-later
+* Copyright 2024 Liassica
+*/
 @font-face {
   font-family: "Cooper Black Regular";
   src: url("/fonts/Cooper-Black-Regular/Cooper-Black-Regular.ttf");
@@ -325,7 +369,7 @@ nav > a {
   text-decoration: none;
 }
 nav > a:hover {
-  background: #3F3F3F;
+  background: #3f3f3f;
 }
 nav > a.nav-active {
   background: #6b0080;
@@ -368,7 +412,7 @@ table tr {
   vertical-align: top;
 }
 table tr.odd {
-  background-color: #3F3F3F;
+  background-color: #3f3f3f;
 }
 table tr th,
 table tr td {
