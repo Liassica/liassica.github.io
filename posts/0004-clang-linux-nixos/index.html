@@ -88,8 +88,8 @@
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        <span class="va">extraMakeFlags</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"LLVM=1"</span> <span class="op">];</span></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="co"># If you'd like to edit your kernel configuration, use</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># `structuredExtraConfig`. # For example, some options available to</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="co"># us when compiling with Clang and linking with LLD:</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># `structuredExtraConfig`. For example, some options available to us</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="co"># when compiling with Clang and linking with LLD:</span></span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        <span class="va">structuredExtraConfig</span> <span class="op">=</span> <span class="op">{</span></span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>          <span class="va">CFI_CLANG</span> <span class="op">=</span> lib.kernel.yes<span class="op">;</span></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>          <span class="va">LTO_CLANG_THIN</span> <span class="op">=</span> lib.kernel.yes<span class="op">;</span></span>
