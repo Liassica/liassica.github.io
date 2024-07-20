@@ -378,7 +378,7 @@ nav > a.nav-active {
 main {
   padding: 0 1em;
   display: grid;
-  grid-template-columns: 1fr min(65ch, 100%) 1fr;
+  grid-template-columns: 1fr min(85ch, 100%) 1fr;
 }
 main a:link {
   text-decoration: none;
@@ -459,11 +459,46 @@ footer a:active {
   color: darkorange;
 }
 
+p > code {
+  background: #191919;
+  font-size: smaller;
+}
+
 .csl-entry {
   display: flex;
 }
 .csl-entry > div {
   margin: 0 0.35em;
+}
+
+.citation {
+  line-height: 1;
+  font-size: smaller;
+  vertical-align: super;
+}
+
+div.sourceCode {
+  background: #191919;
+  overflow-x: auto;
+}
+div.sourceCode code.sourceCode.nix .co {
+  font-style: italic;
+  color: gray;
+}
+div.sourceCode code.sourceCode.nix .op {
+  color: darkgray;
+}
+div.sourceCode code.sourceCode.nix .va {
+  color: orange;
+}
+div.sourceCode code.sourceCode.nix .kw {
+  color: darkviolet;
+}
+div.sourceCode code.sourceCode.nix .cn {
+  color: palevioletred;
+}
+div.sourceCode code.sourceCode.nix .st {
+  color: greenyellow;
 }
 
 /*# sourceMappingURL=main.css.map */

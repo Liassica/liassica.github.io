@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>
+   Compile Linux with Clang on NixOS - Liassica's site
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/main.css" type="text/css">
+  <meta name="generator" content="soupault">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+ </head>
+ <body>
+  <nav>
+   <a href="/">Home</a>
+      <a class="nav-active" href="/posts">Posts</a>
+      <a href="/links">Links</a>
+      <a href="/grszh">Grszh Gallery</a>
+  </nav>
+  <main>
+   <div id="post-header" class="cc-by-sa">
+    <h1 id="post-title">
+     Compile Linux with Clang on NixOS
+    </h1>
+    <div>
+     <strong>Posted:</strong> <time id="post-date" datetime="2024-07-20">2024-07-20</time>
+    </div>
+    <div>
+     <strong>Updated:</strong> <time id="update-date" datetime="2024-07-20">2024-07-20</time>
+    </div>
+    <div class="post-tags">
+     <strong>Tags: </strong><a href="/posts/tag/guide"><span class="post-tag">guide</span></a>, <a href="/posts/tag/linux"><span class="post-tag">linux</span></a>
+    </div>
+   </div>
+   <h2 id="overview">
+    Overview
+   </h2>
+   <p>
+    <span id="post-excerpt">This short guide will teach you how to compile the
+    <a target="_blank" rel="nofollow noopener noreferrer" href="https://kernel.org/">Linux kernel</a> with
+    <a target="_blank" rel="nofollow noopener noreferrer" href="https://clang.llvm.org/">Clang</a> and
+    <a target="_blank" rel="nofollow noopener noreferrer" href="https://llvm.org/">LLVM</a> on
+    <a target="_blank" rel="nofollow noopener noreferrer" href="https://nixos.org/">NixOS</a>.</span>
+  This guide is best viewed on a tablet, laptop, or desktop.
+   </p>
+   <h2 id="nixos-configuration">
+    NixOS configuration
+   </h2>
+   <p>
+    The configuration needed is minimal:
+   </p>
+   <div class="sourceCode" id="cb1">
+    <pre class="sourceCode nix"><code class="sourceCode nix"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># configuration.nix</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span> <span class="va">lib</span><span class="op">,</span> <span class="va">pkgs</span><span class="op">,</span> <span class="op">...</span> <span class="op">}</span>:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Select our kernel packages (kernel and modules).</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">boot</span>.<span class="va">kernelPackages</span> <span class="op">=</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">with</span> pkgs<span class="op">;</span> <span class="co"># Cut down on repeated `pkgs.` declarations</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Choose whichever LLVM version you please. `llvmPackages` is the</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="co"># default version, `llvmPackages_latest` is the latest (at the time of</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="co"># writing, LLVM 17.0.6 and 18.1.8 respectively).</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="va">llvm</span> <span class="op">=</span> llvmPackages_latest<span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Same deal as LLVM; choose whichever kernel version you like.</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="co"># `linux` is the latest LTS, `linux_latest` is the latest stable.</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="va">kernel</span> <span class="op">=</span> linux_latest<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate kernel modules for our custom kernel.</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    linuxPackagesFor <span class="op">(</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Override our chosen kernel version with our custom settings.</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      <span class="op">(</span>kernel.override <span class="op">{</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Set our chosen version of LLVM as our standard environment.</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="va">stdenv</span> <span class="op">=</span> overrideCC llvm.stdenv <span class="op">(</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Tell our C compiler (Clang) to use LLVM bintools--normally GNU</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>          <span class="co"># binutils are used even with Clang as the compiler.</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>          llvm.stdenv.cc.override <span class="op">{</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Work around a NixOS-specific issue that causes boot failures by</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            <span class="co"># disabling the shared library loader (which is unused by the</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            <span class="co"># kernel anyway). See link 1 below for details.</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            <span class="va">bintools</span> <span class="op">=</span> llvm.bintools.override <span class="op">{</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>              <span class="va">sharedLibraryLoader</span> <span class="op">=</span> <span class="cn">null</span><span class="op">;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>            <span class="op">};</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>          <span class="op">}</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        <span class="op">);</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Tell Linux that we're compiling with Clang and LLVM.</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        <span class="va">extraMakeFlags</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"LLVM=1"</span> <span class="op">];</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="co"># If you'd like to edit your kernel configuration, use</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># `structuredExtraConfig`. # For example, some options available to</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="co"># us when compiling with Clang and linking with LLD:</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        <span class="va">structuredExtraConfig</span> <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>          <span class="va">CFI_CLANG</span> <span class="op">=</span> lib.kernel.yes<span class="op">;</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>          <span class="va">LTO_CLANG_THIN</span> <span class="op">=</span> lib.kernel.yes<span class="op">;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        <span class="op">};</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="op">)</span>.overrideAttrs</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Work around another NixOS specific issue where builds with WERROR=y</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="co"># are stopped by a benign error. See link 2 below for details.</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Technically, this fix is only necessary with WERROR=y but the issue</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      <span class="co"># still causes a warning on builds where WERROR is unset.</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      <span class="op">{</span> <span class="va">env</span>.<span class="va">NIX_CFLAGS_COMPILE</span> <span class="op">=</span> <span class="st">"-Wno-unused-command-line-argument"</span><span class="op">;</span> <span class="op">}</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="op">);</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
+   </div>
+   <h2 id="compiling">
+    Compiling
+   </h2>
+   <p>
+    All that’s left to do is rebuild the system. Run
+  <code>sudo nixos-rebuild boot</code> and let it finish. Once it’s done, reboot
+  and, assuming all went well, you should be booted into NixOS with your shiny
+  new Clang-built Linux!
+   </p>
+   <h2 id="links">
+    Links
+   </h2>
+   <p>
+    Here are the links from the Nix code above:
+   </p>
+   <ol type="1">
+    <li>
+     <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/NixOS/nixpkgs/issues/242244#issuecomment-1694235345" class="uri">https://github.com/NixOS/nixpkgs/issues/242244#issuecomment-1694235345</a>
+    </li>
+    <li>
+     <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/ClangBuiltLinux/linux/issues/1983#issuecomment-1904431443" class="uri">https://github.com/ClangBuiltLinux/linux/issues/1983#issuecomment-1904431443</a>
+    </li>
+   </ol>
+  </main>
+  <footer>
+   Copyright © 2024 Liassica. Except where noted, the content of this page is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0</a>.
+  </footer>
+ </body>
+</html>
