@@ -3,12 +3,12 @@
  <head>
   <meta charset="utf-8">
   <title>
-   How to compile GPlates on Fedora Linux - Liassica's site
+   Compile GPlates on Fedora Linux - Liassica's site
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/css/main.css" type="text/css">
   <meta name="generator" content="soupault">
-  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="icon" type="image/png" href="/images/favicon.webp">
  </head>
  <body>
   <nav>
@@ -20,13 +20,13 @@
   <main>
    <div id="post-header" class="cc-by-sa">
     <h1 id="post-title">
-     How to compile GPlates on Fedora Linux
+     Compile GPlates on Fedora Linux
     </h1>
     <div>
      <strong>Posted:</strong> <time id="post-date" datetime="2023-06-24">2023-06-24</time>
     </div>
     <div>
-     <strong>Updated:</strong> <time id="update-date" datetime="2024-01-09">2024-01-09</time>
+     <strong>Updated:</strong> <time id="update-date" datetime="2024-07-25">2024-07-25</time>
     </div>
     <div class="post-tags">
      <strong>Tags: </strong><a href="/posts/tag/guide"><span class="post-tag">guide</span></a>, <a href="/posts/tag/linux"><span class="post-tag">linux</span></a>, <a href="/posts/tag/out of date"><span class="post-tag">out of date</span></a>
@@ -45,8 +45,7 @@
     worldbuilding community. GPlates has an Ubuntu package and both source- and
     binary-based Arch User Repository packages, but no package for Fedora Linux.
     One of the options for running GPlates on Fedora is to compile GPlates from
-    source; this guide will show you how to do so.
-  </span>
+    source; this guide will show you how to do so.</span>
   It was last confirmed to be working 2023-08-26.
    </p>
    <h2 id="download-and-dependencies">
@@ -54,8 +53,8 @@
    </h2>
    <p>
     As of Fedora 38, compiling fails on the most recent stable version of
-  GPlates,<span class="citation" data-cites="gplates1"><a href="#ref-gplates1" role="doc-biblioref">[1]</a></span>
-  however the 2.3.1 beta 5 will compile as expected.<span class="citation" data-cites="gplates2"><a href="#ref-gplates2" role="doc-biblioref">[2]</a></span>
+  GPlates,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+  however the 2.3.1 beta 5 will compile as expected.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
   Download the
   <a target="_blank" rel="nofollow noopener noreferrer" href="https://support.aarnet.edu.au/hc/en-us/sections/6547442372367">2.3.1 beta 5 source code</a>
   and extract the downloaded archive to wherever you like.
@@ -80,7 +79,7 @@
    </h2>
    <p>
     Open the folder with the GPlates source code and open a terminal there. Fedora
-  puts Qwt in an odd spot, so you have to tell cmake where it is.<span class="citation" data-cites="gitlab1"><a href="#ref-gitlab1" role="doc-biblioref">[3]</a></span>
+  puts Qwt in an odd spot, so you have to tell cmake where it is.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
   Enter the command <code>cmake . -DQWT_INCLUDE_DIR=/usr/include/qt5/qwt</code>.
   Once that has finished, run <code>make</code>. Compiling GPlates takes about 2
   hours.
@@ -109,41 +108,29 @@
      GPlates running on Fedora 38 KDE
     </figcaption>
    </figure>
-   <div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-    <h2 id="references">
-     References
-    </h2>
-    <div id="ref-gplates1" class="csl-entry" role="listitem">
-     <div class="csl-left-margin">
-      [1]
-     </div>
-     <div class="csl-right-inline">
-      <span>“Compilation error with boost 1.77,”</span> GPlates Community Forum.
-      Accessed: Jun. 24, 2023. [Online]. Available:
-      <a target="_blank" rel="nofollow noopener noreferrer" href="https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452">https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452</a>
-     </div>
-    </div>
-    <div id="ref-gplates2" class="csl-entry" role="listitem">
-     <div class="csl-left-margin">
-      [2]
-     </div>
-     <div class="csl-right-inline">
-      <span>“Compilation error with boost 1.77,”</span> GPlates Community Forum.
-      Accessed: Jun. 24, 2023. [Online]. Available:
-      <a target="_blank" rel="nofollow noopener noreferrer" href="https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/12">https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/12</a>
-     </div>
-    </div>
-    <div id="ref-gitlab1" class="csl-entry" role="listitem">
-     <div class="csl-left-margin">
-      [3]
-     </div>
-     <div class="csl-right-inline">
-      <span>“QWT_INCLUDE_DIR is not automatically found on Fedora 27,”</span>
-      GitLab. Accessed: Jun. 24, 2023. [Online]. Available:
-      <a target="_blank" rel="nofollow noopener noreferrer" href="https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues/1663">https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues/1663</a>
-     </div>
-    </div>
-   </div>
+   <h2 id="references">
+    References
+   </h2>
+   <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+    <hr>
+    <ol>
+     <li id="fn1">
+      <p>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/1">“Compilation error with boost 1.77”</a>, <em>GPlates Community Forum</em>, 2021-12-20. Accessed 2023-06-24.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a>
+      </p>
+     </li>
+     <li id="fn2">
+      <p>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/12">Comment on “Compilation error with boost 1.77”</a>, <em>GPlates Community Forum</em>, 2022-11-15. Accessed 2023-06-24.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a>
+      </p>
+     </li>
+     <li id="fn3">
+      <p>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues/1663">“QWT_INCLUDE_DIR is not automatically found on Fedora 27”</a>, <em>Orfeo Toolbox GitLab</em>, 2021-12-20. Accessed 2023-06-24.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a>
+      </p>
+     </li>
+    </ol>
+   </section>
   </main>
   <footer>
    Copyright © 2024 Liassica. Except where noted, the content of this page is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0</a>.

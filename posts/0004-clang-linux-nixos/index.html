@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/css/main.css" type="text/css">
   <meta name="generator" content="soupault">
-  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="icon" type="image/png" href="/images/favicon.webp">
  </head>
  <body>
   <nav>
@@ -26,7 +26,7 @@
      <strong>Posted:</strong> <time id="post-date" datetime="2024-07-20">2024-07-20</time>
     </div>
     <div>
-     <strong>Updated:</strong> <time id="update-date" datetime="2024-07-20">2024-07-20</time>
+     <strong>Updated:</strong> <time id="update-date" datetime="2024-07-25">2024-07-25</time>
     </div>
     <div class="post-tags">
      <strong>Tags: </strong><a href="/posts/tag/guide"><span class="post-tag">guide</span></a>, <a href="/posts/tag/linux"><span class="post-tag">linux</span></a>
@@ -77,7 +77,7 @@
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>          llvm.stdenv.cc.override <span class="op">{</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Work around a NixOS-specific issue that causes boot failures by</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            <span class="co"># disabling the shared library loader (which is unused by the</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            <span class="co"># kernel anyway). See link 1 below for details.</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            <span class="co"># kernel anyway). See reference 1 below for details.</span></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            <span class="va">bintools</span> <span class="op">=</span> llvm.bintools.override <span class="op">{</span></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>              <span class="va">sharedLibraryLoader</span> <span class="op">=</span> <span class="cn">null</span><span class="op">;</span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>            <span class="op">};</span></span>
@@ -97,7 +97,7 @@
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="op">)</span>.overrideAttrs</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Work around another NixOS specific issue where builds with WERROR=y</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="co"># are stopped by a benign error. See link 2 below for details.</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="co"># are stopped by a benign error. See reference 2 below for details.</span></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Technically, this fix is only necessary with WERROR=y but the issue</span></span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      <span class="co"># still causes a warning on builds where WERROR is unset.</span></span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      <span class="op">{</span> <span class="va">env</span>.<span class="va">NIX_CFLAGS_COMPILE</span> <span class="op">=</span> <span class="st">"-Wno-unused-command-line-argument"</span><span class="op">;</span> <span class="op">}</span></span>
@@ -114,20 +114,20 @@
   and, assuming all went well, you should be booted into NixOS with your shiny
   new Clang-built Linux!
    </p>
-   <h2 id="links">
-    Links
+   <h2 id="references">
+    References
    </h2>
-   <p>
-    Here are the links from the Nix code above:
-   </p>
-   <ol type="1">
-    <li>
-     <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/NixOS/nixpkgs/issues/242244#issuecomment-1694235345" class="uri">https://github.com/NixOS/nixpkgs/issues/242244#issuecomment-1694235345</a>
-    </li>
-    <li>
-     <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/ClangBuiltLinux/linux/issues/1983#issuecomment-1904431443" class="uri">https://github.com/ClangBuiltLinux/linux/issues/1983#issuecomment-1904431443</a>
-    </li>
-   </ol>
+   <div id="footnotes" class="footnotes footnotes-end-of-document">
+    <hr>
+    <ol type="1">
+     <li>
+      <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/NixOS/nixpkgs/issues/242244#issuecomment-1694235345">Comment on “Linux kernel cannot be linked with the wrapped lld”</a>, <em>GitHub</em>, 2023-08-26. Accessed 2024-07-20.
+     </li>
+     <li>
+      <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/ClangBuiltLinux/linux/issues/1983#issuecomment-1904431443">Comment on “kernel built in NixOS failed to boot”</a>, <em>GitHub</em>, 2024-01-22. Accessed 2024-07-20.
+     </li>
+    </ol>
+   </div>
   </main>
   <footer>
    Copyright © 2024 Liassica. Except where noted, the content of this page is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0</a>.

@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://liassica.codeberg.page/atom.xml</id>
-  <updated>2024-07-20T00:00:00+00:00</updated>
+  <updated>2024-07-25T00:00:00+00:00</updated>
   <title>Liassica's site</title><logo>https://liassica.codeberg.page/images/favicon.png</logo><author>
     <name>Liassica</name></author>
   <generator uri="https://soupault.app" version="4.10.0">soupault</generator>
   <entry>
     <id>https://liassica.codeberg.page/posts/0004-clang-linux-nixos</id>
     <title>Compile Linux with Clang on NixOS</title>
-    <updated>2024-07-20T00:00:00+00:00</updated>
+    <updated>2024-07-25T00:00:00+00:00</updated>
     <content type="html">
     This short guide will teach you how to compile the
     &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://kernel.org/&quot;&gt;Linux kernel&lt;/a&gt; with
@@ -21,8 +21,8 @@
   
   <entry>
     <id>https://liassica.codeberg.page/posts/0003-gplates-fedora</id>
-    <title>How to compile GPlates on Fedora Linux</title>
-    <updated>2024-01-09T00:00:00+00:00</updated>
+    <title>Compile GPlates on Fedora Linux</title>
+    <updated>2024-07-25T00:00:00+00:00</updated>
     <content type="html">
     &lt;strong&gt;Note: this guide is out of date. GPlates has a new stable version (2.4.0)
       and the download link for the old source code doesn’t work

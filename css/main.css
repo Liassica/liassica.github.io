@@ -348,6 +348,14 @@ dl {
   background: #ffffa5;
 }
 
+.buttons p {
+  display: flex;
+  flex-flow: row wrap;
+}
+.buttons p a {
+  margin: 2px;
+}
+
 body {
   background: #303030;
   color: #fff;
@@ -464,41 +472,45 @@ p > code {
   font-size: smaller;
 }
 
-.csl-entry {
-  display: flex;
+.footnote-ref > sup:before {
+  content: "[";
 }
-.csl-entry > div {
-  margin: 0 0.35em;
-}
-
-.citation {
-  line-height: 1;
-  font-size: smaller;
-  vertical-align: super;
+.footnote-ref > sup:after {
+  content: "]";
 }
 
-div.sourceCode {
+.footnote-back:before {
+  content: " ";
+}
+
+pre.sourceCode {
   background: #191919;
   overflow-x: auto;
 }
-div.sourceCode code.sourceCode.nix .co {
+pre.sourceCode code.sourceCode .co {
   font-style: italic;
   color: gray;
 }
-div.sourceCode code.sourceCode.nix .op {
+pre.sourceCode code.sourceCode .op {
   color: darkgray;
 }
-div.sourceCode code.sourceCode.nix .va {
+pre.sourceCode code.sourceCode .va {
   color: orange;
 }
-div.sourceCode code.sourceCode.nix .kw {
-  color: darkviolet;
+pre.sourceCode code.sourceCode .kw {
+  color: mediumorchid;
 }
-div.sourceCode code.sourceCode.nix .cn {
+pre.sourceCode code.sourceCode .cn {
   color: palevioletred;
 }
-div.sourceCode code.sourceCode.nix .st {
+pre.sourceCode code.sourceCode .st {
   color: greenyellow;
+}
+pre.sourceCode code.sourceCode .dt {
+  color: palegreen;
+}
+pre.sourceCode code.sourceCode .ot {
+  color: lightseagreen;
 }
 
 /*# sourceMappingURL=main.css.map */
