@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>
+   Software recommendations - Liassica's site
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/main.css" type="text/css">
+  <meta name="generator" content="soupault">
+  <link rel="icon" type="image/png" href="/images/favicon.webp">
+ </head>
+ <body>
+  <nav>
+   <a href="/">Home</a>
+      <a class="nav-active" href="/posts">Posts</a>
+      <a href="/links">Links</a>
+      <a href="/grszh">Grszh Gallery</a>
+  </nav>
+  <main>
+   <div id="post-header" class="cc-by-nd">
+    <h1 id="post-title">
+     Software recommendations
+    </h1>
+    <div>
+     <strong>Posted:</strong> <time id="post-date" datetime="2024-08-10">2024-08-10</time>
+    </div>
+    <div>
+     <strong>Updated:</strong> <time id="update-date" datetime="2024-08-10">2024-08-10</time>
+    </div>
+    <div class="post-tags">
+     <strong>Tags: </strong><a href="/posts/tag/browsers"><span class="post-tag">browsers</span></a>, <a href="/posts/tag/linux"><span class="post-tag">linux</span></a>
+    </div>
+   </div>
+   <h2 id="overview">
+    Overview
+   </h2>
+   <p>
+    <span id="post-excerpt">This post lists software I recommend for various use cases.</span>
+  Idea blatantly stolen from
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://geckro.github.io/html/lists/software.html">geck</a>.
+   </p>
+   <table>
+    <caption>
+     Operating systems
+    </caption>
+    <colgroup>
+     <col>
+     <col>
+     <col>
+    </colgroup>
+    <thead>
+     <tr class="header">
+      <th>
+       OS family
+      </th>
+      <th>
+       OS
+      </th>
+      <th>
+       Explanation
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr class="odd">
+      <td rowspan="4">
+       Linux
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://nixos.org">NixOS</a>
+      </td>
+      <td>
+       Currently my main operating system. Its main features are declarative
+        system configuration and generational deployment. This not only makes it
+        extremely robust, but it also makes it very easy to copy configurations
+        between devices or restore them after a reinstallation. You can find
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://codeberg.org/Liassica/nixos-config">my NixOS configuration</a>
+        on my Codeberg.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/secureblue/secureblue">Secureblue</a>
+      </td>
+      <td>
+       Hardened Fedora Atomic images. One of the best choices for a
+        (relatively) secure Linux desktop and built upon a robust Fedora Atomic
+        base.
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://archlinux.org/">Arch Linux</a>
+      </td>
+      <td>
+       Flexible DIY distro. While I generally prefer NixOS, I’ve enough
+        experience with Arch to recommend it to those who don’t want to learn
+        NixOS’s ins and outs.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://grapheneos.org/">GrapheneOS</a>
+      </td>
+      <td>
+       Hardened Android derivative. The best option for mobile devices.
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       Windows
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://microsoft.com/evalcenter/evaluate-windows-11-iot-enterprise-ltsc">Windows 11 IoT LTSC</a>
+      </td>
+      <td>
+       The only somewhat usable version of Windows. I avoid using Windows when
+        I can because I don’t particularly like it. Good luck trying to get your
+        hands on a copy, though; the education edition is probably good enough
+        if you can’t.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <table>
+    <caption>
+     Web browsers
+    </caption>
+    <colgroup>
+     <col>
+     <col>
+     <col>
+    </colgroup>
+    <thead>
+     <tr class="header">
+      <th>
+       OS
+      </th>
+      <th>
+       Browser
+      </th>
+      <th>
+       Explanation
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr class="odd">
+      <td>
+       Fedora
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/secureblue/hardened-chromium">Hardened Chromium</a>
+      </td>
+      <td>
+       The name is self-explanatory. Uses a set of custom patches as well as
+        patches from GrapheneOS’s Vanadium to reduce the attack surface and
+        increase the security of the standard Fedora Chromium package.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       Other desktop Linux
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://flathub.org/apps/org.chromium.Chromium">Chromium Flatpak</a>
+      </td>
+      <td>
+       Most other distros do not compile Chromium correctly by introducing lots
+        of downstream patches that weaken security, compiling debug builds
+        instead of production builds, or dynamically linking Chromium to
+        unhardened system libraries and thereby
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://clang.llvm.org/docs/ControlFlowIntegrity.html#:~:text=To%20allow%20the%20checks%20to%20be%20implemented%20efficiently%2C%20the%20program%20must%20be%20structured%20such%20that%20certain%20object%20files%20are%20compiled%20with%20CFI%20enabled%2C%20and%20are%20statically%20linked%20into%20the%20program.">severely weakening control flow integrity</a>
+        (CFI). The Chromium Flatpak mitigates some of this by replacing
+        Chromium’s built-in sandboxing with Flatpak’s sandboxing.
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       GrapheneOS
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/GrapheneOS/Vanadium">Vanadium</a>
+      </td>
+      <td>
+       Hardened Chromium-based browser for GrapheneOS.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       Other Android
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/uazo/cromite">Cromite</a>
+      </td>
+      <td>
+       Chromium-based Android browser with some privacy enhancements.
+      </td>
+     </tr>
+     <tr class="odd">
+      <td rowspan="2">
+       Windows
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://microsoft.com/edge">Microsoft Edge</a>
+      </td>
+      <td>
+       Edge’s strict enhanced security mode disables just-in-time (JIT)
+        compilation for all sites,
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode/#:~:text=it%20would%20remove%20roughly%20half%20of%20the%20V8%20bugs%20that%20must%20be%20fixed">massively reducing the attack vector of V8</a>, Chromium’s JavaScript engine. However, the addition of the
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://microsoftedge.github.io/edgevr/posts/Introducing-Enhanced-Security-for-Microsoft-Edge/#introducing-drum-brake-a-webassembly-interpreter">DrumBrake</a>
+        WebAssembly (WASM) interpreter allows you to still use WASM with
+        enhanced security enabled. This mode also enables use of advanced
+        Windows security features such as
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://learn.microsoft.com/windows/win32/secbp/control-flow-guard">Control Flow Guard</a>
+        and
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://learn.microsoft.com/defender-endpoint/exploit-protection-reference#arbitrary-code-guard">Arbitrary Code Guard</a>. Finally, by using Edge, you avoid trusting an extra party by
+        installing a different browser, as you’re already trusting Microsoft by
+        using Windows.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://mozilla.org/firefox">Mozilla Firefox</a>
+      </td>
+      <td>
+       If you <em>really</em> don’t like the idea of using Edge, the most
+        secure version of Firefox is the
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://madaidans-insecurities.github.io/firefox-chromium.html#windows-sandbox">Windows one</a>.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p>
+    Generally avoid Firefox Mobile and its derivatives as it is missing important
+  security features
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1610822">such as site isolation</a>.
+   </p>
+   <p>
+    With the exception of Edge on Windows, generally avoid proprietary
+  Chromium-based desktop browsers such as Opera or Vivaldi as they generally
+  provide nothing security-wise over Chromium/Edge while adding attack surface,
+  extra parties you’re required to trust, and tracking.
+   </p>
+   <table>
+    <caption>
+     Browser extensions
+    </caption>
+    <colgroup>
+     <col>
+     <col>
+    </colgroup>
+    <thead>
+     <tr class="header">
+      <th>
+       Extension
+      </th>
+      <th>
+       Explanation
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr class="odd">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://ublockorigin.com/">uBlock Origin Lite</a>
+      </td>
+      <td rowspan="2">
+       Efficient general-purpose content blocker. Stick to its default filter
+        lists to avoid standing out and prevent the possibility of a malicious
+        filter rule being added; prefer Lite on Chromium-based browsers so that
+        you can completely avoid Manifest V2,
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://developer.chrome.com/docs/extensions/develop/migrate/improve-security">improving security</a>.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://ublockorigin.com/">uBlock Origin</a>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p>
+    First rule of browser extensions: less is more. Install as few extensions as
+  possible; the more you have installed, the greater your attack surface and the
+  more you stand out. I personally only have a single extension,
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://chromewebstore.google.com/detail/bitwarden-password-manage/nngceckbapebfimnlniiiahkandclblb">Bitwarden password manager</a>, and if Bitwarden Desktop for Linux ever gains the ability to handle passkey
+  requests from the browser I may consider ditching even that. I use
+  <a target="_blank" rel="nofollow noopener noreferrer" href="https://adguard-dns.io/en/public-dns.html">AdGuard’s public DNS servers</a>
+  to provide ad blocking so that I don’t need to install uBlock Origin.
+   </p>
+   <table>
+    <caption>
+     Desktop applications
+    </caption>
+    <colgroup>
+     <col>
+     <col>
+     <col>
+    </colgroup>
+    <thead>
+     <tr class="header">
+      <th>
+       Category
+      </th>
+      <th>
+       App
+      </th>
+      <th>
+       Explanation
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr class="odd">
+      <td rowspan="3">
+       Text editor/ IDE
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://neovim.io/">Neovim</a>
+      </td>
+      <td>
+       Modern Vim fork with native Lua support. Fast and simple. I personally
+        use a <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.lazyvim.org/">LazyVim</a>-based
+        configuration.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.gnu.org/software/emacs/">Emacs</a>
+      </td>
+      <td>
+       Extensible GUI and TUI text editor. Emacs can do anything. personally
+        use a
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/doomemacs/doomemacs">Doom Emacs</a>-based
+        configuration.
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://vscodium.com/">VSCodium</a>
+      </td>
+      <td>
+       Builds of Code OSS with Microsoft telemetry removed. The most
+        beginner-friendly of these options.
+      </td>
+     </tr>
+     <tr class="even">
+      <td rowspan="2">
+       Notes
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://orgmode.org/">Org mode</a>
+      </td>
+      <td>
+       Major mode and plain-text file format for Emacs. Similar to Markdown in
+        many ways but a bit more flexible.
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://obsidian.md/">Obsidian</a>
+      </td>
+      <td>
+       Markdown-based note-taking app with a bunch of fancy features. If
+        Obsidian was open-source it would be top 3 software.
+      </td>
+     </tr>
+     <tr class="even">
+      <td rowspan="2">
+       Music player
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.strawberrymusicplayer.org/">Strawberry</a>
+      </td>
+      <td>
+       Cross-platform open-source Qt-based music player. The default icons are
+        a bit ugly but this can mostly be mitigated on Linux by turning on
+        “system icons”. Strawberry fulfills my two requirements for a music
+        player–Last.fm integration using the newer OAuth API (as opposed to
+        plain-text username and password) and album-order preserving shuffle
+        (e.g.&nbsp;in a playlist of mixed singles and albums, it will shuffle the
+        playlist order but play albums in the original list order)–and is the
+        only Linux music player I’ve found that does so.
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.foobar2000.org/">foobar2000</a>
+      </td>
+      <td>
+       Customizable freeware music player for Windows and macOS. The only other
+        music player I know of that fulfills the two above requirements. If
+        foobar2000 was open-source it would be top 3 software.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       RSS reader
+      </td>
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/martinrotter/rssguard">RSS Guard</a>
+      </td>
+      <td>
+       Cross-platform open-source Qt-based RSS reader. Extremely featureful and
+        looks really nice with a good Qt theme.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <table>
+    <caption>
+     Mobile applications
+    </caption>
+    <colgroup>
+     <col>
+     <col>
+    </colgroup>
+    <thead>
+     <tr class="header">
+      <th>
+       App
+      </th>
+      <th>
+       Explanation
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr class="odd">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://getaegis.app/">Aegis Authenticator</a>
+      </td>
+      <td>
+       Open-source multi-factor authenticator. Allows exports and setting a
+        vault password.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/deckerst/aves">Aves</a>
+      </td>
+      <td>
+       Open-source photo gallery.
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://signal.org/">Signal</a>
+      </td>
+      <td>
+       Private and secure open-source instant messenger. Often considered the
+        gold-standard of encrypted real-time communication.
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       <a target="_blank" rel="nofollow noopener noreferrer" href="https://kdeconnect.kde.org/">KDE Connect</a>
+      </td>
+      <td>
+       Easily connect your desktop or laptop to your mobile devices. Very
+        useful for sharing notifications and files between devices.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </main>
+  <footer>
+   Copyright © 2024 Liassica. Except where noted, the content of this page is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-ND 4.0</a>.
+  </footer>
+ </body>
+</html>

@@ -1,15 +1,3 @@
-/**
-* SPDX-License-Identifier: AGPL-3.0-or-later
-* Copyright 2024 Liassica
-*/
-/**
-* SPDX-License-Identifier: AGPL-3.0-or-later
-* Copyright 2024 Liassica
-*/
-/**
-* SPDX-License-Identifier: AGPL-3.0-or-later
-* Copyright 2024 Liassica
-*/
 /* Document
  * ========================================================================== */
 /**
@@ -303,14 +291,6 @@ dl {
   padding-left: 1em;
 }
 
-/**
-* SPDX-License-Identifier: AGPL-3.0-or-later
-* Copyright 2024 Liassica
-*/
-/**
-* SPDX-License-Identifier: AGPL-3.0-or-later
-* Copyright 2024 Liassica
-*/
 @font-face {
   font-family: "Cooper Black Regular";
   src: url("/fonts/Cooper-Black-Regular/Cooper-Black-Regular.ttf");
@@ -425,6 +405,7 @@ table tr.odd {
 table tr th,
 table tr td {
   padding: 0.4em;
+  border: 1px solid gray;
 }
 
 .gallery p {

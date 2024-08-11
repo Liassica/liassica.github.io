@@ -1,10 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://liassica.codeberg.page/atom.xml</id>
-  <updated>2024-08-05T00:00:00+00:00</updated>
+  <updated>2024-08-10T00:00:00+00:00</updated>
   <title>Liassica's site</title><logo>https://liassica.codeberg.page/images/favicon.png</logo><author>
     <name>Liassica</name></author>
   <generator uri="https://soupault.app" version="4.10.0">soupault</generator>
+  <entry>
+    <id>https://liassica.codeberg.page/posts/0005-software-recs</id>
+    <title>Software recommendations</title>
+    <updated>2024-08-10T00:00:00+00:00</updated>
+    <content type="html">
+    This post lists software I recommend for various use cases.
+    </content>
+    <link href="https://liassica.codeberg.page/posts/0005-software-recs" rel="alternate"/>
+  </entry>
+  
   <entry>
     <id>https://liassica.codeberg.page/posts/0004-clang-linux-nixos</id>
     <title>Compile Linux with Clang on NixOS</title>
