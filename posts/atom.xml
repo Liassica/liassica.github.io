@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://liassica.codeberg.page/atom.xml</id>
-  <updated>2024-08-10T00:00:00+00:00</updated>
+  <updated>2024-08-18T00:00:00+00:00</updated>
   <title>Liassica's site</title><logo>https://liassica.codeberg.page/images/favicon.png</logo><author>
     <name>Liassica</name></author>
   <generator uri="https://soupault.app" version="4.10.0">soupault</generator>
   <entry>
     <id>https://liassica.codeberg.page/posts/0005-software-recs</id>
     <title>Software recommendations</title>
-    <updated>2024-08-10T00:00:00+00:00</updated>
+    <updated>2024-08-18T00:00:00+00:00</updated>
     <content type="html">
     This post lists software I recommend for various use cases.
     </content>
@@ -77,7 +77,7 @@
   <entry>
     <id>https://liassica.codeberg.page/posts/0000-arkenfox</id>
     <title>Arkenfox installation guide</title>
-    <updated>2024-07-18T00:00:00+00:00</updated>
+    <updated>2024-08-18T00:00:00+00:00</updated>
     <content type="html">
     &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/arkenfox/user.js&quot;&gt;Arkenfox user.js&lt;/a&gt; is a
     configuration file for desktop Firefox designed to increase the privacy and

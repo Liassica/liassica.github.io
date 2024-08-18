@@ -448,7 +448,8 @@ footer a:active {
   color: darkorange;
 }
 
-p > code {
+p > code,
+li > code {
   background: #191919;
   font-size: smaller;
 }
