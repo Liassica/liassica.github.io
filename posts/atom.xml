@@ -373,13 +373,13 @@
   <entry>
     <id>https://liassica.codeberg.page/posts/0004-clang-linux-nixos</id>
     <title>Compile Linux with Clang on NixOS</title>
-    <updated>2024-09-01T00:00:00+00:00</updated>
+    <updated>2025-03-08T00:00:00+00:00</updated>
     <content type="html">
     &lt;div id=&quot;post-header&quot; class=&quot;cc-by-sa&quot;&gt;
       &lt;h1 id=&quot;post-title&quot;&gt;Compile Linux with Clang on NixOS&lt;/h1&gt;
       &lt;div&gt;&lt;strong&gt;Posted:&lt;/strong&gt; &lt;time id=&quot;post-date&quot; datetime=&quot;2024-07-20&quot;&gt;2024-07-20&lt;/time&gt;&lt;/div&gt;
       
-      &lt;div&gt;&lt;strong&gt;Updated:&lt;/strong&gt; &lt;time id=&quot;update-date&quot; datetime=&quot;2024-09-01&quot;&gt;2024-09-01&lt;/time&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;strong&gt;Updated:&lt;/strong&gt; &lt;time id=&quot;update-date&quot; datetime=&quot;2025-03-08&quot;&gt;2025-03-08&lt;/time&gt;&lt;/div&gt;
       
       
         &lt;div class=&quot;post-tags&quot;&gt;
@@ -430,35 +430,30 @@
 &lt;span id=&quot;cb1-27&quot;&gt;&lt;a href=&quot;#cb1-27&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;co&quot;&gt;# Tell our C compiler (Clang) to use LLVM bintools--normally GNU&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-28&quot;&gt;&lt;a href=&quot;#cb1-28&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;co&quot;&gt;# binutils are used even with Clang as the compiler.&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-29&quot;&gt;&lt;a href=&quot;#cb1-29&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          llvm.stdenv.cc.override &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-30&quot;&gt;&lt;a href=&quot;#cb1-30&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;            &lt;span class=&quot;co&quot;&gt;# Work around a NixOS-specific issue that causes boot failures by&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-31&quot;&gt;&lt;a href=&quot;#cb1-31&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;            &lt;span class=&quot;co&quot;&gt;# disabling the shared library loader (which is unused by the&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-32&quot;&gt;&lt;a href=&quot;#cb1-32&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;            &lt;span class=&quot;co&quot;&gt;# kernel anyway). See reference 1 below for details.&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-33&quot;&gt;&lt;a href=&quot;#cb1-33&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;            &lt;span class=&quot;va&quot;&gt;bintools&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; llvm.bintools.override &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-34&quot;&gt;&lt;a href=&quot;#cb1-34&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;              &lt;span class=&quot;va&quot;&gt;sharedLibraryLoader&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;cn&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-35&quot;&gt;&lt;a href=&quot;#cb1-35&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;            &lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-36&quot;&gt;&lt;a href=&quot;#cb1-36&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-37&quot;&gt;&lt;a href=&quot;#cb1-37&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;op&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-38&quot;&gt;&lt;a href=&quot;#cb1-38&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-39&quot;&gt;&lt;a href=&quot;#cb1-39&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# Tell Linux that we&apos;re compiling with Clang and LLVM.&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-40&quot;&gt;&lt;a href=&quot;#cb1-40&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;va&quot;&gt;extraMakeFlags&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&quot;LLVM=1&quot;&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;];&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-41&quot;&gt;&lt;a href=&quot;#cb1-41&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-42&quot;&gt;&lt;a href=&quot;#cb1-42&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# If you&apos;d like to edit your kernel configuration, use&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-43&quot;&gt;&lt;a href=&quot;#cb1-43&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# `structuredExtraConfig`. For example, some options available to us&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-44&quot;&gt;&lt;a href=&quot;#cb1-44&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# when compiling with Clang and linking with LLD:&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-45&quot;&gt;&lt;a href=&quot;#cb1-45&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;va&quot;&gt;structuredExtraConfig&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-46&quot;&gt;&lt;a href=&quot;#cb1-46&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;va&quot;&gt;CFI_CLANG&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; lib.kernel.yes&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-47&quot;&gt;&lt;a href=&quot;#cb1-47&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;va&quot;&gt;LTO_CLANG_THIN&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; lib.kernel.yes&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-48&quot;&gt;&lt;a href=&quot;#cb1-48&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-49&quot;&gt;&lt;a href=&quot;#cb1-49&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-50&quot;&gt;&lt;a href=&quot;#cb1-50&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;)&lt;/span&gt;.overrideAttrs&lt;/span&gt;
-&lt;span id=&quot;cb1-51&quot;&gt;&lt;a href=&quot;#cb1-51&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# Work around another NixOS specific issue where builds with WERROR=y&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-52&quot;&gt;&lt;a href=&quot;#cb1-52&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# are stopped by a benign error. See reference 2 below for details.&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-53&quot;&gt;&lt;a href=&quot;#cb1-53&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# Technically, this fix is only necessary with WERROR=y but the issue&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-54&quot;&gt;&lt;a href=&quot;#cb1-54&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# still causes a warning on builds where WERROR is unset.&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-55&quot;&gt;&lt;a href=&quot;#cb1-55&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;va&quot;&gt;env&lt;/span&gt;.&lt;span class=&quot;va&quot;&gt;NIX_CFLAGS_COMPILE&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&quot;-Wno-unused-command-line-argument&quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-56&quot;&gt;&lt;a href=&quot;#cb1-56&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-57&quot;&gt;&lt;a href=&quot;#cb1-57&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;co&quot;&gt;# ...&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-58&quot;&gt;&lt;a href=&quot;#cb1-58&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span id=&quot;cb1-30&quot;&gt;&lt;a href=&quot;#cb1-30&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;            &lt;span class=&quot;va&quot;&gt;bintools&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; llvm.bintools&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-31&quot;&gt;&lt;a href=&quot;#cb1-31&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-32&quot;&gt;&lt;a href=&quot;#cb1-32&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;op&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-33&quot;&gt;&lt;a href=&quot;#cb1-33&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-34&quot;&gt;&lt;a href=&quot;#cb1-34&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# Tell Linux that we&apos;re compiling with Clang and LLVM.&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-35&quot;&gt;&lt;a href=&quot;#cb1-35&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;va&quot;&gt;extraMakeFlags&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&quot;LLVM=1&quot;&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;];&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-36&quot;&gt;&lt;a href=&quot;#cb1-36&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-37&quot;&gt;&lt;a href=&quot;#cb1-37&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# If you&apos;d like to edit your kernel configuration, use&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-38&quot;&gt;&lt;a href=&quot;#cb1-38&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# `structuredExtraConfig`. For example, some options available to us&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-39&quot;&gt;&lt;a href=&quot;#cb1-39&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# when compiling with Clang and linking with LLD:&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-40&quot;&gt;&lt;a href=&quot;#cb1-40&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;va&quot;&gt;structuredExtraConfig&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-41&quot;&gt;&lt;a href=&quot;#cb1-41&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;va&quot;&gt;CFI_CLANG&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; lib.kernel.yes&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-42&quot;&gt;&lt;a href=&quot;#cb1-42&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;va&quot;&gt;LTO_CLANG_THIN&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; lib.kernel.yes&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-43&quot;&gt;&lt;a href=&quot;#cb1-43&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-44&quot;&gt;&lt;a href=&quot;#cb1-44&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-45&quot;&gt;&lt;a href=&quot;#cb1-45&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;)&lt;/span&gt;.overrideAttrs&lt;/span&gt;
+&lt;span id=&quot;cb1-46&quot;&gt;&lt;a href=&quot;#cb1-46&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# Work around another NixOS specific issue where builds with WERROR=y&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-47&quot;&gt;&lt;a href=&quot;#cb1-47&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# are stopped by a benign error. See reference 1 below for details.&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-48&quot;&gt;&lt;a href=&quot;#cb1-48&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# Technically, this fix is only necessary with WERROR=y but the issue&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-49&quot;&gt;&lt;a href=&quot;#cb1-49&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# still causes a warning on builds where WERROR is unset.&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-50&quot;&gt;&lt;a href=&quot;#cb1-50&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;va&quot;&gt;env&lt;/span&gt;.&lt;span class=&quot;va&quot;&gt;NIX_CFLAGS_COMPILE&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&quot;-Wno-unused-command-line-argument&quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-51&quot;&gt;&lt;a href=&quot;#cb1-51&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-52&quot;&gt;&lt;a href=&quot;#cb1-52&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;co&quot;&gt;# ...&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-53&quot;&gt;&lt;a href=&quot;#cb1-53&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;h2 id=&quot;compiling&quot;&gt;Compiling&lt;/h2&gt;
 &lt;p&gt;
@@ -471,9 +466,6 @@
 &lt;div id=&quot;footnotes&quot; class=&quot;footnotes footnotes-end-of-document&quot;&gt;
   &lt;hr&gt;
   &lt;ol type=&quot;1&quot;&gt;
-    &lt;li&gt;
-      &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/NixOS/nixpkgs/issues/242244#issuecomment-1694235345&quot;&gt;Comment on “Linux kernel cannot be linked with the wrapped lld”&lt;/a&gt;, &lt;em&gt;GitHub&lt;/em&gt;, 2023-08-26. Accessed 2024-07-20.
-    &lt;/li&gt;
     &lt;li&gt;
       &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/ClangBuiltLinux/linux/issues/1983#issuecomment-1904431443&quot;&gt;Comment on “kernel built in NixOS failed to boot”&lt;/a&gt;, &lt;em&gt;GitHub&lt;/em&gt;, 2024-01-22. Accessed 2024-07-20.
     &lt;/li&gt;
