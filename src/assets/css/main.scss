@@ -38,6 +38,8 @@ nav {
     margin: 0;
     list-style: none;
     position: relative;
+    display: flex;
+    align-items: center;
 
     a {
       background-color: $mantle;
@@ -48,6 +50,13 @@ nav {
 
       &:hover {
         background-color: $highlight;
+      }
+
+      &:has(> img) {
+        padding: 0;
+        img {
+          max-height: 5em;
+        }
       }
     }
 
