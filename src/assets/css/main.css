@@ -1,0 +1,53 @@
+:root {
+  --bg: #eee;
+  --text: #333;
+  --dropdown-bg: #ccc;
+  --highlight: orange;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+nav {
+  background-color: var(--dropdown-bg);
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+nav ul ul li {
+  float: none;
+  display: list-item;
+  position: relative;
+  width: 15em;
+}
+
+nav a {
+  display: block;
+  padding: 0 1em;
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--highlight);
+}
