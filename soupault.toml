@@ -1,0 +1,48 @@
+[settings]
+  soupault_version = "4.7.0"
+  strict = true
+  verbose = true
+  debug = false
+  site_dir = "src"
+  build_dir = "public"
+  page_file_extensions = ["htm", "html", "md", "rst", "adoc"]
+  clean_urls = true
+  keep_extensions = ["html", "htm"]
+  default_extension = "html"
+  ignore_extensions = ["draft"]
+  generator_mode = true
+  complete_page_selector = "html"
+  default_template_file = "templates/main.html"
+  default_content_selector = "main"
+  default_content_action = "append_child"
+  keep_doctype = true
+  doctype = "<!DOCTYPE html>"
+  pretty_print_html = true
+  plugin_discovery = true
+  plugin_dirs = ["plugins"]
+  caching = true
+  cache_dir = ".cache/soupault"
+  page_character_encoding = "utf-8"
+
+[asset_processors]
+  scss = "if [[ ! {{source_file_name}} =~ ^[_] ]]; then sass {{source_file_path}} {{target_dir}}/{{source_file_base_name}}.css | prettier --parser=css; fi"
+
+[widgets.page-title]
+  widget = "title"
+  selector = ["#page-title", "h1"]
+  default = "Nomoxapine&reg; (ventatracin)"
+  append = " | Nomoxapine&reg; (ventatracin)"
+
+  # Insert a <title> in a page if it doesn't have one already.
+  # By default soupault assumes if it's missing, you don't want it.
+  force = false
+
+[widgets.safe-links]
+  widget = "safe-links"
+  attributes = ["nofollow"]
+  targets = ["_blank"]
+
+[widgets.highlight-active-link]
+  widget = "section-link-highlight"
+  selector = "nav"
+  active_link_class = "nav-active"
