@@ -1,15 +1,15 @@
-$bg: #eee;
+$base: #eee;
+$mantle: #ccc;
 $text: #333;
-$dropdown-bg: #ccc;
 $highlight: orange;
 
 body {
-  background-color: $bg;
+  background-color: $base;
   color: $text;
   font-family: sans-serif;
 
   footer {
-    #safety-popup {
+    background-color: $mantle;
       position: fixed;
       top: 85vh;
       height: 100%;
@@ -25,7 +25,7 @@ body {
 }
 
 nav {
-  background-color: $dropdown-bg;
+  background-color: $mantle;
 
   ul {
     padding: 0;
@@ -34,7 +34,7 @@ nav {
     position: relative;
 
     a {
-      background-color: $dropdown-bg;
+      background-color: $mantle;
       display: block;
       padding: 1em;
       color: inherit;
