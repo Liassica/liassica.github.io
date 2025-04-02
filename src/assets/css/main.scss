@@ -8,6 +8,19 @@ body {
   color: $text;
   font-family: sans-serif;
 
+  footer {
+    #safety-popup {
+      position: fixed;
+      top: 85vh;
+      height: 100%;
+      overflow: hidden;
+      transition: all 1s;
+
+      &.close {
+        top: 100%;
+        height: 0;
+      }
+    }
   }
 }
 
