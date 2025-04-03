@@ -51,12 +51,12 @@ dl {
 }
 
 body {
-  background-color: #eee;
-  color: #333;
-  font-family: sans-serif;
+  background-color: #eeeeee;
+  color: #222;
+  font-family: "Merriweather Sans";
 }
 body nav {
-  background-color: #ccc;
+  background-color: #e9e9e9;
 }
 body nav ul {
   padding: 0;
@@ -68,7 +68,7 @@ body nav ul {
   justify-content: center;
 }
 body nav ul a {
-  background-color: #ccc;
+  background-color: #e9e9e9;
   display: block;
   padding: 1em;
   color: inherit;
@@ -114,11 +114,12 @@ body main .homepage-promo__content {
   text-transform: uppercase;
 }
 body main .homepage-promo__content > * {
-  padding: 1em;
+  padding: 36px;
 }
 body main .homepage-promo__content button {
   font-size: x-large;
-  color: white;
+  color: #e9e9e9;
+  font-family: inherit;
   background-color: #405051;
   border: solid #405051;
   border-radius: 1em;
@@ -126,7 +127,7 @@ body main .homepage-promo__content button {
   padding: 1em;
 }
 body footer {
-  background-color: #ccc;
+  background-color: #e9e9e9;
 }
 body footer h2 {
   color: #405051;
@@ -139,7 +140,7 @@ body footer #safety-info {
   display: none;
 }
 body footer #safety-popup {
-  padding: 0.3em;
+  padding: 0.5em 2em;
   background-color: inherit;
   position: fixed;
   top: 80vh;
@@ -153,7 +154,7 @@ body footer #safety-popup.close {
   height: 0;
 }
 body footer #safety-bottom {
-  padding: 0.3em;
+  padding: 0.5em 2em;
 }
 
 /*# sourceMappingURL=main.css.map */
