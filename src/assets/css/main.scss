@@ -55,6 +55,7 @@ nav {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     a {
       background-color: $mantle;
@@ -72,7 +73,7 @@ nav {
       }
 
       &:has(> img) {
-        padding: 0;
+        padding: 0.5em;
         img {
           max-height: 5em;
         }
