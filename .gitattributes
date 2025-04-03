@@ -1,0 +1,2 @@
+src/assets/images/favicon.webp filter=lfs diff=lfs merge=lfs -text
+src/assets/images/logo.webp filter=lfs diff=lfs merge=lfs -text
