@@ -1,9 +1,12 @@
 @use "resets";
 
+$light: #97b0b2;
+$dark: #405051;
+
 $base: #eee;
 $mantle: #ccc;
 $text: #333;
-$highlight: orange;
+$highlight: $light;
 
 body {
   background-color: $base;
