@@ -16,6 +16,10 @@ body {
   footer {
     background-color: $mantle;
 
+    #safety-info {
+      display: none;
+    }
+
     #safety-popup {
       background-color: inherit;
       position: fixed;

@@ -2,6 +2,12 @@ $(document).ready(function () {
   $("#safety-popup").after(function () {
     return $(this).clone().removeAttr("id").attr("id", "safety-bottom");
   });
+
+  $("#safety-bottom").append($("#safety-info").html());
+
+  $("#safety-popup h2")
+    .append('<i class="bi bi-chevron-up"></i>')
+    .wrapInner('<a href="#safety-bottom"></a>');
 });
 
 $(document).scroll(function () {
