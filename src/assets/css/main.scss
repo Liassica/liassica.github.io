@@ -11,7 +11,7 @@ $highlight: $light;
 body {
   background-color: $base;
   color: $text;
-  font-family: sans-serif;
+  font-family: "Merriweather Sans";
 
   nav {
     background-color: $mantle;
@@ -91,6 +91,7 @@ body {
         button {
           font-size: x-large;
           color: $mantle;
+          font-family: inherit;
           background-color: $dark;
           border: solid $dark;
           border-radius: 1em;
