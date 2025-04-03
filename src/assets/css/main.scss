@@ -3,9 +3,9 @@
 $light: #97b0b2;
 $dark: #405051;
 
-$base: #eee;
-$mantle: #ccc;
-$text: #333;
+$base: #eeeeee;
+$mantle: #e9e9e9;
+$text: #222;
 $highlight: $light;
 
 body {
@@ -90,7 +90,7 @@ body {
 
         button {
           font-size: x-large;
-          color: white;
+          color: $mantle;
           background-color: $dark;
           border: solid $dark;
           border-radius: 1em;
