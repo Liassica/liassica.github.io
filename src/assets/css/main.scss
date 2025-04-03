@@ -85,7 +85,7 @@ body {
         text-transform: uppercase;
 
         > * {
-          padding: 1em;
+          padding: 36px;
         }
 
         button {
@@ -117,7 +117,7 @@ body {
     }
 
     #safety-popup {
-      padding: 0.3em;
+      padding: 0.5em 2em;
       background-color: inherit;
       position: fixed;
       top: 80vh;
@@ -133,7 +133,7 @@ body {
     }
 
     #safety-bottom {
-      padding: 0.3em;
+      padding: 0.5em 2em;
     }
   }
 }
