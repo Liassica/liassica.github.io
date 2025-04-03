@@ -109,13 +109,15 @@ body main .homepage-promo {
   background-repeat: no-repeat;
 }
 body main .homepage-promo__content {
-  padding: 0.5em;
+  padding: 5em 5em 15em;
   font-size: x-large;
+  text-transform: uppercase;
 }
-body main .homepage-promo__content h3 {
-  padding: 5em;
+body main .homepage-promo__content > * {
+  padding: 1em;
 }
-body main .homepage-promo button {
+body main .homepage-promo__content button {
+  font-size: x-large;
   color: white;
   background-color: #405051;
   border: solid #405051;
@@ -137,6 +139,7 @@ body footer #safety-info {
   display: none;
 }
 body footer #safety-popup {
+  padding: 0.3em;
   background-color: inherit;
   position: fixed;
   top: 80vh;
@@ -148,6 +151,9 @@ body footer #safety-popup {
 body footer #safety-popup.close {
   top: 100%;
   height: 0;
+}
+body footer #safety-bottom {
+  padding: 0.3em;
 }
 
 /*# sourceMappingURL=main.css.map */
