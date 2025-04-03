@@ -11,6 +11,7 @@
     {
       devShells.${system}.default = mkShell {
         nativeBuildInputs = [
+          dart-sass
           http-server
           nodePackages.prettier
           soupault
