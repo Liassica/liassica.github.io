@@ -71,16 +71,16 @@ body {
   }
 
   main {
-    .homepage-promo {
-      color: white;
-      background-image:
-        linear-gradient(rgba(black, 0.5), rgba(black, 0.3)),
-        url("/assets/images/promo.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
+    article {
+      padding: 5em 5em 15em;
 
-      &__content {
-        padding: 5em 5em 15em;
+      &#homepage-promo {
+        color: white;
+        background-image:
+          linear-gradient(rgba(black, 0.5), rgba(black, 0.3)),
+          url("/assets/images/promo.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
         font-size: x-large;
         text-transform: uppercase;
 
