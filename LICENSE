@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Eteros Solutions Site
-Upstream-Contact:
-Source:
+Upstream-Name: Nomoxapine Site
+Upstream-Contact: https://github.com/Liassica/liassica.github.io
+Source: https://github.com/Liassica/liassica.github.io
 
 Files:
   plugins/*
