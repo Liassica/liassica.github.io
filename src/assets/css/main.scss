@@ -74,6 +74,17 @@ body {
     article {
       padding: 5em 5em 15em;
 
+
+      button {
+        font-size: x-large;
+        color: $mantle;
+        font-family: inherit;
+        background-color: $dark;
+        border: solid $dark;
+        border-radius: 1em;
+        cursor: pointer;
+        padding: 1em;
+      }
       &#homepage-promo {
         color: white;
         background-image:
@@ -86,17 +97,6 @@ body {
 
         > * {
           padding: 36px;
-        }
-
-        button {
-          font-size: x-large;
-          color: $mantle;
-          font-family: inherit;
-          background-color: $dark;
-          border: solid $dark;
-          border-radius: 1em;
-          cursor: pointer;
-          padding: 1em;
         }
       }
     }

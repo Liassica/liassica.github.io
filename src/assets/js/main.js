@@ -8,6 +8,8 @@ $(document).ready(function () {
   $("#safety-popup h2")
     .append('<i class="bi bi-chevron-up"></i>')
     .wrapInner('<a href="#safety-bottom"></a>');
+
+  $("button").append(' <i class="bi bi-chevron-right"></i>');
 });
 
 $(document).on("click", 'a[href^="#"]', function (event) {
