@@ -50,8 +50,30 @@ dl {
   padding-left: 1em;
 }
 
+body footer, body main article {
+  display: grid;
+  grid-template-columns: 1fr min(85ch, 100%) 1fr;
+}
+body footer > *, body main article > * {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1/-1;
+}
+
+body footer #eteros-info ul, body nav ul {
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  body footer #eteros-info ul, body nav ul {
+    flex-direction: row;
+  }
+}
+
 body {
-  background-color: #eeeeee;
+  background-color: #f9f9f9;
   color: #222;
   font-family: "Merriweather Sans";
 }
@@ -102,21 +124,13 @@ body nav ul ul li {
   position: relative;
   width: 15em;
 }
-body main .homepage-promo {
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("/assets/images/promo.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
+body main article {
+  padding: 5em 1em 15em;
 }
-body main .homepage-promo__content {
-  padding: 5em 5em 15em;
-  font-size: x-large;
+body main article h1 {
   text-transform: uppercase;
 }
-body main .homepage-promo__content > * {
-  padding: 36px;
-}
-body main .homepage-promo__content button {
+body main article button {
   font-size: x-large;
   color: #e9e9e9;
   font-family: inherit;
@@ -125,6 +139,36 @@ body main .homepage-promo__content button {
   border-radius: 1em;
   cursor: pointer;
   padding: 1em;
+}
+body main article div:has(iframe) {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 2em 0;
+}
+body main article div:has(iframe):after {
+  display: block;
+  content: "";
+  padding-top: 75%;
+}
+body main article div:has(iframe) iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body main article#homepage-promo {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("/assets/images/promo.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: x-large;
+  text-transform: uppercase;
+}
+body main article#homepage-promo > * {
+  padding: 36px;
 }
 body footer {
   background-color: #e9e9e9;
@@ -140,21 +184,55 @@ body footer #safety-info {
   display: none;
 }
 body footer #safety-popup {
-  padding: 0.5em 2em;
   background-color: inherit;
   position: fixed;
-  top: 80vh;
   width: 100%;
   height: 100%;
   overflow: hidden;
   transition: all 0.3s;
+  z-index: 1;
+  padding: 0.3em 1.2em;
+  top: calc(100vh - 10em);
+}
+@media screen and (min-width: 640px) {
+  body footer #safety-popup {
+    padding: 0.5em 2em;
+    top: calc(100vh - 7.5em);
+  }
 }
 body footer #safety-popup.close {
   top: 100%;
   height: 0;
 }
-body footer #safety-bottom {
-  padding: 0.5em 2em;
+body footer #eteros-info, body footer #safety-bottom {
+  padding: 0 1.2em;
+}
+@media screen and (min-width: 640px) {
+  body footer #eteros-info, body footer #safety-bottom {
+    padding: 0 2em;
+  }
+}
+body footer #eteros-info {
+  color: #e9e9e9;
+  background-color: #405051;
+}
+body footer #eteros-info a:link {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+body footer #eteros-info a:visited {
+  color: mediumorchid;
+}
+body footer #eteros-info a:hover {
+  text-decoration: underline;
+}
+body footer #eteros-info a:active {
+  color: darkorange;
+}
+body footer #eteros-info ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=main.css.map */
