@@ -3,7 +3,3 @@ src/assets/images/favicon.webp filter=lfs diff=lfs merge=lfs -text
 src/assets/images/logo.webp filter=lfs diff=lfs merge=lfs -text
 src/assets/images/promo.webp filter=lfs diff=lfs merge=lfs -text
 src/assets/images/eteros-logo.webp filter=lfs diff=lfs merge=lfs -text
-docs/assets/images/favicon.webp filter=lfs diff=lfs merge=lfs -text
-docs/assets/images/logo.webp filter=lfs diff=lfs merge=lfs -text
-docs/assets/images/promo.webp filter=lfs diff=lfs merge=lfs -text
-docs/assets/images/eteros-logo.webp filter=lfs diff=lfs merge=lfs -text
