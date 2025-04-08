@@ -164,7 +164,6 @@ body {
 
   footer {
     background-color: $mantle;
-    @extend %grid;
 
     h2 {
       color: $dark;
@@ -201,6 +200,10 @@ body {
       }
     }
 
+    > div:not(#safety-popup):not(#safety-info) {
+      @extend %grid;
+    }
+
     %footer-padding {
       padding: 0 1.2em;
 
@@ -215,8 +218,8 @@ body {
 
     #eteros-info {
       @extend %footer-padding;
+      background-color: rgba($dark, 0.9);
       color: $mantle;
-      background-color: $dark;
 
       a {
         &:link {
@@ -238,7 +241,13 @@ body {
         list-style: none;
         display: flex;
         justify-content: space-between;
+        padding: 0;
         @extend %responsive-flexbox;
+      }
+
+      img {
+        max-width: 6em;
+        padding: 0.5em;
       }
     }
   }

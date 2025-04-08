@@ -50,11 +50,11 @@ dl {
   padding-left: 1em;
 }
 
-body footer, body main article {
+body footer > div:not(#safety-popup):not(#safety-info), body main article {
   display: grid;
   grid-template-columns: 1fr min(85ch, 100%) 1fr;
 }
-body footer > *, body main article > * {
+body footer > div:not(#safety-popup):not(#safety-info) > *, body main article > * {
   grid-column: 2;
 }
 
@@ -214,8 +214,8 @@ body footer #eteros-info, body footer #safety-bottom {
   }
 }
 body footer #eteros-info {
+  background-color: rgba(64, 80, 81, 0.9);
   color: #e9e9e9;
-  background-color: #405051;
 }
 body footer #eteros-info a:link {
   text-decoration: none;
@@ -234,6 +234,11 @@ body footer #eteros-info ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  padding: 0;
+}
+body footer #eteros-info img {
+  max-width: 6em;
+  padding: 0.5em;
 }
 
 /*# sourceMappingURL=main.css.map */
