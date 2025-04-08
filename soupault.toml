@@ -46,3 +46,9 @@
   widget = "section-link-highlight"
   selector = "nav"
   active_link_class = "nav-active"
+
+[hooks.post-build]
+  lua_source = '''
+    Sys.get_program_output(format("mv %s/404/index.html %s/404.html", build_dir, build_dir))
+    Sys.get_program_output(format("rmdir %s/404", build_dir))
+  '''
