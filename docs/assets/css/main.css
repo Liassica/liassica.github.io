@@ -75,7 +75,7 @@ body footer #eteros-info ul, body nav ul {
 body {
   background-color: #f9f9f9;
   color: #222;
-  font-family: "Merriweather Sans";
+  font-family: "Merriweather Sans", sans-serif;
 }
 body nav {
   background-color: #e9e9e9;

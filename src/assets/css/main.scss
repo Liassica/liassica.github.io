@@ -42,7 +42,7 @@ $breakpoint-large: 2 * $breakpoint-med;
 body {
   background-color: $base;
   color: $text;
-  font-family: "Merriweather Sans";
+  font-family: "Merriweather Sans", sans-serif;
 
   nav {
     background-color: $mantle;
