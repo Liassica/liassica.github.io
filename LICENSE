@@ -9,7 +9,13 @@ Copyright: 2020, 2022 Daniil Baturin <https://baturin.org/>
 License: MIT
 
 Files:
-  src/*
+  src/*.html
+  src/assets/css/*
+  src/assets/js/*
+  src/CNAME
+  src/nomoxapine-resources/*
+  src/taking-nomoxapine/*
+  src/try-nomoxapine/*
   templates/*
   flake.nix
   LICENSE
@@ -20,10 +26,30 @@ Copyright: 2025 Liassica
 License: AGPL-3.0+
 
 Files:
+  src/images/promo.webp
+Copyright: 2022 iStock
+License: LicenseRef-Fair-Use
+
+Files:
+  src/images/eteros-logo.webp
+  src/images/favicon.webp
+  src/assets/images/logo.webp
+Copyright: 2025 Ashlyn
+License: LicenseRef-Group-Project
+  Allowed to use these graphics as part of this group project.
+
+Files:
   flake.lock
 Copyright: none
 License: public-domain
 Comment: Auto-generated non-unique lock file
+
+License: LicenseRef-Fair-Use
+  Section 107 of the Copyright Act of 1976 allows fair use of a
+  copyrighted work for purposes such as criticism, comment, news
+  reporting, teaching, scholarship, or research. Neither the creator(s)
+  nor the host(s) of this site benefit financially from displaying
+  copyrighted works.
 
 License: MIT
   MIT License
