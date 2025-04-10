@@ -63,11 +63,12 @@ body footer > div:not(#safety-popup):not(#safety-info) > *, body main article > 
   grid-column: 1/-1;
 }
 
-body footer #eteros-info ul, body nav ul {
+.side-by-side, body footer #eteros-info ul, body nav ul {
+  display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 640px) {
-  body footer #eteros-info ul, body nav ul {
+  .side-by-side, body footer #eteros-info ul, body nav ul {
     flex-direction: row;
   }
 }
@@ -85,7 +86,6 @@ body nav ul {
   margin: 0;
   list-style: none;
   position: relative;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -232,13 +232,60 @@ body footer #eteros-info a:active {
 }
 body footer #eteros-info ul {
   list-style: none;
-  display: flex;
   justify-content: space-between;
   padding: 0;
 }
 body footer #eteros-info img {
   max-width: 6em;
   padding: 0.5em;
+}
+
+#comparison table {
+  background-color: #e9e9e9;
+  border-radius: 1em;
+  padding: 1em;
+}
+#comparison table caption {
+  text-align: left;
+}
+@media screen and (max-width: 640px) {
+  #comparison table tr {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#comparison table tr td:nth-child(1) {
+  order: 0;
+}
+#comparison table tr td:nth-child(2) {
+  order: -1;
+}
+#comparison table tr td:nth-child(3) {
+  order: 1;
+}
+#comparison table tr > * {
+  padding: 1em;
+  text-align: center;
+}
+#comparison table tr > *:nth-child(1) {
+  background-color: #97b0b2;
+}
+#comparison table tr > *:nth-child(3) {
+  color: #e9e9e9;
+  background-color: #405051;
+}
+#comparison table tr > *:nth-child(1), #comparison table tr > *:nth-child(3) {
+  border-radius: 0.5em;
+}
+
+.side-by-side {
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  gap: 1em;
+  padding-top: 1em;
+}
+.side-by-side img {
+  max-width: 20em;
 }
 
 /*# sourceMappingURL=main.css.map */

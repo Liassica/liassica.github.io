@@ -32,6 +32,7 @@ $breakpoint-large: 2 * $breakpoint-med;
 }
 
 %responsive-flexbox {
+  display: flex;
   flex-direction: column;
 
   @media screen and (min-width: $breakpoint-med) {
@@ -52,7 +53,6 @@ body {
       margin: 0;
       list-style: none;
       position: relative;
-      display: flex;
       align-items: center;
       justify-content: center;
       @extend %responsive-flexbox;
@@ -239,7 +239,6 @@ body {
 
       ul {
         list-style: none;
-        display: flex;
         justify-content: space-between;
         padding: 0;
         @extend %responsive-flexbox;
@@ -298,5 +297,17 @@ body {
         }
       }
     }
+  }
+}
+
+.side-by-side {
+  @extend %responsive-flexbox;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  gap: 1em;
+  padding-top: 1em;
+
+  img {
+    max-width: 20em;
   }
 }

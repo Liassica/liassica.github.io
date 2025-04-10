@@ -11,6 +11,7 @@ License: MIT
 Files:
   src/*.html
   src/assets/css/*
+  src/assets/images/brain.webp
   src/assets/js/*
   src/CNAME
   src/nomoxapine-resources/*
