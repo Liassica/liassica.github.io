@@ -252,3 +252,51 @@ body {
     }
   }
 }
+
+#comparison {
+  table {
+    background-color: $mantle;
+    border-radius: 1em;
+    padding: 1em;
+
+    caption {
+      text-align: left;
+    }
+
+    tr {
+      @media screen and (max-width: $breakpoint-med) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      td:nth-child(1) {
+        order: 0;
+      }
+      td:nth-child(2) {
+        order: -1;
+      }
+      td:nth-child(3) {
+        order: 1;
+      }
+
+      > * {
+        padding: 1em;
+        text-align: center;
+
+        &:nth-child(1) {
+          background-color: $light;
+        }
+
+        &:nth-child(3) {
+          color: $mantle;
+          background-color: $dark;
+        }
+
+        &:nth-child(1),
+        &:nth-child(3) {
+          border-radius: 0.5em;
+        }
+      }
+    }
+  }
+}
