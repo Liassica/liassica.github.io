@@ -2,15 +2,15 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://liassica.codeberg.page/atom.xml</id>
   <updated>2024-08-18T00:00:00+00:00</updated>
-  <title>Liassica's site</title><logo>https://liassica.codeberg.page/images/favicon.png</logo><author>
+  <title>Liassica's site</title><author>
     <name>Liassica</name></author>
-  <generator uri="https://soupault.app" version="4.10.0">soupault</generator>
+  <generator uri="https://soupault.app" version="4.11.0">soupault</generator>
   <entry>
     <id>https://liassica.codeberg.page/posts/0005-software-recs</id>
     <title>Software recommendations</title>
     <updated>2024-08-18T00:00:00+00:00</updated>
     <content type="html">
-    &lt;div id=&quot;post-header&quot; class=&quot;cc-by-nd&quot;&gt;
+    &lt;div id=&quot;post-header&quot; class=&quot;&quot;&gt;
       &lt;h1 id=&quot;post-title&quot;&gt;Software recommendations&lt;/h1&gt;
       &lt;div&gt;&lt;strong&gt;Posted:&lt;/strong&gt; &lt;time id=&quot;post-date&quot; datetime=&quot;2024-08-10&quot;&gt;2024-08-10&lt;/time&gt;&lt;/div&gt;
       
@@ -375,7 +375,7 @@
     <title>Compile Linux with Clang on NixOS</title>
     <updated>2025-03-08T00:00:00+00:00</updated>
     <content type="html">
-    &lt;div id=&quot;post-header&quot; class=&quot;cc-by-sa&quot;&gt;
+    &lt;div id=&quot;post-header&quot; class=&quot;&quot;&gt;
       &lt;h1 id=&quot;post-title&quot;&gt;Compile Linux with Clang on NixOS&lt;/h1&gt;
       &lt;div&gt;&lt;strong&gt;Posted:&lt;/strong&gt; &lt;time id=&quot;post-date&quot; datetime=&quot;2024-07-20&quot;&gt;2024-07-20&lt;/time&gt;&lt;/div&gt;
       
@@ -480,7 +480,7 @@
     <title>Compile GPlates on Fedora Linux</title>
     <updated>2024-07-25T00:00:00+00:00</updated>
     <content type="html">
-    &lt;div id=&quot;post-header&quot; class=&quot;cc-by-sa&quot;&gt;
+    &lt;div id=&quot;post-header&quot; class=&quot;&quot;&gt;
       &lt;h1 id=&quot;post-title&quot;&gt;Compile GPlates on Fedora Linux&lt;/h1&gt;
       &lt;div&gt;&lt;strong&gt;Posted:&lt;/strong&gt; &lt;time id=&quot;post-date&quot; datetime=&quot;2023-06-24&quot;&gt;2023-06-24&lt;/time&gt;&lt;/div&gt;
       
@@ -549,13 +549,13 @@
   desktop entry.
 &lt;/p&gt;
 &lt;figure&gt;
-  &lt;img src=&quot;/images/posts/gplates-fedora/gplates-gnome.webp&quot; alt=&quot;GPlates running on a Fedora 38 container in Fedora 38 Silverblue&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/gplates-fedora/gplates-gnome.webp&quot; alt=&quot;GPlates running on a Fedora 38 container in Fedora 38 Silverblue&quot;&gt;
   &lt;figcaption aria-hidden=&quot;true&quot;&gt;
     GPlates running on a Fedora 38 container in Fedora 38 Silverblue
   &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-  &lt;img src=&quot;/images/posts/gplates-fedora/gplates-kde.webp&quot; alt=&quot;GPlates running on Fedora 38 KDE&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/gplates-fedora/gplates-kde.webp&quot; alt=&quot;GPlates running on Fedora 38 KDE&quot;&gt;
   &lt;figcaption aria-hidden=&quot;true&quot;&gt;GPlates running on Fedora 38 KDE&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
@@ -588,7 +588,7 @@
     <title>Deploy to Neocities through GitHub</title>
     <updated>2024-07-28T00:00:00+00:00</updated>
     <content type="html">
-    &lt;div id=&quot;post-header&quot; class=&quot;cc-by-sa&quot;&gt;
+    &lt;div id=&quot;post-header&quot; class=&quot;&quot;&gt;
       &lt;h1 id=&quot;post-title&quot;&gt;Deploy to Neocities through GitHub&lt;/h1&gt;
       &lt;div&gt;&lt;strong&gt;Posted:&lt;/strong&gt; &lt;time id=&quot;post-date&quot; datetime=&quot;2023-05-06&quot;&gt;2023-05-06&lt;/time&gt;&lt;/div&gt;
       
@@ -628,7 +628,7 @@
 &lt;p&gt;
   Next, download your Neocities site. You can do this from the Neocities
   dashboard by clicking ‘Download entire site’.
-  &lt;img src=&quot;/images/posts/neocities-github/download-site.webp&quot; title=&quot;Download your Neocities site&quot; alt=&quot;Download your Neocities site&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/neocities-github/download-site.webp&quot; title=&quot;Download your Neocities site&quot; alt=&quot;Download your Neocities site&quot;&gt;
 &lt;/p&gt;
 &lt;p&gt;
   Extract the site archive into a subfolder of your repository. Name the folder
@@ -645,7 +645,7 @@
 &lt;/p&gt;
 &lt;p&gt;
   By this point, your repository should look something like this:
-  &lt;img src=&quot;/images/posts/neocities-github/repo.webp&quot; title=&quot;Example repository directory structure&quot; alt=&quot;Example repository directory structure&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/neocities-github/repo.webp&quot; title=&quot;Example repository directory structure&quot; alt=&quot;Example repository directory structure&quot;&gt;
 &lt;/p&gt;
 &lt;p&gt;
   Next, you need to add your Neocities API key as a repository secret. Go to
@@ -693,7 +693,7 @@
     <title>Introduction to yt-dlp</title>
     <updated>2024-01-03T00:00:00+00:00</updated>
     <content type="html">
-    &lt;div id=&quot;post-header&quot; class=&quot;cc-by-sa&quot;&gt;
+    &lt;div id=&quot;post-header&quot; class=&quot;&quot;&gt;
       &lt;h1 id=&quot;post-title&quot;&gt;Introduction to yt-dlp&lt;/h1&gt;
       &lt;div&gt;&lt;strong&gt;Posted:&lt;/strong&gt; &lt;time id=&quot;post-date&quot; datetime=&quot;2023-04-22&quot;&gt;2023-04-22&lt;/time&gt;&lt;/div&gt;
       
@@ -803,7 +803,7 @@
     <title>Arkenfox installation guide</title>
     <updated>2024-08-18T00:00:00+00:00</updated>
     <content type="html">
-    &lt;div id=&quot;post-header&quot; class=&quot;cc-by-sa&quot;&gt;
+    &lt;div id=&quot;post-header&quot; class=&quot;&quot;&gt;
       &lt;h1 id=&quot;post-title&quot;&gt;Arkenfox installation guide&lt;/h1&gt;
       &lt;div&gt;&lt;strong&gt;Posted:&lt;/strong&gt; &lt;time id=&quot;post-date&quot; datetime=&quot;2023-04-10&quot;&gt;2023-04-10&lt;/time&gt;&lt;/div&gt;
       
