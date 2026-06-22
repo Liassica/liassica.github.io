@@ -302,6 +302,13 @@ dl {
 .webrings p {
   margin-block-start: 0;
 }
+.webrings .garfring > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em;
+  margin: 0.1em;
+}
 .webrings .garfring {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -310,13 +317,6 @@ dl {
   font-size: x-large;
   font-family: "Cooper Black Regular", sans-serif;
   background: #ff9c31;
-}
-.webrings .garfring > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.3em;
-  margin: 0.1em;
 }
 .webrings .garfring a {
   color: black;
@@ -365,8 +365,6 @@ nav > a.nav-active {
 
 main {
   padding: 0 1em;
-  display: grid;
-  grid-template-columns: 1fr min(85ch, 100%) 1fr;
 }
 main a:link {
   text-decoration: none;
@@ -380,6 +378,10 @@ main a:hover {
 }
 main a:active {
   color: darkorange;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr min(85ch, 100%) 1fr;
 }
 main > * {
   grid-column: 2;
@@ -396,11 +398,11 @@ table {
 table caption {
   font-size: large;
 }
+table tbody tr:nth-child(odd) {
+  background-color: #3f3f3f;
+}
 table tr {
   vertical-align: top;
-}
-table tr.odd {
-  background-color: #3f3f3f;
 }
 table tr th,
 table tr td {
@@ -408,10 +410,6 @@ table tr td {
   border: 1px solid gray;
 }
 
-footer {
-  text-align: center;
-  padding: 1em;
-}
 footer a:link {
   text-decoration: none;
   color: cornflowerblue;
@@ -424,6 +422,10 @@ footer a:hover {
 }
 footer a:active {
   color: darkorange;
+}
+footer {
+  text-align: center;
+  padding: 1em;
 }
 
 p > code,

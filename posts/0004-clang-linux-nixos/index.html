@@ -71,13 +71,13 @@
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate kernel modules for our custom kernel.</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    linuxPackagesFor <span class="op">(</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Override our chosen kernel version with our custom settings.</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="op">(</span>kernel.override <span class="op">{</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="op">(</span>kernel<span class="op">.</span>override <span class="op">{</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Set our chosen version of LLVM as our standard environment.</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">stdenv</span> <span class="op">=</span> overrideCC llvm.stdenv <span class="op">(</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">stdenv</span> <span class="op">=</span> overrideCC llvm<span class="op">.</span>stdenv <span class="op">(</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Tell our C compiler (Clang) to use LLVM bintools--normally GNU</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>          <span class="co"># binutils are used even with Clang as the compiler.</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>          llvm.stdenv.cc.override <span class="op">{</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>            <span class="va">bintools</span> <span class="op">=</span> llvm.bintools<span class="op">;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>          llvm<span class="op">.</span>stdenv<span class="op">.</span>cc<span class="op">.</span>override <span class="op">{</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>            <span class="va">bintools</span> <span class="op">=</span> llvm<span class="op">.</span>bintools<span class="op">;</span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>          <span class="op">}</span></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        <span class="op">);</span></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
@@ -88,11 +88,11 @@
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="co"># `structuredExtraConfig`. For example, some options available to us</span></span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># when compiling with Clang and linking with LLD:</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="va">structuredExtraConfig</span> <span class="op">=</span> <span class="op">{</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>          <span class="va">CFI_CLANG</span> <span class="op">=</span> lib.kernel.yes<span class="op">;</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>          <span class="va">LTO_CLANG_THIN</span> <span class="op">=</span> lib.kernel.yes<span class="op">;</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>          <span class="va">CFI_CLANG</span> <span class="op">=</span> lib<span class="op">.</span>kernel<span class="op">.</span>yes<span class="op">;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>          <span class="va">LTO_CLANG_THIN</span> <span class="op">=</span> lib<span class="op">.</span>kernel<span class="op">.</span>yes<span class="op">;</span></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        <span class="op">};</span></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="op">)</span>.overrideAttrs</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="op">).</span>overrideAttrs</span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Work around another NixOS specific issue where builds with WERROR=y</span></span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>      <span class="co"># are stopped by a benign error. See reference 1 below for details.</span></span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Technically, this fix is only necessary with WERROR=y but the issue</span></span>

@@ -4,9 +4,9 @@
   <updated>2024-08-18T00:00:00+00:00</updated>
   <title>Liassica's site</title><author>
     <name>Liassica</name></author>
-  <generator uri="https://soupault.app" version="4.11.0">soupault</generator>
+  <generator uri="https://soupault.app" version="5.3.0">soupault</generator>
   <entry>
-    <id>https://liassica.codeberg.page/posts/0005-software-recs</id>
+    <id>https://liassica.codeberg.page/posts/0005-software-recs/</id>
     <title>Software recommendations</title>
     <updated>2024-08-18T00:00:00+00:00</updated>
     <content type="html">
@@ -28,7 +28,7 @@
 &lt;p&gt;
   &lt;span id=&quot;post-excerpt&quot;&gt;This post lists software I recommend for various use cases.&lt;/span&gt;
   Idea blatantly stolen from
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://geckro.github.io/html/lists/software.html&quot;&gt;geck&lt;/a&gt;.
+  &lt;a href=&quot;https://geckro.github.io/html/lists/software.html&quot;&gt;geck&lt;/a&gt;.
 &lt;/p&gt;
 
 &lt;table style=&quot;width: 99%&quot;&gt;
@@ -36,54 +36,54 @@
     Operating systems
   &lt;/caption&gt;
   &lt;colgroup&gt;
-    &lt;col&gt;
-    &lt;col&gt;
-    &lt;col&gt;
+    &lt;col style=&quot;width: 10%&quot;&gt;
+    &lt;col style=&quot;width: 24%&quot;&gt;
+    &lt;col style=&quot;width: 65%&quot;&gt;
   &lt;/colgroup&gt;
   &lt;thead&gt;
-    &lt;tr class=&quot;header&quot;&gt;
+    &lt;tr&gt;
       &lt;th&gt;OS family&lt;/th&gt;
       &lt;th&gt;OS&lt;/th&gt;
       &lt;th&gt;Explanation&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
+    &lt;tr&gt;
       &lt;td rowspan=&quot;4&quot;&gt;Linux&lt;/td&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://nixos.org&quot;&gt;NixOS&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://nixos.org&quot;&gt;NixOS&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Currently my main operating system. Its main features are declarative
         system configuration and generational deployment. This not only makes it
         extremely robust, but it also makes it very easy to copy configurations
         between devices or restore them after a reinstallation. You can find
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://codeberg.org/Liassica/nixos-config&quot;&gt;my NixOS configuration&lt;/a&gt;
+        &lt;a href=&quot;https://codeberg.org/Liassica/nixos-config&quot;&gt;my NixOS configuration&lt;/a&gt;
         on my Codeberg.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/secureblue/secureblue&quot;&gt;Secureblue&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/secureblue/secureblue&quot;&gt;Secureblue&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Hardened Fedora Atomic images. One of the best choices for a
         (relatively) secure Linux desktop and built upon a robust Fedora Atomic
         base.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Flexible DIY distro. While I generally prefer NixOS, I’ve enough
         experience with Arch to recommend it to those who don’t want to learn
         NixOS’s ins and outs.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://grapheneos.org/&quot;&gt;GrapheneOS&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://grapheneos.org/&quot;&gt;GrapheneOS&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;Hardened Android derivative. The best option for mobile devices.&lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
+    &lt;tr&gt;
       &lt;td&gt;Windows&lt;/td&gt;
       &lt;td&gt;
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://microsoft.com/evalcenter/evaluate-windows-11-iot-enterprise-ltsc&quot;&gt;Windows 11 IoT LTSC&lt;/a&gt;
+        &lt;a href=&quot;https://microsoft.com/evalcenter/evaluate-windows-11-iot-enterprise-ltsc&quot;&gt;Windows 11 IoT LTSC&lt;/a&gt;
       &lt;/td&gt;
       &lt;td&gt;
         The only somewhat usable version of Windows. I avoid using Windows when
@@ -101,22 +101,22 @@
     Web browsers
   &lt;/caption&gt;
   &lt;colgroup&gt;
-    &lt;col&gt;
-    &lt;col&gt;
-    &lt;col&gt;
+    &lt;col style=&quot;width: 13%&quot;&gt;
+    &lt;col style=&quot;width: 22%&quot;&gt;
+    &lt;col style=&quot;width: 64%&quot;&gt;
   &lt;/colgroup&gt;
   &lt;thead&gt;
-    &lt;tr class=&quot;header&quot;&gt;
+    &lt;tr&gt;
       &lt;th&gt;OS&lt;/th&gt;
       &lt;th&gt;Browser&lt;/th&gt;
       &lt;th&gt;Explanation&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
+    &lt;tr&gt;
       &lt;td&gt;Fedora&lt;/td&gt;
       &lt;td&gt;
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/secureblue/hardened-chromium&quot;&gt;Hardened Chromium&lt;/a&gt;
+        &lt;a href=&quot;https://github.com/secureblue/hardened-chromium&quot;&gt;Hardened Chromium&lt;/a&gt;
       &lt;/td&gt;
       &lt;td&gt;
         The name is self-explanatory. Uses a set of custom patches as well as
@@ -124,55 +124,55 @@
         increase the security of the standard Fedora Chromium package.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
+    &lt;tr&gt;
       &lt;td&gt;Other desktop Linux&lt;/td&gt;
       &lt;td&gt;
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://flathub.org/apps/org.chromium.Chromium&quot;&gt;Chromium Flatpak&lt;/a&gt;
+        &lt;a href=&quot;https://flathub.org/apps/org.chromium.Chromium&quot;&gt;Chromium Flatpak&lt;/a&gt;
       &lt;/td&gt;
       &lt;td&gt;
         Most other distros do not compile Chromium correctly by introducing lots
         of downstream patches that weaken security, compiling debug builds
         instead of production builds, or dynamically linking Chromium to
         unhardened system libraries and thereby
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://clang.llvm.org/docs/ControlFlowIntegrity.html#:~:text=To%20allow%20the%20checks%20to%20be%20implemented%20efficiently%2C%20the%20program%20must%20be%20structured%20such%20that%20certain%20object%20files%20are%20compiled%20with%20CFI%20enabled%2C%20and%20are%20statically%20linked%20into%20the%20program.&quot;&gt;severely weakening control flow integrity&lt;/a&gt;
+        &lt;a href=&quot;https://clang.llvm.org/docs/ControlFlowIntegrity.html#:~:text=To%20allow%20the%20checks%20to%20be%20implemented%20efficiently%2C%20the%20program%20must%20be%20structured%20such%20that%20certain%20object%20files%20are%20compiled%20with%20CFI%20enabled%2C%20and%20are%20statically%20linked%20into%20the%20program.&quot;&gt;severely weakening control flow integrity&lt;/a&gt;
         (CFI). The Chromium Flatpak mitigates some of this by replacing
         Chromium’s built-in sandboxing with Flatpak’s sandboxing.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
+    &lt;tr&gt;
       &lt;td&gt;GrapheneOS&lt;/td&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/GrapheneOS/Vanadium&quot;&gt;Vanadium&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/GrapheneOS/Vanadium&quot;&gt;Vanadium&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;Hardened Chromium-based browser for GrapheneOS.&lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
+    &lt;tr&gt;
       &lt;td&gt;Other Android&lt;/td&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/uazo/cromite&quot;&gt;Cromite&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/uazo/cromite&quot;&gt;Cromite&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;Chromium-based Android browser with some privacy enhancements.&lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
+    &lt;tr&gt;
       &lt;td rowspan=&quot;2&quot;&gt;Windows&lt;/td&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://microsoft.com/edge&quot;&gt;Microsoft Edge&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://microsoft.com/edge&quot;&gt;Microsoft Edge&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Edge’s strict enhanced security mode disables just-in-time (JIT)
         compilation for all sites,
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode/#:~:text=it%20would%20remove%20roughly%20half%20of%20the%20V8%20bugs%20that%20must%20be%20fixed&quot;&gt;massively reducing the attack vector of V8&lt;/a&gt;, Chromium’s JavaScript engine. However, the addition of the
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://microsoftedge.github.io/edgevr/posts/Introducing-Enhanced-Security-for-Microsoft-Edge/#introducing-drum-brake-a-webassembly-interpreter&quot;&gt;DrumBrake&lt;/a&gt;
+        &lt;a href=&quot;https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode/#:~:text=it%20would%20remove%20roughly%20half%20of%20the%20V8%20bugs%20that%20must%20be%20fixed&quot;&gt;massively reducing the attack vector of V8&lt;/a&gt;, Chromium’s JavaScript engine. However, the addition of the
+        &lt;a href=&quot;https://microsoftedge.github.io/edgevr/posts/Introducing-Enhanced-Security-for-Microsoft-Edge/#introducing-drum-brake-a-webassembly-interpreter&quot;&gt;DrumBrake&lt;/a&gt;
         WebAssembly (WASM) interpreter allows you to still use WASM with
         enhanced security enabled. This mode also enables use of advanced
         Windows security features such as
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://learn.microsoft.com/windows/win32/secbp/control-flow-guard&quot;&gt;Control Flow Guard&lt;/a&gt;
+        &lt;a href=&quot;https://learn.microsoft.com/windows/win32/secbp/control-flow-guard&quot;&gt;Control Flow Guard&lt;/a&gt;
         and
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://learn.microsoft.com/defender-endpoint/exploit-protection-reference#arbitrary-code-guard&quot;&gt;Arbitrary Code Guard&lt;/a&gt;. Finally, by using Edge, you avoid trusting an extra party by
+        &lt;a href=&quot;https://learn.microsoft.com/defender-endpoint/exploit-protection-reference#arbitrary-code-guard&quot;&gt;Arbitrary Code Guard&lt;/a&gt;. Finally, by using Edge, you avoid trusting an extra party by
         installing a different browser, as you’re already trusting Microsoft by
         using Windows.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://mozilla.org/firefox&quot;&gt;Mozilla Firefox&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://mozilla.org/firefox&quot;&gt;Mozilla Firefox&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         If you &lt;em&gt;really&lt;/em&gt; don’t like the idea of using Edge, the most
         secure version of Firefox is the
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://madaidans-insecurities.github.io/firefox-chromium.html#windows-sandbox&quot;&gt;Windows one&lt;/a&gt;. Make sure to check out my
+        &lt;a href=&quot;https://madaidans-insecurities.github.io/firefox-chromium.html#windows-sandbox&quot;&gt;Windows one&lt;/a&gt;. Make sure to check out my
         &lt;a href=&quot;/posts/0000-arkenfox&quot;&gt;Arkenfox guide&lt;/a&gt; to get the most out of
         Firefox!
       &lt;/td&gt;
@@ -183,7 +183,7 @@
 &lt;p&gt;
   Generally avoid Firefox Mobile and its derivatives as it is missing important
   security features
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=1610822&quot;&gt;such as site isolation&lt;/a&gt;.
+  &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=1610822&quot;&gt;such as site isolation&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;
   With the exception of Edge on Windows, generally avoid proprietary
@@ -197,28 +197,28 @@
     Browser extensions
   &lt;/caption&gt;
   &lt;colgroup&gt;
-    &lt;col&gt;
-    &lt;col&gt;
+    &lt;col style=&quot;width: 23%&quot;&gt;
+    &lt;col style=&quot;width: 76%&quot;&gt;
   &lt;/colgroup&gt;
   &lt;thead&gt;
-    &lt;tr class=&quot;header&quot;&gt;
+    &lt;tr&gt;
       &lt;th&gt;Extension&lt;/th&gt;
       &lt;th&gt;Explanation&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://ublockorigin.com/&quot;&gt;uBlock Origin Lite&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://ublockorigin.com/&quot;&gt;uBlock Origin Lite&lt;/a&gt;&lt;/td&gt;
       &lt;td rowspan=&quot;2&quot;&gt;
         Efficient general-purpose content blocker. Stick to its default filter
         lists to avoid standing out and prevent the possibility of a malicious
         filter rule being added; prefer Lite on Chromium-based browsers so that
         you can completely avoid Manifest V2,
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://developer.chrome.com/docs/extensions/develop/migrate/improve-security&quot;&gt;improving security&lt;/a&gt;.
+        &lt;a href=&quot;https://developer.chrome.com/docs/extensions/develop/migrate/improve-security&quot;&gt;improving security&lt;/a&gt;.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://ublockorigin.com/&quot;&gt;uBlock Origin&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://ublockorigin.com/&quot;&gt;uBlock Origin&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -227,9 +227,9 @@
   First rule of browser extensions: less is more. Install as few extensions as
   possible; the more you have installed, the greater your attack surface and the
   more you stand out. I personally only have a single extension,
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://chromewebstore.google.com/detail/bitwarden-password-manage/nngceckbapebfimnlniiiahkandclblb&quot;&gt;Bitwarden password manager&lt;/a&gt;, and if Bitwarden Desktop for Linux ever gains the ability to handle passkey
+  &lt;a href=&quot;https://chromewebstore.google.com/detail/bitwarden-password-manage/nngceckbapebfimnlniiiahkandclblb&quot;&gt;Bitwarden password manager&lt;/a&gt;, and if Bitwarden Desktop for Linux ever gains the ability to handle passkey
   requests from the browser I may consider ditching even that. I use
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://adguard-dns.io/en/public-dns.html&quot;&gt;AdGuard’s public DNS servers&lt;/a&gt;
+  &lt;a href=&quot;https://adguard-dns.io/en/public-dns.html&quot;&gt;AdGuard’s public DNS servers&lt;/a&gt;
   to provide ad blocking so that I don’t need to install uBlock Origin.
 &lt;/p&gt;
 
@@ -238,61 +238,61 @@
     Desktop applications
   &lt;/caption&gt;
   &lt;colgroup&gt;
-    &lt;col&gt;
-    &lt;col&gt;
-    &lt;col&gt;
+    &lt;col style=&quot;width: 11%&quot;&gt;
+    &lt;col style=&quot;width: 15%&quot;&gt;
+    &lt;col style=&quot;width: 73%&quot;&gt;
   &lt;/colgroup&gt;
   &lt;thead&gt;
-    &lt;tr class=&quot;header&quot;&gt;
+    &lt;tr&gt;
       &lt;th&gt;Category&lt;/th&gt;
       &lt;th&gt;App&lt;/th&gt;
       &lt;th&gt;Explanation&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
+    &lt;tr&gt;
       &lt;td rowspan=&quot;3&quot;&gt;Text editor/ IDE&lt;/td&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://neovim.io/&quot;&gt;Neovim&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://neovim.io/&quot;&gt;Neovim&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Modern Vim fork with native Lua support. Fast and simple. I personally
-        use a &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://www.lazyvim.org/&quot;&gt;LazyVim&lt;/a&gt;-based
+        use a &lt;a href=&quot;https://www.lazyvim.org/&quot;&gt;LazyVim&lt;/a&gt;-based
         configuration.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;Emacs&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;Emacs&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Extensible GUI and TUI text editor. Emacs can do anything. personally
         use a
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/doomemacs/doomemacs&quot;&gt;Doom Emacs&lt;/a&gt;-based
+        &lt;a href=&quot;https://github.com/doomemacs/doomemacs&quot;&gt;Doom Emacs&lt;/a&gt;-based
         configuration.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://vscodium.com/&quot;&gt;VSCodium&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://vscodium.com/&quot;&gt;VSCodium&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Builds of Code OSS with Microsoft telemetry removed. The most
         beginner-friendly of these options.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
+    &lt;tr&gt;
       &lt;td rowspan=&quot;2&quot;&gt;Notes&lt;/td&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://orgmode.org/&quot;&gt;Org mode&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://orgmode.org/&quot;&gt;Org mode&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Major mode and plain-text file format for Emacs. Similar to Markdown in
         many ways but a bit more flexible.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Markdown-based note-taking app with a bunch of fancy features. If
         Obsidian was open-source it would be top 3 software.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
+    &lt;tr&gt;
       &lt;td rowspan=&quot;2&quot;&gt;Music player&lt;/td&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://www.strawberrymusicplayer.org/&quot;&gt;Strawberry&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.strawberrymusicplayer.org/&quot;&gt;Strawberry&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Cross-platform open-source Qt-based music player. The default icons are
         a bit ugly but this can mostly be mitigated on Linux by turning on
@@ -304,17 +304,17 @@
         only Linux music player I’ve found that does so.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://www.foobar2000.org/&quot;&gt;foobar2000&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.foobar2000.org/&quot;&gt;foobar2000&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Customizable freeware music player for Windows and macOS. The only other
         music player I know of that fulfills the two above requirements. If
         foobar2000 was open-source it would be top 3 software.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
+    &lt;tr&gt;
       &lt;td&gt;RSS reader&lt;/td&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/martinrotter/rssguard&quot;&gt;RSS Guard&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/martinrotter/rssguard&quot;&gt;RSS Guard&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Cross-platform open-source Qt-based RSS reader. Extremely featureful and
         looks really nice with a good Qt theme.
@@ -329,36 +329,36 @@
     Mobile applications
   &lt;/caption&gt;
   &lt;colgroup&gt;
-    &lt;col&gt;
-    &lt;col&gt;
+    &lt;col style=&quot;width: 24%&quot;&gt;
+    &lt;col style=&quot;width: 75%&quot;&gt;
   &lt;/colgroup&gt;
   &lt;thead&gt;
-    &lt;tr class=&quot;header&quot;&gt;
+    &lt;tr&gt;
       &lt;th&gt;App&lt;/th&gt;
       &lt;th&gt;Explanation&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://getaegis.app/&quot;&gt;Aegis Authenticator&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://getaegis.app/&quot;&gt;Aegis Authenticator&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Open-source multi-factor authenticator. Allows exports and setting a
         vault password.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/deckerst/aves&quot;&gt;Aves&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/deckerst/aves&quot;&gt;Aves&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;Open-source photo gallery.&lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;odd&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://signal.org/&quot;&gt;Signal&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://signal.org/&quot;&gt;Signal&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Private and secure open-source instant messenger. Often considered the
         gold-standard of encrypted real-time communication.
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class=&quot;even&quot;&gt;
-      &lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://kdeconnect.kde.org/&quot;&gt;KDE Connect&lt;/a&gt;&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://kdeconnect.kde.org/&quot;&gt;KDE Connect&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         Easily connect your desktop or laptop to your mobile devices. Very
         useful for sharing notifications and files between devices.
@@ -367,11 +367,11 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
     </content>
-    <link href="https://liassica.codeberg.page/posts/0005-software-recs" rel="alternate"/>
+    <link href="https://liassica.codeberg.page/posts/0005-software-recs/" rel="alternate"/>
   </entry>
   
   <entry>
-    <id>https://liassica.codeberg.page/posts/0004-clang-linux-nixos</id>
+    <id>https://liassica.codeberg.page/posts/0004-clang-linux-nixos/</id>
     <title>Compile Linux with Clang on NixOS</title>
     <updated>2025-03-08T00:00:00+00:00</updated>
     <content type="html">
@@ -392,10 +392,10 @@
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;
   &lt;span id=&quot;post-excerpt&quot;&gt;This short guide will teach you how to compile the
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://kernel.org/&quot;&gt;Linux kernel&lt;/a&gt; with
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://clang.llvm.org/&quot;&gt;Clang&lt;/a&gt; and
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://llvm.org/&quot;&gt;LLVM&lt;/a&gt; on
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://nixos.org/&quot;&gt;NixOS&lt;/a&gt;.&lt;/span&gt;
+    &lt;a href=&quot;https://kernel.org/&quot;&gt;Linux kernel&lt;/a&gt; with
+    &lt;a href=&quot;https://clang.llvm.org/&quot;&gt;Clang&lt;/a&gt; and
+    &lt;a href=&quot;https://llvm.org/&quot;&gt;LLVM&lt;/a&gt; on
+    &lt;a href=&quot;https://nixos.org/&quot;&gt;NixOS&lt;/a&gt;.&lt;/span&gt;
   This guide is best viewed on a tablet, laptop, or desktop.
 &lt;/p&gt;
 &lt;h2 id=&quot;nixos-configuration&quot;&gt;NixOS configuration&lt;/h2&gt;
@@ -424,13 +424,13 @@
 &lt;span id=&quot;cb1-21&quot;&gt;&lt;a href=&quot;#cb1-21&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;co&quot;&gt;# Generate kernel modules for our custom kernel.&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-22&quot;&gt;&lt;a href=&quot;#cb1-22&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    linuxPackagesFor &lt;span class=&quot;op&quot;&gt;(&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-23&quot;&gt;&lt;a href=&quot;#cb1-23&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# Override our chosen kernel version with our custom settings.&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-24&quot;&gt;&lt;a href=&quot;#cb1-24&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;op&quot;&gt;(&lt;/span&gt;kernel.override &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-24&quot;&gt;&lt;a href=&quot;#cb1-24&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;op&quot;&gt;(&lt;/span&gt;kernel&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;override &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-25&quot;&gt;&lt;a href=&quot;#cb1-25&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# Set our chosen version of LLVM as our standard environment.&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-26&quot;&gt;&lt;a href=&quot;#cb1-26&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;va&quot;&gt;stdenv&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; overrideCC llvm.stdenv &lt;span class=&quot;op&quot;&gt;(&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-26&quot;&gt;&lt;a href=&quot;#cb1-26&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;va&quot;&gt;stdenv&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; overrideCC llvm&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;stdenv &lt;span class=&quot;op&quot;&gt;(&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-27&quot;&gt;&lt;a href=&quot;#cb1-27&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;co&quot;&gt;# Tell our C compiler (Clang) to use LLVM bintools--normally GNU&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-28&quot;&gt;&lt;a href=&quot;#cb1-28&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;co&quot;&gt;# binutils are used even with Clang as the compiler.&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-29&quot;&gt;&lt;a href=&quot;#cb1-29&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          llvm.stdenv.cc.override &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-30&quot;&gt;&lt;a href=&quot;#cb1-30&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;            &lt;span class=&quot;va&quot;&gt;bintools&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; llvm.bintools&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-29&quot;&gt;&lt;a href=&quot;#cb1-29&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          llvm&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;stdenv&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;cc&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;override &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-30&quot;&gt;&lt;a href=&quot;#cb1-30&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;            &lt;span class=&quot;va&quot;&gt;bintools&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; llvm&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;bintools&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-31&quot;&gt;&lt;a href=&quot;#cb1-31&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-32&quot;&gt;&lt;a href=&quot;#cb1-32&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;op&quot;&gt;);&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-33&quot;&gt;&lt;a href=&quot;#cb1-33&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;/span&gt;
@@ -441,11 +441,11 @@
 &lt;span id=&quot;cb1-38&quot;&gt;&lt;a href=&quot;#cb1-38&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# `structuredExtraConfig`. For example, some options available to us&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-39&quot;&gt;&lt;a href=&quot;#cb1-39&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;co&quot;&gt;# when compiling with Clang and linking with LLD:&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-40&quot;&gt;&lt;a href=&quot;#cb1-40&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;va&quot;&gt;structuredExtraConfig&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-41&quot;&gt;&lt;a href=&quot;#cb1-41&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;va&quot;&gt;CFI_CLANG&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; lib.kernel.yes&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-42&quot;&gt;&lt;a href=&quot;#cb1-42&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;va&quot;&gt;LTO_CLANG_THIN&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; lib.kernel.yes&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-41&quot;&gt;&lt;a href=&quot;#cb1-41&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;va&quot;&gt;CFI_CLANG&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; lib&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;kernel&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;yes&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-42&quot;&gt;&lt;a href=&quot;#cb1-42&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;          &lt;span class=&quot;va&quot;&gt;LTO_CLANG_THIN&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; lib&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;kernel&lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;yes&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-43&quot;&gt;&lt;a href=&quot;#cb1-43&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;        &lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-44&quot;&gt;&lt;a href=&quot;#cb1-44&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;cb1-45&quot;&gt;&lt;a href=&quot;#cb1-45&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;)&lt;/span&gt;.overrideAttrs&lt;/span&gt;
+&lt;span id=&quot;cb1-45&quot;&gt;&lt;a href=&quot;#cb1-45&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;).&lt;/span&gt;overrideAttrs&lt;/span&gt;
 &lt;span id=&quot;cb1-46&quot;&gt;&lt;a href=&quot;#cb1-46&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# Work around another NixOS specific issue where builds with WERROR=y&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-47&quot;&gt;&lt;a href=&quot;#cb1-47&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# are stopped by a benign error. See reference 1 below for details.&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&quot;cb1-48&quot;&gt;&lt;a href=&quot;#cb1-48&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;      &lt;span class=&quot;co&quot;&gt;# Technically, this fix is only necessary with WERROR=y but the issue&lt;/span&gt;&lt;/span&gt;
@@ -467,16 +467,16 @@
   &lt;hr&gt;
   &lt;ol type=&quot;1&quot;&gt;
     &lt;li&gt;
-      &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/ClangBuiltLinux/linux/issues/1983#issuecomment-1904431443&quot;&gt;Comment on “kernel built in NixOS failed to boot”&lt;/a&gt;, &lt;em&gt;GitHub&lt;/em&gt;, 2024-01-22. Accessed 2024-07-20.
+      &lt;a href=&quot;https://github.com/ClangBuiltLinux/linux/issues/1983#issuecomment-1904431443&quot;&gt;Comment on “kernel built in NixOS failed to boot”&lt;/a&gt;, &lt;em&gt;GitHub&lt;/em&gt;, 2024-01-22. Accessed 2024-07-20.
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
     </content>
-    <link href="https://liassica.codeberg.page/posts/0004-clang-linux-nixos" rel="alternate"/>
+    <link href="https://liassica.codeberg.page/posts/0004-clang-linux-nixos/" rel="alternate"/>
   </entry>
   
   <entry>
-    <id>https://liassica.codeberg.page/posts/0003-gplates-fedora</id>
+    <id>https://liassica.codeberg.page/posts/0003-gplates-fedora/</id>
     <title>Compile GPlates on Fedora Linux</title>
     <updated>2024-07-25T00:00:00+00:00</updated>
     <content type="html">
@@ -499,7 +499,7 @@
   &lt;span id=&quot;post-excerpt&quot;&gt;&lt;strong&gt;Note: this guide is out of date. GPlates has a new stable version (2.4.0)
       and the download link for the old source code doesn’t work
       anymore.&lt;/strong&gt;
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://www.gplates.org/&quot;&gt;GPlates&lt;/a&gt; is a free software program
+    &lt;a href=&quot;https://www.gplates.org/&quot;&gt;GPlates&lt;/a&gt; is a free software program
     for modeling the tectonic history of a planet. It was designed with a
     scientific audience in mind, but it has also gained popularity among the
     worldbuilding community. GPlates has an Ubuntu package and both source- and
@@ -514,7 +514,7 @@
   GPlates,&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
   however the 2.3.1 beta 5 will compile as expected.&lt;a href=&quot;#fn2&quot; class=&quot;footnote-ref&quot; id=&quot;fnref2&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
   Download the
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://support.aarnet.edu.au/hc/en-us/sections/6547442372367&quot;&gt;2.3.1 beta 5 source code&lt;/a&gt;
+  &lt;a href=&quot;https://support.aarnet.edu.au/hc/en-us/sections/6547442372367&quot;&gt;2.3.1 beta 5 source code&lt;/a&gt;
   and extract the downloaded archive to wherever you like.
 &lt;/p&gt;
 &lt;p&gt;
@@ -564,27 +564,27 @@
   &lt;ol&gt;
     &lt;li id=&quot;fn1&quot;&gt;
       &lt;p&gt;
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/1&quot;&gt;“Compilation error with boost 1.77”&lt;/a&gt;, &lt;em&gt;GPlates Community Forum&lt;/em&gt;, 2021-12-20. Accessed 2023-06-24.&lt;a href=&quot;#fnref1&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;
+        &lt;a href=&quot;https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/1&quot;&gt;“Compilation error with boost 1.77”&lt;/a&gt;, &lt;em&gt;GPlates Community Forum&lt;/em&gt;, 2021-12-20. Accessed 2023-06-24.&lt;a href=&quot;#fnref1&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;
       &lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn2&quot;&gt;
       &lt;p&gt;
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/12&quot;&gt;Comment on “Compilation error with boost 1.77”&lt;/a&gt;, &lt;em&gt;GPlates Community Forum&lt;/em&gt;, 2022-11-15. Accessed 2023-06-24.&lt;a href=&quot;#fnref2&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;
+        &lt;a href=&quot;https://discourse.gplates.org/t/compilation-error-with-boost-1-77/452/12&quot;&gt;Comment on “Compilation error with boost 1.77”&lt;/a&gt;, &lt;em&gt;GPlates Community Forum&lt;/em&gt;, 2022-11-15. Accessed 2023-06-24.&lt;a href=&quot;#fnref2&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;
       &lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn3&quot;&gt;
       &lt;p&gt;
-        &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues/1663&quot;&gt;“QWT_INCLUDE_DIR is not automatically found on Fedora 27”&lt;/a&gt;, &lt;em&gt;Orfeo Toolbox GitLab&lt;/em&gt;, 2021-12-20. Accessed 2023-06-24.&lt;a href=&quot;#fnref3&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;
+        &lt;a href=&quot;https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues/1663&quot;&gt;“QWT_INCLUDE_DIR is not automatically found on Fedora 27”&lt;/a&gt;, &lt;em&gt;Orfeo Toolbox GitLab&lt;/em&gt;, 2021-12-20. Accessed 2023-06-24.&lt;a href=&quot;#fnref3&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;
       &lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/section&gt;
     </content>
-    <link href="https://liassica.codeberg.page/posts/0003-gplates-fedora" rel="alternate"/>
+    <link href="https://liassica.codeberg.page/posts/0003-gplates-fedora/" rel="alternate"/>
   </entry>
   
   <entry>
-    <id>https://liassica.codeberg.page/posts/0002-neocities-github</id>
+    <id>https://liassica.codeberg.page/posts/0002-neocities-github/</id>
     <title>Deploy to Neocities through GitHub</title>
     <updated>2024-07-28T00:00:00+00:00</updated>
     <content type="html">
@@ -604,16 +604,16 @@
     
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;
-  &lt;span id=&quot;post-excerpt&quot;&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://neocities.org/&quot; title=&quot;Neocities home page&quot;&gt;Neocities&lt;/a&gt;
+  &lt;span id=&quot;post-excerpt&quot;&gt;&lt;a href=&quot;https://neocities.org/&quot; title=&quot;Neocities home page&quot;&gt;Neocities&lt;/a&gt;
     is a free, adless webhosting service modeled after the defunct
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://en.wikipedia.org/wiki/GeoCities&quot; title=&quot;GeoCities - Wikipedia&quot;&gt;GeoCities&lt;/a&gt;. However, Neocities’ web editor is quite basic and there is no version
+    &lt;a href=&quot;https://en.wikipedia.org/wiki/GeoCities&quot; title=&quot;GeoCities - Wikipedia&quot;&gt;GeoCities&lt;/a&gt;. However, Neocities’ web editor is quite basic and there is no version
     control. One way to alleviate these problems is to deploy your Neocities
     site through a GitHub repository.&lt;/span&gt;
 &lt;/p&gt;
 &lt;p&gt;
   This guide will assume you know how to use Git and GitHub. If you don’t, I
   recommend looking through
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://docs.github.com/en/get-started&quot; title=&quot;Get started with GitHub documentation - GitHub Docs&quot;&gt;GitHub’s “Get started with GitHub” documentation&lt;/a&gt;.
+  &lt;a href=&quot;https://docs.github.com/en/get-started&quot; title=&quot;Get started with GitHub documentation - GitHub Docs&quot;&gt;GitHub’s “Get started with GitHub” documentation&lt;/a&gt;.
 &lt;/p&gt;
 &lt;h2 id=&quot;setting-up-a-github-repository&quot;&gt;Setting up a GitHub repository&lt;/h2&gt;
 &lt;p&gt;
@@ -685,11 +685,11 @@
   Pages mirror.
 &lt;/p&gt;
     </content>
-    <link href="https://liassica.codeberg.page/posts/0002-neocities-github" rel="alternate"/>
+    <link href="https://liassica.codeberg.page/posts/0002-neocities-github/" rel="alternate"/>
   </entry>
   
   <entry>
-    <id>https://liassica.codeberg.page/posts/0001-yt-dlp</id>
+    <id>https://liassica.codeberg.page/posts/0001-yt-dlp/</id>
     <title>Introduction to yt-dlp</title>
     <updated>2024-01-03T00:00:00+00:00</updated>
     <content type="html">
@@ -709,13 +709,13 @@
     
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;
-  &lt;span id=&quot;post-excerpt&quot;&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/yt-dlp/yt-dlp&quot;&gt;yt-dlp&lt;/a&gt; is a command-line
+  &lt;span id=&quot;post-excerpt&quot;&gt;&lt;a href=&quot;https://github.com/yt-dlp/yt-dlp&quot;&gt;yt-dlp&lt;/a&gt; is a command-line
     tool for downloading audio and video from YouTube and other sites. This post
     will serve as a basic introduction to the program.&lt;/span&gt;
 &lt;/p&gt;
 &lt;p&gt;
   yt-dlp is a maintained fork of
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/ytdl-org/youtube-dl&quot;&gt;youtube-dl&lt;/a&gt; with many new
+  &lt;a href=&quot;https://github.com/ytdl-org/youtube-dl&quot;&gt;youtube-dl&lt;/a&gt; with many new
   features and improvements. It allows extensive control over the output of the
   command, from format to quality to file name.
 &lt;/p&gt;
@@ -735,7 +735,7 @@
 &lt;p&gt;
   If your preferred package is not listed or you wish to install yt-dlp
   manually, consult the
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/yt-dlp/yt-dlp/wiki/Installation&quot;&gt;installation page of the yt-dlp wiki&lt;/a&gt;.
+  &lt;a href=&quot;https://github.com/yt-dlp/yt-dlp/wiki/Installation&quot;&gt;installation page of the yt-dlp wiki&lt;/a&gt;.
 &lt;/p&gt;
 &lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
 &lt;p&gt;
@@ -745,7 +745,7 @@
 &lt;h2 id=&quot;ffmpeg&quot;&gt;FFmpeg&lt;/h2&gt;
 &lt;p&gt;
   To access most of the more advanced features of yt-dlp, you will likely need
-  to install &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://ffmpeg.org/&quot;&gt;FFmpeg&lt;/a&gt;. FFmpeg is a tool for
+  to install &lt;a href=&quot;https://ffmpeg.org/&quot;&gt;FFmpeg&lt;/a&gt;. FFmpeg is a tool for
   processing audio and video and adds functionality to yt-dlp. Like yt-dlp,
   FFmpeg is available from a variety of package managers (non-exhaustive):
 &lt;/p&gt;
@@ -758,15 +758,15 @@
 &lt;/ul&gt;
 &lt;p&gt;
   For other package managers, see the
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://repology.org/project/ffmpeg/versions&quot;&gt;Repology page for FFmpeg&lt;/a&gt;. Alternatively,
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://ffmpeg.org/download.html&quot;&gt;download FFmpeg manually from their site&lt;/a&gt;.
+  &lt;a href=&quot;https://repology.org/project/ffmpeg/versions&quot;&gt;Repology page for FFmpeg&lt;/a&gt;. Alternatively,
+  &lt;a href=&quot;https://ffmpeg.org/download.html&quot;&gt;download FFmpeg manually from their site&lt;/a&gt;.
 &lt;/p&gt;
 &lt;h2 id=&quot;options&quot;&gt;Options&lt;/h2&gt;
 &lt;p&gt;
   yt-dlp has a vast selection of command options that allow fine-grained control
   over the output. They can be found in the man page (&lt;code&gt;man yt-dlp&lt;/code&gt;),
   help command (&lt;code&gt;yt-dlp -h&lt;/code&gt; or &lt;code&gt;yt-dlp --help&lt;/code&gt;), or on the
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/yt-dlp/yt-dlp#usage-and-options&quot;&gt;yt-dlp README&lt;/a&gt;.
+  &lt;a href=&quot;https://github.com/yt-dlp/yt-dlp#usage-and-options&quot;&gt;yt-dlp README&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;Some common yt-dlp options are:&lt;/p&gt;
 &lt;ul&gt;
@@ -790,16 +790,16 @@
     &lt;code&gt;-o&lt;/code&gt; or &lt;code&gt;--output&lt;/code&gt;: specify the output template (file
     name). Supports a variety of field names (e.g.&amp;nbsp;‘title’, ‘artist’,
     ‘uploader’, etc.) and Python string formatting. Read the
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/yt-dlp/yt-dlp#output-template&quot;&gt;output template section of the yt-dlp README&lt;/a&gt;
+    &lt;a href=&quot;https://github.com/yt-dlp/yt-dlp#output-template&quot;&gt;output template section of the yt-dlp README&lt;/a&gt;
     to get the most out of it.
   &lt;/li&gt;
 &lt;/ul&gt;
     </content>
-    <link href="https://liassica.codeberg.page/posts/0001-yt-dlp" rel="alternate"/>
+    <link href="https://liassica.codeberg.page/posts/0001-yt-dlp/" rel="alternate"/>
   </entry>
   
   <entry>
-    <id>https://liassica.codeberg.page/posts/0000-arkenfox</id>
+    <id>https://liassica.codeberg.page/posts/0000-arkenfox/</id>
     <title>Arkenfox installation guide</title>
     <updated>2024-08-18T00:00:00+00:00</updated>
     <content type="html">
@@ -819,13 +819,13 @@
     
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;
-  &lt;span id=&quot;post-excerpt&quot;&gt;&lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/arkenfox/user.js&quot;&gt;Arkenfox user.js&lt;/a&gt; is a
+  &lt;span id=&quot;post-excerpt&quot;&gt;&lt;a href=&quot;https://github.com/arkenfox/user.js&quot;&gt;Arkenfox user.js&lt;/a&gt; is a
     configuration file for desktop Firefox designed to increase the privacy and
     security of the browser while avoiding making the browser unusable. This
     guide will walk you through how to install it and later explain some use
     cases and alternatives.&lt;/span&gt;
   I recommend reading the
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/arkenfox/user.js/wiki/1.1-To-Arkenfox-or-Not&quot;&gt;Arkenfox wiki&lt;/a&gt;
+  &lt;a href=&quot;https://github.com/arkenfox/user.js/wiki/1.1-To-Arkenfox-or-Not&quot;&gt;Arkenfox wiki&lt;/a&gt;
   in order to decide whether to use Arkenfox first.
 &lt;/p&gt;
 &lt;h2 id=&quot;installing-firefox&quot;&gt;Installing Firefox&lt;/h2&gt;
@@ -847,7 +847,7 @@
 &lt;/ul&gt;
 &lt;p&gt;
   Alternatively,
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://www.mozilla.org/en-US/firefox/download/thanks/&quot;&gt;download Firefox from Mozilla’s site&lt;/a&gt;
+  &lt;a href=&quot;https://www.mozilla.org/en-US/firefox/download/thanks/&quot;&gt;download Firefox from Mozilla’s site&lt;/a&gt;
   or with your favorite graphical software center application.
 &lt;/p&gt;
 &lt;h2 id=&quot;installing-arkenfox&quot;&gt;Installing Arkenfox&lt;/h2&gt;
@@ -860,7 +860,7 @@
 &lt;/p&gt;
 &lt;p&gt;
   Then, open the
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/arkenfox/user.js/releases/latest&quot;&gt;latest Arkenfox user.js release page&lt;/a&gt;
+  &lt;a href=&quot;https://github.com/arkenfox/user.js/releases/latest&quot;&gt;latest Arkenfox user.js release page&lt;/a&gt;
   and download ‘Source code (zip)’. Extract the archive somewhere and open the
   resulting folder. Copy the contents of that folder into the root folder you
   opened earlier.
@@ -868,8 +868,8 @@
 &lt;p&gt;
   In order to customize Arkenfox, we will use a file called ‘user-overrides.js’.
   You can write your own by following the
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/arkenfox/user.js/wiki/3.1-Overrides&quot;&gt;Arkenfox wiki page on user overrides&lt;/a&gt;, or you can use one of the
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://codeberg.org/Liassica/user-overrides&quot;&gt;user overrides presets I’ve made&lt;/a&gt;.
+  &lt;a href=&quot;https://github.com/arkenfox/user.js/wiki/3.1-Overrides&quot;&gt;Arkenfox wiki page on user overrides&lt;/a&gt;, or you can use one of the
+  &lt;a href=&quot;https://codeberg.org/Liassica/user-overrides&quot;&gt;user overrides presets I’ve made&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;
   If you chose to use one of my user overrides, simply extract whichever archive
@@ -886,7 +886,7 @@
 &lt;h2 id=&quot;use-cases-and-alternatives&quot;&gt;Use cases and alternatives&lt;/h2&gt;
 &lt;p&gt;
   Firefox with Arkenfox is best used when using
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://www.torproject.org/download/&quot;&gt;Tor Browser&lt;/a&gt; is impossible
+  &lt;a href=&quot;https://www.torproject.org/download/&quot;&gt;Tor Browser&lt;/a&gt; is impossible
   or impractical. Firefox with Arkenfox will not give you as much protection as
   Tor Browser, but it’s still far ahead of mainstream proprietary browsers like
   Chrome or Edge. It can also be used alongside Tor Browser if one or the other
@@ -895,42 +895,42 @@
 &lt;p&gt;Some alternatives to Firefox with Arkenfox include:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://librewolf.net/&quot;&gt;Librewolf&lt;/a&gt;, Firefox fork with more
+    &lt;a href=&quot;https://librewolf.net/&quot;&gt;Librewolf&lt;/a&gt;, Firefox fork with more
     private defaults
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://mullvad.net/en/browser&quot;&gt;Mullvad Browser&lt;/a&gt;, essentially
+    &lt;a href=&quot;https://mullvad.net/en/browser&quot;&gt;Mullvad Browser&lt;/a&gt;, essentially
     Tor Browser but with
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://mullvad.net/en/vpn&quot;&gt;Mullvad VPN&lt;/a&gt; instead of
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://en.wikipedia.org/wiki/Tor_(network)&quot;&gt;Tor&lt;/a&gt;
+    &lt;a href=&quot;https://mullvad.net/en/vpn&quot;&gt;Mullvad VPN&lt;/a&gt; instead of
+    &lt;a href=&quot;https://en.wikipedia.org/wiki/Tor_(network)&quot;&gt;Tor&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://brave.com/&quot;&gt;Brave&lt;/a&gt;,
-    &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://www.chromium.org/Home/&quot;&gt;Chromium&lt;/a&gt;-based
+    &lt;a href=&quot;https://brave.com/&quot;&gt;Brave&lt;/a&gt;,
+    &lt;a href=&quot;https://www.chromium.org/Home/&quot;&gt;Chromium&lt;/a&gt;-based
   &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;extensions&quot;&gt;Extensions&lt;/h2&gt;
 &lt;p&gt;
   As explained on the
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/arkenfox/user.js/wiki/4.1-Extensions&quot;&gt;Arkenfox wiki page on extensions&lt;/a&gt;, extensions have elevated privileges in your browser and can make you more
+  &lt;a href=&quot;https://github.com/arkenfox/user.js/wiki/4.1-Extensions&quot;&gt;Arkenfox wiki page on extensions&lt;/a&gt;, extensions have elevated privileges in your browser and can make you more
   vulnerable to fingerprinting and security flaws. Therefore I recommend you
   stick mostly to the extensions listed on that Arkenfox page and to use as few
   as possible.
 &lt;/p&gt;
 &lt;p&gt;
   In addition to
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/&quot;&gt;uBlock Origin&lt;/a&gt;
+  &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/&quot;&gt;uBlock Origin&lt;/a&gt;
   as recommended by Arkenfox, I have also used an extension for my password
-  manager, &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://bitwarden.com/&quot;&gt;Bitwarden&lt;/a&gt;.
+  manager, &lt;a href=&quot;https://bitwarden.com/&quot;&gt;Bitwarden&lt;/a&gt;.
 &lt;/p&gt;
 &lt;h2 id=&quot;special-treat-for-nix-users&quot;&gt;Special treat for Nix users&lt;/h2&gt;
 &lt;p&gt;
   Check out the wonderful
-  &lt;a target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; href=&quot;https://github.com/dwarfmaster/arkenfox-nixos&quot;&gt;arkenfox-nixos&lt;/a&gt;
+  &lt;a href=&quot;https://github.com/dwarfmaster/arkenfox-nixos&quot;&gt;arkenfox-nixos&lt;/a&gt;
   project for managing Arkenfox declaratively on NixOS or with Home Manager!
 &lt;/p&gt;
     </content>
-    <link href="https://liassica.codeberg.page/posts/0000-arkenfox" rel="alternate"/>
+    <link href="https://liassica.codeberg.page/posts/0000-arkenfox/" rel="alternate"/>
   </entry>
   
 </feed>
